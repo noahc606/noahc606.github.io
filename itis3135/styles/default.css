@@ -1,0 +1,75 @@
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+p, a, figcaption, li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black
+}
+a:visited { color: darkorchid; }
+a:hover { color: crimson; }
+a:active { color: pink; }
+
+.nch-text-center {
+    text-align: center;
+}
+
+.nch-div-list {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.nch-div-floating {
+    margin: auto;
+    margin-bottom: 10px;
+    border: 16px;
+    border-width: 5px;
+    border-style: solid;
+}
+.nch-figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-style: italic;
+    width: 50%;
+}
+
+.nch-div-background {
+    background-image: linear-gradient(#833cf6, #583cf6, #463492);
+    padding: 10px;
+}
+.nch-div-background-alt {
+    background-image: linear-gradient(#463492, #833cf6);
+    padding: 10px;
+}
+
+.nch-div-header {
+    background-color: aquamarine;
+    padding: 2px;
+    width: 95%;
+    max-width: 950px;
+    border-image: linear-gradient(#3cf664, #270c9f) 30;
+}
+
+.nch-div-main {
+    background-color: rgb(180, 245, 223);
+    padding: 10px;    
+    width: 80%;
+    max-width: 800px;
+    border-width: 3px;
+    border-image: linear-gradient(#FFFFFF, #000000) 45;
+}
+
+.nch-div-footer {
+    background-color: #e0d4eb;
+    
+    padding: 2px;
+    width: 95%;
+    max-width: 950px;
+    border-image: linear-gradient(#5920b4, #093e69) 30;
+}
+
+.nch-div-fill {
+    height: 100%; 
+}
