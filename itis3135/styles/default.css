@@ -1,22 +1,48 @@
-h1, h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(17, 25, 134)
 }
 
-p, a, figcaption, li {
+a, p, figcaption, figure, form, li, table {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black
 }
+
+.nch-table tr:nth-child(odd) {
+    background-color: #888888;
+    color: #000000;
+}
+.nch-table tr:nth-child(even) {
+    background-color: #BBBBBB;
+    color: #000000;
+}
+.nch-table tr:nth-child(1) {
+    background-color: #444444;
+    color: #DDDDDD;
+}
+
 a:visited { color: darkorchid; }
 a:hover { color: crimson; }
 a:active { color: pink; }
+
+.nch-input-1 {
+    width: 36px;
+}
+.nch-input-2 {
+    width: 48px;
+}
+
+.nch-body {
+    background-color: #463462;
+}
 
 .nch-text-center {
     text-align: center;
 }
 
 .nch-div-list {
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: 0px;
+    margin-right: 40px;
 }
 
 .nch-div-floating {
@@ -36,11 +62,11 @@ a:active { color: pink; }
 }
 
 .nch-div-background {
-    background-image: linear-gradient(#833cf6, #583cf6, #463492);
+    background-image: linear-gradient(#650df1, #583cf6, #463492);
     padding: 10px;
 }
 .nch-div-background-alt {
-    background-image: linear-gradient(#463492, #833cf6);
+    background-image: linear-gradient(#463492, #650df1);
     padding: 10px;
 }
 

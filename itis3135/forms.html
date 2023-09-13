@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || Forms</title>
+	<link rel="stylesheet" href="styles/default.css">
+</head>
+<body class="nch-body">
+	<div class ="nch-div-background nch-div-fill">
+		<header>
+			<div class="nch-div-background">
+				<div class="nch-div-header nch-div-floating nch-text-center">
+					<h1>Noah Hebert's ITIS3135 Site</h1>
+				</div>
+				<div class="nch-div-header nch-div-floating">
+					<nav>
+						<a href="index.html">Home</a> |
+						<a href="introduction.html">Introduction</a> |
+						<a href="contract.html">Contract</a> |
+						<a href="tables.html">Tables</a> |
+						<a href="forms.html"><b>Forms</b></a> |
+						<a href="../">Back to Parent Site</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="nch-div-background-alt">
+				<div class="nch-div-main nch-div-floating">
+					<h2>HTML Form</h2>
+					<form id="registration-form" method="post" action="#">
+						<fieldset>
+							<h4>Basic Info</h4>
+							<label id="name-label"> Full Name:
+								<input id="name" type="text" placeholder="George Washington" required>
+							</label>
+							<label id="email-label">
+								E-mail: <input id="email" type="email" placeholder="emailuser@gmail.com" required>
+							</label>
+							<p></p>
+							<label id="phone1-label">
+								Phone Number: +1 (
+								<input id="phone-1" class="nch-input-1" type="number" placeholder="123" required>
+								)
+							</label>
+							<label id="phone2-label">
+								<input id="phone-2" class="nch-input-1" type="number" placeholder="456" required>
+								-
+							</label>
+							<label id="phone3-label">
+								<input id="phone-3" class="nch-input-2" type="number" placeholder="7890" required>
+							</label>
+							<h4>Questions</h4>
+							<p></p>
+							How has your experience on this site been so far?
+							<label id="experience-label">
+								<select id="experience-dropdown">
+									<option value="0">Select one</option>
+									<option value="1">Very good</option>
+									<option value="2">Okay</option>
+									<option value="3">Neutral</option>
+									<option value="3">Not great</option>
+									<option value="3">Very bad</option>
+								</select>
+							</label>
+							<p></p>
+							How proficient are you at web design?
+							<p></p>
+							<label id="proficiency1-label">
+								<input name="proficiency1" id="expert" type="radio">Expert
+							</label>
+							<label id="proficiency2-label">
+								<input name="proficiency2" id="experienced" type="radio">Very experienced
+							</label>
+							<label id="proficiency3-label">
+								<input name="proficiency3" id="decent" type="radio">Decent
+							</label>
+							<label id="proficiency4-label">
+								<input name="proficiency4" id="okay" type="radio">Some experience
+							</label>
+							<label id="proficiency5-label">
+								<input name="proficiency5" id="noob" type="radio">Know nothing
+							</label>
+							<p></p>
+							Which cities in North Carolina do you live in or close to? (check all that apply)
+							<p></p>
+							<input type="checkbox" value="cb1">Raleigh
+							<input type="checkbox" value="cb2">Charlotte
+							<input type="checkbox" value="cb3">Asheville
+							<input type="checkbox" value="cb4">Concord
+							<input type="checkbox" value="cb5">Greensboro
+							<p></p>
+							How did you find out about this site?
+							<p></p>
+							<label><textarea></textarea></label>
+							<p></p>
+							<button type="submit">Send</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="nch-div-background">
+				<div class="nch-div-footer nch-div-floating">
+					<nav>
+						<a href="https://webpages.charlotte.edu/nhebert1/">UNC Charlotte Webspace</a> |
+						<a href="https://github.com/noahc606/noahc606.github.io">Course Github Repo</a> |
+						<a href="https://noahc606.github.io/">Course Github.io</a> |
+						<a href="https://www.freecodecamp.org/noahc606">freeCodeCamp</a> |
+						<a href="https://www.codecademy.com/profiles/noahc606">Codecademy</a> |
+						<a href="https://www.linkedin.com/in/nh606/">LinkedIn Profile</a>
+					</nav>
+					<p>© 2023 Designed by <a href="hi.biz/">Hebert, Inc.</a></p>
+					<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fnhebert1%2Fitis3135%2Fforms.html">
+						<img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+					</a>
+					<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fnhebert1%2Fitis3135%2Fforms.html">
+						<img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="ValidCSS!">
+					</a>
+				</div>
+			</div>
+			<div class="nch-div-background-alt">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

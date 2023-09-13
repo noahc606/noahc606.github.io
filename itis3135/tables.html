@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || Tables</title>
+	<link rel="stylesheet" href="styles/default.css">
+</head>
+<body class="nch-body">
+	<div class ="nch-div-background nch-div-fill">
+		<header>
+			<div class="nch-div-background">
+				<div class="nch-div-header nch-div-floating nch-text-center">
+					<h1>Noah Hebert's ITIS3135 Site</h1>
+				</div>
+				<div class="nch-div-header nch-div-floating">
+					<nav>
+						<a href="index.html">Home</a> |
+						<a href="introduction.html">Introduction</a> |
+						<a href="contract.html">Contract</a> |
+						<a href="tables.html"><b>Tables</b></a> |
+						<a href="forms.html">Forms</a> |
+						<a href="../">Back to Parent Site</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="nch-div-background-alt">
+				<div class="nch-div-main nch-div-floating">
+					<h2>HTML Tables</h2>
+					<h3>My Tabular Data</h3>
+                    <ol>
+                        <li>Tom Cat: thomasc@yahoo.com, 5 years</li>
+                        <li>Jerry Mouse: jerrym@gmail.com, 6 years</li>
+                        <li>Henry Davis: hdavis4@uncc.edu, 2 years</li>
+                        <li>Sheri Davis: sheridavis@outlook.com, 2 years</li>
+                        <li>Jon Arbuckle: jarbuckle@gmail.com, 5 years</li>
+                        <li>Michael Fox: michaeljfox@gmail.com, 9 years</li>
+                        <li>George Hills: georgeh@yahoo.com, 4 years</li>
+                        <li>Tom Holland: tomholland@gmail.com, 8 years</li>
+                    </ol>
+
+                    <h3>Employee Data in Simple Table</h3>
+                    <table>
+                        <tr><th>Name</th>           <th>Email</th>                  <th>Years of Service</th></tr>
+                        <tr><td>Tom Cat</td>        <td>thomasc@yahoo.com</td>      <td>5</td></tr>
+                        <tr><td>Jerry Mouse</td>    <td>jerrym@gmail.com</td>       <td>6</td></tr>
+                        <tr><td>Henry Davis</td>    <td>hdavis4@uncc.edu</td>       <td>2</td></tr>
+                        <tr><td>Sheri Davis</td>    <td>sheridavis@outlook.com</td> <td>2</td></tr>
+                        <tr><td>Jon Arbuckle</td>   <td>jarbuckle@gmail.com</td>    <td>5</td></tr>
+                        <tr><td>Michael Fox</td>    <td>michaeljfox@gmail.com</td>  <td>9</td></tr>
+                        <tr><td>George Hills</td>   <td>georgeh@yahoo.com</td>      <td>4</td></tr>
+                        <tr><td>Tom Holland</td>    <td>tomholland@gmail.com</td>   <td>8</td></tr>
+                    </table>
+
+                    <h3>Employee Data in Complex Table</h3>
+                    <figure>
+                        <table class="nch-table">
+                            <tr><th id="occ">Occupation</th>        <th id="name">Name</th>                 <th id="email">Email</th>                       <th id="years">Years of Service</th>    <th id="salary">Monthly Salary</th></tr>
+                            <tr><td headers="occ">Marketing</td>    <td headers="name">Tom Cat</td>         <td headers="email">thomasc@yahoo.com</td>      <td headers="years">5</td>              <td headers="salary">$60,440</td></tr>
+                            <tr><td headers="occ">Sales</td>        <td headers="name">Jerry Mouse</td>     <td headers="email">jerrym@gmail.com</td>       <td headers="years">6</td>              <td headers="salary">$80,950</td></tr>
+                            <tr><td headers="occ">Engineer</td>     <td headers="name">Henry Davis</td>     <td headers="email">hdavis4@uncc.edu</td>       <td headers="years">2</td>              <td headers="salary">$12,700</td></tr>
+                            <tr><td headers="occ">Sales</td>        <td headers="name">Sheri Davis</td>     <td headers="email">sheridavis@outlook.com</td> <td headers="years">2</td>              <td headers="salary">$12,800</td></tr>
+                            <tr><td headers="occ">Sales</td>        <td headers="name">Jon Arbuckle</td>    <td headers="email">jarbuckle@gmail.com</td>    <td headers="years">5</td>              <td headers="salary">$60,500</td></tr>
+                            <tr><td headers="occ">Marketing</td>    <td headers="name">Michael Fox</td>     <td headers="email">michaeljfox@gmail.com</td>  <td headers="years">9</td>              <td headers="salary">$125,250</td></tr>
+                            <tr><td headers="occ">Engineer</td>     <td headers="name">George Hills</td>    <td headers="email">georgeh@yahoo.com</td>      <td headers="years">4</td>              <td headers="salary">$55,200</td></tr>
+                            <tr><td headers="occ">Engineer</td>     <td headers="name">Tom Holland</td>     <td headers="email">tomholland@gmail.com</td>   <td headers="years">8</td>              <td headers="salary">$100,120</td></tr>
+                            <tr><td></td>                           <td></td>                               <th id="total">Total Years of Service</th>      <td headers="total years">41</td>       <td headers="total salary">$507,960</td></tr>
+                        </table>
+                        <figcaption class="nch-figure">
+                            List of employees at Hebert, Inc.
+                        </figcaption>
+                    </figure>
+
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="nch-div-background">
+				<div class="nch-div-footer nch-div-floating">
+					<nav>
+						<a href="https://webpages.charlotte.edu/nhebert1/">UNC Charlotte Webspace</a> |
+						<a href="https://github.com/noahc606/noahc606.github.io">Course Github Repo</a> |
+						<a href="https://noahc606.github.io/">Course Github.io</a> |
+						<a href="https://www.freecodecamp.org/noahc606">freeCodeCamp</a> |
+						<a href="https://www.codecademy.com/profiles/noahc606">Codecademy</a> |
+						<a href="https://www.linkedin.com/in/nh606/">LinkedIn Profile</a>
+					</nav>
+					<p>© 2023 Designed by <a href="hi.biz/">Hebert, Inc.</a></p>
+					<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fnhebert1%2Fitis3135%2Ftables.html">
+						<img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+					</a>
+					<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fnhebert1%2Fitis3135%2Ftables.html">
+						<img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="ValidCSS!">
+					</a>
+				</div>
+			</div>
+			<div class="nch-div-background-alt">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
