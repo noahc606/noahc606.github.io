@@ -17,7 +17,7 @@ textarea {
 }
 
 a { color: #3c6604 }
-a:visited { color: darkorchid; }
+a:visited { color: #3c6604; }
 a:hover { color: crimson; }
 a:active { color: rgb(255, 145, 163); }
 
