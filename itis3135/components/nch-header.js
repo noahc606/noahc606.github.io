@@ -11,7 +11,7 @@ class NCH_Header extends HTMLElement {
             </div>
             <div class="nch-div-header nch-div-floating">
                 <nav>
-                    <a class="nch-bold" href="index.html">Home</a> |
+                    <a href="index.html">Home</a> |
                     <a href="introduction.html">Introduction</a> |
                     <a href="contract.html">Contract</a> |
                     <a href="tables.html">Tables</a> |
