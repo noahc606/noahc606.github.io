@@ -85,7 +85,7 @@ function submitForm()
     } else if( Number.isNaN(sides) || sides<-100.5 || sides>=100.5 ) {
         alert("Please enter a valid number between 0 and 100.")
     } else {
-        alert("Hebert Incorporated welcomes you, "+user+"! Feeling "+feels+" today, huh? Whatever, click \"ok\" to get the name of a random shape.");
+        alert("Hebert Incorporated welcomes you, "+user+"! Feeling "+feels+" today, huh? Whatever - click \"OK\" to get the name of a (totally random) shape.");
         
         shape = getShapeName( Math.abs(Math.round(sides)) );
         alert(shape);
