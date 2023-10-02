@@ -1,6 +1,11 @@
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(17, 25, 134)
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(17, 60, 180)
 }
 
 hr.nch-dashed {
@@ -42,6 +47,9 @@ a:active { color: rgb(255, 145, 163); }
 }
 .nch-input-2 {
     width: 48px;
+}
+.nch-input-3 {
+    width: 72px;
 }
 
 .nch-body {
@@ -106,4 +114,9 @@ a:active { color: rgb(255, 145, 163); }
 }
 .nch-div-fill {
     height: 100%; 
+}
+
+.nch-special {
+    color:#AA6600;
+    font-style: italic;
 }

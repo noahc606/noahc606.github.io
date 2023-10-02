@@ -17,6 +17,7 @@ class NCH_Header extends HTMLElement {
                     <a href="tables.html">Tables</a> |
                     <a href="forms.html">Forms</a> |
                     <a href="website_evaluations.html">Website Evaluations</a> |
+                    <a href="firstscripts.html">First JavaScripts</a> |
                     <a href="../">Back to Parent Site</a>
                 </nav>
                 <nav>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || First Scripts</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+	<script src="scripts/defaultscripts.js" defer></script>
+</head>
+<body class="nch-body">
+	<div class ="nch-div-background nch-div-fill">
+		<header>
+			<nch-header></nch-header>
+		</header>
+		<main>
+			<div class="nch-div-background-alt">
+				<div class="nch-div-main nch-div-floating">
+					<h2>First JavaScripts</h2>
+					<hr class="nch-dashed">
+                    <section>
+                        <h3>Currently it is <span id="datetime"></span></h3>
+                    </section>
+                    <hr class="nch-dashed">
+                    <section>
+                        <h3>Interactable Form</h3>
+                        <form action="POST" id="scriptedform">
+                            <fieldset>
+                                <label id="name-label">What is your name?</label>
+                                <input id="name-input" type="text" placeholder="First Last">
+                                <p></p>
+                                <label id="feeling-label">How are you feeling today?</label>
+                                <input id="feeling-input" type="text" placeholder="great">
+                                <p></p>
+                                <label id="favoritenumber-label">What is your favorite number from 0-100?</label>
+                                <input class="nch-input-1" id="favoritenumber-input" type="text">
+                                <p></p>
+                                <button type='button' onclick="submitForm()">Submit</button> 
+                            </fieldset>
+                        </form>
+                    </section>
+                    <p></p>
+                    <hr class="nch-dashed">
+                    <section>
+                        <h3>Cool JS Experiments</h3>
+                        <form>
+                            <fieldset>
+                                <p>Here you can return the name of one of our company's horses at random: </p>
+                                <button type="button" onclick="horseNames()">Get Horse Name</button>
+                                <span id="horsename" class="nch-special">Click me</span>
+
+                                <p>Here you may enter a food and we will recommend whether or not you should feed it to your horse:</p>
+                                <input class="nch-input-3" id="food-input" type="text" placeholder="Carrot"></button>
+                                <button type="button" onclick="horseEatsFood()">Submit</button>
+                                <span id="horsefood" class="nch-special">Enter food and click me</span>
+
+                                <p>Here, you can find the top speed of a random horse our company owns:</p>
+                                <button type="button" onclick="horseSpeed()">Get Horse Speed</button>
+                                <span id="horsespeed" class="nch-special">Click me</span>
+
+                                <p>We have invented a machine that returns the very last word/phrase that was thought about by any horse on Earth. Why don't you try it out?</p>
+                                <button type="button" onclick="horseThoughts()">Blow My Mind</button>
+                                <span id="horsethoughts" class="nch-special">Click me</span>
+                            </fieldset>
+                        </form>
+                    </section>
+					<hr class="nch-dashed">
+
+				</div>
+			</div>
+		</main>
+		<footer>
+			<nch-footer></nch-footer>
+		</footer>
+	</div>
+</body>
+</html>
