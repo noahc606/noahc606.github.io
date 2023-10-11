@@ -74,6 +74,8 @@ function addIntro(imgSrc) {
         buildListItem(ul, "Academic Background", eById("academic-bg-input").value );
         //Web development Background
         buildListItem(ul, "Background in Web Development", eById("webdev-bg-input").value );
+        //Personal Computer Platform
+        buildListItem(ul, "Primary Computer Platform", eById("pc-platforms-input").value );
         //Courses taken list item
         var coursesLI = create("li");
             //Bold
