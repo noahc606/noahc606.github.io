@@ -25,6 +25,7 @@ a { color: #3c6604 }
 a:visited { color: #3c6604; }
 a:hover { color: crimson; }
 a:active { color: rgb(255, 145, 163); }
+a.nch-no-underline { color: #e0d4eb; }
 
 .nch-bold {
     font-weight: bolder;
@@ -70,6 +71,58 @@ a:active { color: rgb(255, 145, 163); }
     color: #DDDDDD;
 }
 
+.nch-tableform tr:nth-child(odd) {
+    background-color: #7bf1c8;
+    color: #000000;
+}
+.nch-tableform tr:nth-child(even) {
+    background-color: #7ecab0;
+    color: #000000;
+}
+.nch-tableform tr:nth-child(1) {
+    background-color: #5c8f7f;
+    color: #000000;
+}
+.nch-tableform {
+    width: 80%;
+    margin: auto;
+}
+.nch-tableform table.nch-tableform {
+    width: 80%;
+    margin: auto;
+}
+.nch-tableform table.nch-tableform textarea {
+    width: 95%;
+    resize: none;
+}
+.nch-tableform table.nch-tableform input {
+    width: 95%;
+    resize: none;
+}
+td.nch-small {
+    width: 18%;
+}
+td.nch-small input {
+    max-width: 89%;
+}
+
+td.nch-medium {
+    padding-right: 5px;
+    width: 67%;
+    max-width: 350px;
+}
+td.nch-medium input {
+    min-width: 98.5%;
+}
+
+table.nch-subtable {
+    width: 95%;
+    margin-bottom: -2px;
+}
+
+.nch-add {
+    width: 100%;
+}
 .nch-div-list {
     margin-left: 0px;
     margin-right: 40px;
@@ -92,15 +145,15 @@ a:active { color: rgb(255, 145, 163); }
 .nch-div-header {
     background-color: aquamarine;
     padding: 2px;
-    width: 95%;
-    max-width: 950px;
+    width: 85%;
+    min-width: 400px;
     border-image: linear-gradient(#3cf664, #270c9f) 30;
 }
 .nch-div-main {
-    background-color: rgb(180, 245, 223);
+    background-color: #b4f5df;
     padding: 10px;    
-    width: 80%;
-    max-width: 800px;
+    width: 65%;
+    min-width: 400px;
     border-width: 3px;
     border-image: linear-gradient(#FFFFFF, #000000) 45;
 }
@@ -108,8 +161,8 @@ a:active { color: rgb(255, 145, 163); }
     background-color: #e0d4eb;
     
     padding: 2px;
-    width: 95%;
-    max-width: 950px;
+    width: 85%;
+    min-width: 400px;
     border-image: linear-gradient(#5920b4, #093e69) 30;
 }
 .nch-div-fill {

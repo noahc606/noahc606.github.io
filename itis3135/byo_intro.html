@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || BYO Intro</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+	<script src="scripts/survey.js" defer></script>
+</head>
+<body class="nch-body">
+	<div class ="nch-div-background nch-div-fill">
+		<header>
+			<nch-header></nch-header>
+		</header>
+		<main>
+			<div class="nch-div-background-alt" id ="div-background">
+				<div class="nch-div-main nch-div-floating" id="div-main">
+					<h2>Bring Your Own Introduction</h2>
+					<hr class="nch-dashed">
+                    <section>
+                        <h3>Want to introduce yourself (or somebody else)? Fill out the form below and we will generate an introduction page for you.</h3>
+                    </section>
+                    <section>
+                        <form action="POST", id="byoform" class="nch-tableform">
+                            <fieldset>
+                                <table class="nch-tableform">
+                                    <tbody>
+                                        <tr></tr>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td><input id="name-input" type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mascot</td>
+                                            <td><input id="mascot-input" type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Image</td>
+                                            <td><input type="file" id="file-upload"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Image Caption</td>
+                                            <td><input id="imgcaption-input" type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Personal Background</td>
+                                            <td><textarea id="personal-bg-input" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Professional Background</td>
+                                            <td><textarea id="professional-bg-input" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Academic Background</td>
+                                            <td><textarea id="academic-bg-input" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Background in Web Develoment</td>
+                                            <td><textarea id="webdev-bg-input" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Primary Computer Platform(s)</td>
+                                            <td><input id="pc-platforms-input" type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Courses you are taking</td>
+                                            <td>
+                                                <table class="nch-subtable">
+                                                    <tbody id="courses-subtable">
+                                                    </tbody>                                                    
+                                                </table>
+                                                <table class="nch-subtable">
+                                                    <tbody>
+                                                        <tr id="courses-add-row">
+                                                            <td><button type="button" class="nch-add" id="courses-button-add-new" onclick="addCourse()">Add New Course</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fun detail about yourself</td>
+                                            <td><textarea id="fun-detail-input" rows="2"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anything else?</td>
+                                            <td><textarea id="extra-input" rows="4"></textarea></td>
+                                        </tr>    
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                            <fieldset>
+                                What is on this page is not password protected and you should not put anything here that you don't want publicly available.
+                                <br>
+                                <input type="checkbox" id="user-agreement">Acknowledge
+                            </fieldset>
+                            <fieldset>
+                                <button type="button" onclick="submitForm()">Submit</button>
+                                <button type="button" onclick="resetForm()">Reset</button>
+                                <button type="button" onclick="exampleForm()">Give Example</button>
+                            </fieldset>
+                        </form>
+                    </section>
+					<hr class="nch-dashed">
+				</div>
+                <div id="div-invisible"></div>
+			</div>
+		</main>
+		<footer>
+			<nch-footer></nch-footer>
+		</footer>
+	</div>
+</body>
+</html>
