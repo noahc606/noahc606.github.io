@@ -49,7 +49,7 @@ function addIntro(imgSrc) {
         //Figure heading
         var fig_h1 = create("h1");
         fig_h1.setAttribute("class", "nch-text-center");
-        addText(fig_h1, eById("name-input").value);
+        addText(fig_h1, eById("name-input").value+" - "+eById("mascot-input").value);
         figure.appendChild(fig_h1);
         //Figure image
         var figimg = create("img");
