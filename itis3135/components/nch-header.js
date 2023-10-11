@@ -19,6 +19,7 @@ class NCH_Header extends HTMLElement {
                     <a href="website_evaluations.html">Website Evaluations</a> |
                     <a href="firstscripts.html">First JavaScripts</a> |
                     <a href="byo_intro.html">BYO Intro</a> |
+                    <a href="emmet.html">Emmet</a> |
                     <a href="../">Back to Parent Site</a>
                 </nav>
                 <nav>
