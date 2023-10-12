@@ -8,12 +8,12 @@ class NCH_Footer extends HTMLElement {
         <div class="nch-div-background">
             <div class="nch-div-footer nch-div-floating">
                 <nav>
-                    <a href="https://webpages.charlotte.edu/nhebert1/">UNC Charlotte Webspace</a> |
-                    <a href="https://github.com/noahc606/noahc606.github.io">Course Github Repo</a> |
+                    <a href="https://webpages.charlotte.edu/nhebert1/">CLT Webspace</a> |
+                    <a href="https://github.com/noahc606/noahc606.github.io">Course Github</a> |
                     <a href="https://noahc606.github.io/">Course Github.io</a> |
                     <a href="https://www.freecodecamp.org/noahc606">freeCodeCamp</a> |
                     <a href="https://www.codecademy.com/profiles/noahc606">Codecademy</a> |
-                    <a href="https://www.linkedin.com/in/nh606/">LinkedIn Profile</a>
+                    <a href="https://www.linkedin.com/in/nh606/">LinkedIn</a>
                 </nav>
                 <p>© 2023 Designed by <a href="hi.biz/">Hebert, Inc.</a></p>
                 <a href="https://validator.w3.org/nu/?doc=`+window.location.href+`" target="_blank" class="nch-no-underline">
