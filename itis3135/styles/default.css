@@ -1,3 +1,5 @@
+body { background-color: #650df1; }
+
 /*
     Headings:
     - Times New Roman.
@@ -23,13 +25,6 @@ a, p, figcaption, figure, form, li, table {
 }
 
 /*
-    Specific text styling:
-    - Bold, centering
-*/
-.bold { font-weight: bolder; }
-.text-center { text-align: center; }
-
-/*
     Links:
     - Visited and unvisited same green color
     - Hover is crimson color
@@ -40,6 +35,18 @@ a:visited { color: #3c6604; }
 a:hover { color: crimson; }
 a:active { color: rgb(255, 145, 163); }
 a.no-underline { color: #e0d4eb; }
+
+/*
+    Specific text styling:
+    - Bold, centering
+    - Special text
+*/
+.bold { font-weight: bolder; }
+.text-center { text-align: center; }
+.special {
+    color:#AA6600;
+    font-style: italic;
+}
 
 /*
     Dashes:
@@ -59,6 +66,10 @@ hr.dashed { border-top: 2px dotted #08C; }
 .input-1 { width: 36px; }
 .input-2 { width: 48px; }
 .input-3 { width: 72px; }
+
+/*
+    Tables:
+*/
 
 .table tr { color: #000000; }
 .table tr:nth-child(1) {
@@ -82,29 +93,27 @@ hr.dashed { border-top: 2px dotted #08C; }
     resize: none;
 }
 
-
 table.subtable { width: 100%; }
 .add { width: 100%; }
 
-body {
-    background-color: #650df1;
-}
+/*
+    Divs:
+*/
 
 .div-floating {
     margin: auto;
-    margin-bottom: 10px;
     border: 16px;
     border-width: 5px;
     border-style: solid;
 }
 .div-background {
     background-image: linear-gradient(#650df1, #463492);
-    padding: 10px;
+    padding: 10px 4px 10px 4px;
     margin: -8px;
 }
 .div-background-alt {
     background-image: linear-gradient(#463492, #650df1);
-    padding: 10px;
+    padding: 10px 4px 10px 4px;
     margin: -8px;
 }
 .div-header {
@@ -121,15 +130,13 @@ body {
 }
 .div-main {
     background-color: #b4f5df;
-    padding: 10px;    
-    min-width: 400px;
-    max-width: 900px;
+    padding: 10px;
+    max-width: 950px;
     border-width: 3px;
     border-image: linear-gradient(#FFFFFF, #000000) 45;
 }
 .div-footer {
     background-color: #e0d4eb;
-    padding: 2px;
     max-width: 1100px;
     border-image: linear-gradient(#5920b4, #093e69) 30;
 }
@@ -137,7 +144,31 @@ body {
     height: 100%;
 }
 
-.special {
-    color:#AA6600;
-    font-style: italic;
+@media (max-width: 576px) {
+    figure img {
+        min-width: 250px;
+    }
+
+    .table {
+        table-layout: fixed;
+        width: 22em;
+        font-size: smaller;
+    }
+
+    .tableform {
+        width: 100%;
+    }
+    .tableform tr td:first-child {
+        max-width: 5em;
+    }
+
+    .div-main {
+        padding: 4px;
+    }
+    .div-background, .div-background-alt {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        min-width: 100%;
+    }
+
 }
