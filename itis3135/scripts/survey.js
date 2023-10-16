@@ -32,7 +32,7 @@ function addIntro(imgSrc) {
     //Create a new div element
     const newDiv = create("div");
     newDiv.setAttribute("id", "gen-div-"+numIntros);
-    newDiv.className = "nch-div-main nch-div-floating";
+    newDiv.className = "div-main div-floating";
 
     //Add main header
     x = create("h2");
@@ -41,31 +41,31 @@ function addIntro(imgSrc) {
 
     //Add hr
     x = create("hr");
-    x.setAttribute("class", "nch-dashed");
+    x.setAttribute("class", "dashed");
     newDiv.appendChild(x);
 
     //Add figure with figcaption
     var figure = create("figure");
         //Figure heading
         var fig_h1 = create("h1");
-        fig_h1.setAttribute("class", "nch-text-center");
+        fig_h1.setAttribute("class", "text-center");
         addText(fig_h1, eById("name-input").value+" - "+eById("mascot-input").value);
         figure.appendChild(fig_h1);
         //Figure image
         var figimg = create("img");
-        figimg.setAttribute("class", "nch-figure");
+        figimg.setAttribute("class", "figure");
         figimg.setAttribute("src", imgSrc);
         figure.appendChild(figimg);
         //Figcaption
         var figcap = create("figcaption");
         addText(figcap, eById("imgcaption-input").value);
-        figcap.setAttribute("class", "nch-figure");
+        figcap.setAttribute("class", "figure");
         figure.appendChild(figcap);
     newDiv.appendChild(figure);
 
     //Add unordered list
     var ul = create("ul");
-    ul.setAttribute("class", "nch-div-list");
+    ul.setAttribute("class", "div-list");
         //Personal Background
         buildListItem(ul, "Personal Background", eById("personal-bg-input").value );
         //Professional Background
@@ -138,7 +138,7 @@ function addCourse() {
     newRow.setAttribute("id", "gen-tr-"+numCourses);
         //Table data 1
         var td1 = create("td");
-        td1.setAttribute("class", "nch-small");
+        td1.setAttribute("class", "small");
             //Table data input 1
             var input1 = create("input");
             input1.setAttribute("id", "courses-input-a-"+numCourses);
@@ -147,7 +147,7 @@ function addCourse() {
         newRow.appendChild(td1);
         //Table data 2
         var td2 = create("td");
-        td2.setAttribute("class", "nch-medium");
+        td2.setAttribute("class", "medium");
             //Table data input 2
             var input2 = create("input");
             input2.setAttribute("id", "courses-input-b-"+numCourses);
@@ -156,12 +156,12 @@ function addCourse() {
         newRow.appendChild(td2);
         //Table data 3
         var td3 = create("td");
-        td3.setAttribute("class", "nch-small");
+        td3.setAttribute("class", "small");
             //Table data input 3
             var input3 = create("button");
             input3.setAttribute("type", "button");
             input3.setAttribute("id", "courses-input-c-"+numCourses);
-            input3.setAttribute("class", "nch-remove");
+            input3.setAttribute("class", "remove");
             input3.setAttribute("onclick", "removeCourse(this.id)");
             addText(input3, "Remove");
             td3.appendChild(input3);

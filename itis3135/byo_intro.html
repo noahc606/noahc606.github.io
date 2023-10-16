@@ -9,21 +9,21 @@
 	<script src="components/nch-footer.js" defer></script>
 	<script src="scripts/survey.js" defer></script>
 </head>
-<body class="nch-body">
-	<div class ="nch-div-background nch-div-fill">
+<body class="body">
+	<div>
 		<header>
 			<nch-header></nch-header>
 		</header>
 		<main>
-			<div class="nch-div-background-alt" id ="div-background">
-				<div class="nch-div-main nch-div-floating" id="div-main">
+			<div class="div-background-alt" id ="div-background">
+				<div class="div-main div-floating" id="div-main">
 					<h2>Bring Your Own Introduction</h2>
-					<hr class="nch-dashed">
+					<hr class="dashed">
                     <section>
                         <h3>Want to introduce yourself (or somebody else)? Fill out the form below and we will generate an introduction page for you.</h3>
-                        <form action="POST" id="byoform" class="nch-tableform">
+                        <form action="POST" id="byoform" class="tableform">
                             <fieldset>
-                                <table class="nch-tableform">
+                                <table class="tableform">
                                     <tbody>
                                         <tr>
                                             <td>Prompt</td>
@@ -68,14 +68,14 @@
                                         <tr>
                                             <td>Courses you are taking</td>
                                             <td>
-                                                <table class="nch-subtable">
+                                                <table class="subtable">
                                                     <tbody id="courses-subtable">
                                                     </tbody>                                                    
                                                 </table>
-                                                <table class="nch-subtable">
+                                                <table class="subtable">
                                                     <tbody>
                                                         <tr id="courses-add-row">
-                                                            <td><button type="button" class="nch-add" id="courses-button-add-new" onclick="addCourse()">Add New Course</button></td>
+                                                            <td><button type="button" class="add" id="courses-button-add-new" onclick="addCourse()">Add New Course</button></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -104,7 +104,7 @@
                             </fieldset>
                         </form>
                     </section>
-					<hr class="nch-dashed">
+					<hr class="dashed">
 				</div>
                 <div id="div-invisible"></div>
 			</div>
