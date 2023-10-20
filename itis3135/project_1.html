@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Hebert || Neat Horse || ITIS3135 || Project 1</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+</head>
+<body class="body">
+    <div>
+        <header>
+			<nch-header></nch-header>
+		</header>
+        <main>
+            <div class="div-background-alt">
+                <div class="div-main div-floating">
+					<h2>Client Project Outline</h2>
+					<hr class="dashed">
+                        <h3>Preliminaries</h3>
+                            <h4>Client Category (2)</h4>
+                                <p>The client is a friend of mine that lives outside of North Carolina.</p>
+                            <h4>Project Category (1)</h4>
+                                <p>I will be developing a web application to help anybody looking to build a website promoting their technical experience and brand.</p>
+					<hr class="dashed">
+                        <h3>Requirements & Design</h3>
+                            <h4>Project Overview</h4>
+                                <ol>
+                                    <li>
+                                        Application & Purpose
+                                        <ul>
+                                            <li>Project name: TPS (Technical Portfolio Studio).</li>
+                                            <li>The application will be a website generator for a website promoting the client's technical experience.</li>
+                                            <li>After the user is done building the "base" of their website, they may simply use CTRL+S to save each page to their own computer for further modification.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Intended users
+                                        <ul>
+                                            <li>Ultimately this application will provide a "template website" for anybody looking to build a site promoting themselves.</li>
+                                            <li>These can be students as well as those who are already in the professional world.</li>
+                                            <li>It's free to use.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Content
+                                        <ul>
+                                            <li>The app will work by having two modes: an 'edit' mode and a 'preview' mode. There will be a button where you can toggle between the two, which will float in the top-left corner.
+                                            <li>Being in the 'edit' mode will reveal buttons for editing a navbar ("navigation bar") as well as other site contents.</li>
+                                            <li>By default, the navbar's elements are already there. For any particular navbar link, the user may choose whether to include, edit, or remove it.</li>
+                                            <li>The navbar elements may link to a personal introduction page; A resume page; A page listing contact info of references; or pages for personal projects (one page per project).</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            <h4>Client Information</h4>
+                                <ol>
+                                    <li>Client Name: Charles Haney</li>
+                                    <li>Client Background: He is a good friend of mine who lives out of state. He wants to build a website to promote his background. He has some technical expertise and could build a good website if he put in the time; however, he would like to get a basic layout for his site up and running as quickly as possible. </li>
+                                    <li>Client Organization: None in particular - He is a college student outside of North Carolina. </li>
+                                    <li>Client E-mail: [private]</li>
+                                    <li>Client Phone #: [private]</li>
+                                </ol>
+                            <h4>Sitemap</h4>
+                            <img src="images/SiteMap.png"></img>
+
+                            <h4>Page Design - Global Elements</h4>
+                            <ol>
+                                <li>
+                                    Preview/Edit Button
+                                    <ul>
+                                        <li>When clicked, the mode will switch to either "Preview" or "Edit".</li>
+                                        <li>When in the "Preview" mode, the site appears to be a normal web page.</li>
+                                        <li>When in the "Edit" mode, all the forms appear where you can edit/add/remove basic web elements.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Customization Buttons
+                                    <ul>
+                                        <li>"Preview" and "Edit": Allows the user to go into "Preview" or "Edit" mode.</li>
+                                        <li>"Create New Page": When clicked, an alert window will appear which will allow the user to select the title of a new page. Then, the new page is added toward the end of the existing navbar. </li>
+                                        <li>"Edit Page Link": An alert window will pop up with two fields. In the first is the nav link ID (1, 2, 3, 4...) and the second is the new nav link name (A string). </li>
+                                        <li>"Remove Page": An alert window will pop up where the user can select which nav link (#) they want to remove.</li>
+                                        <li>"Instructions": Introduces the user to app functionality. This will be its own page with several paragraphs and images.</li>
+                                        <li>"Your Website": Brings the user to the main interface with the navbar.</li>
+                                        <li>"Advanced": Brings the user to the Styling and Customization options, which is a separate page</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Layout of These Elements
+                                    <ul>
+                                        <li>Both of these elements be within a window that floats on the top left corner of the page.</li>
+                                        <li>The sub-buttons will be laid out just like how they appear in the image above, within the floating window.</li>
+                                        <li>These elements will be on all pages, and will never disappear.</li>
+                                        <li>The "(selected)" text you see on the site map represents which button is selected in that group. The "(selected)" will not be there on the real site - rather, there will be a color-based indicator.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <h4>Page Design - Individual Pages</h4>
+                                <ol>
+                                    <li>
+                                        Index
+                                        <ul>
+                                            <li>Represnts what will become the user's homepage.</li>
+                                            <li>User may build headers, paragraphs, lists, and images using form elements.</li>
+                                            <li>These form elements will be textboxes, normal buttons, and file-upload buttons.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        About Me
+                                        <ul>
+                                            <li>This page will be similar in essence to the BYO Intro page. However there will be more customizability options.</li>
+                                            <li>Like in page #1, the user will be able to build headers, paragraphs, lists, and images as HTML elements.</li>
+                                            <li>The page will be pre-filled with an introduction similar to the BYO Intro default introduction.</li>
+                                            <li>There will be a preview/edit button to build the elements and preview the sites - this is where the user can save it using CTRL+S.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Resume
+                                        <ul>
+                                            <li>This will be a form page prefilled with data of what a real resume would look like.</li>
+                                            <li>The user will upload a PDF/DOCX (check with JavaScript) of their resume.</li>
+                                            <li>Of course, there are many small details which the user will need put in manually, but this tool should do most of the work.</li>
+                                            <li>This page has the same preview/edit button as the previous one.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Contacts, References
+                                        <ul>
+                                            <li>Again, this page will be a generator similar to #2 and #3, also with a preview/edit button.</li>
+                                            <li>The user will add their own contact info (E-mail, Phone #) and any of their social links (LinkedIn, GitHub, GitLab, etc).</li>
+                                            <li>The user will add any references with their contact info. To do this, there will be an "Add Reference" button which will dynamically generate a mini-form which itself will generate HTML elements.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Projects
+                                        <ul>
+                                            <li>Here, the user can generate one or more personal project pages and preview them.</li>
+                                            <li>Each one of these projects will appear individually as a page in the navbar.</li>
+                                            <li>Similarly to #2, the user will be able to build headers, paragraphs, lists, and images.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Styling, Customization
+                                        <ul>
+                                            <li>The most complicated feature of the application - This section will be accessed through the "Advanced" global button.</li>
+                                            <li>The user can set the CSS of the own site and see the background, colors, and fonts change in real time.</li>
+                                            <li>Ths will work by using JavaScript to change the CSS within the HTML file (head > styles). At the same time, the webpage will update a copy-paste section with the corresponding CSS code.</li>
+                                            <li>There will be instructions as to how to set up an external stylesheet that works for all the pages.</li>
+                                            <li>Like with the resume, the user obviously won't be able to do EVERYTHING they want from the web UI - but they can get the most of the basics done.</li>
+                                        </ul>
+                                    </li>                                        
+                                </ol>
+                            <h4>Dynamic Site Functionality</h4>
+                                <ul>
+                                    <li>Nearly every page (except for the home) will have Javascript functionality.</li>
+                                    <li>Each of the functional pages (#2-#5) will dynamically create HTML elements. These will work similarly to the BYO Intro page but will have support for adding multiple images, paragraghs, and headers.</li>
+                                    <li>Each of the functional pages will have an option to preview what the page will look like based on the user input.</li>
+                                    <li>The very last site (Styling, Layout, Customization) will be able to change its own CSS styling based on a number of form fields. These deal with the navbar layout(sidebar or top), font color, font type, and the background image/color/color gradient.</li>
+                                </ul>
+                            
+                    <hr class="dashed">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nch-footer></nch-footer>
+        </footer>
+    </div>
+    
+</body>
+</html>

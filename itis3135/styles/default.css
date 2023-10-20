@@ -9,19 +9,28 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(17, 25, 134)
 }
-h2, h3, h4, h5, h6 {
+h2, h3 {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(17, 60, 180)
 }
+h4, h5, h6 {
+    font-family: 'Times New Roman', Times, sans-serif;
+    color: rgb(0, 100, 90)
+}
 
 /*
-    Most text elements:
+    Most text/image elements:
     - links, paragraphs, captions, list items, table items
     - Arial font as opposted to more formal Times font
+    - Images have their max-width set to 100%
+
 */
 a, p, figcaption, figure, form, li, table {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black
+}
+img {
+    max-width: 100%;
 }
 
 /*
