@@ -15,6 +15,8 @@ function addText(element, text) {
 
 let display1 = "0";
 let display2 = "0";
+let input1;
+let input2;
 
 function overflowPreventsInput() {
     if( display2.includes("Overflow") || display2.includes("Infinity") || display2.includes("NaN") ) {
@@ -31,9 +33,28 @@ function clearInputs() {
     display2 = "0";
 }
 
+function cleanUpDisplays() {
+    if( display1=="" || display1=="-" ) {
+        display1 = "0";
+    }
+    if( display2=="" || display2=="-" ) {
+        display2 = "0";
+    }
+
+    if(display2.length>14) {
+        display1 = "0";
+        display2 = "Overflow";
+        input1.textContent = "0";
+        input2.textContent = "Overflow";
+    } else {
+        input1.textContent = display1;
+        input2.textContent = display2;
+    }
+}
+
 function pushButton(button) {
-    let input1 = eById("display1");
-    let input2 = eById("display2");
+    input1 = eById("display1");
+    input2 = eById("display2");
     
     switch(button) {
         case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
@@ -81,7 +102,7 @@ function pushButton(button) {
         } break;
 
         // '$': represents switch between negative/positive
-        case '$': {
+        case '$': {            
             let num = Number(display2);
             display2 = ""+-num;
         } break;
@@ -133,20 +154,27 @@ function pushButton(button) {
         } break;
     }
 
-    if( display1=="" || display1=="-" ) {
-        display1 = "0";
-    }
-    if( display2=="" || display2=="-" ) {
-        display2 = "0";
-    }
+    cleanUpDisplays();
+}
 
-    if(display2.length>14) {
-        display1 = "0";
-        display2 = "Overflow";
-        input1.textContent = "0";
-        input2.textContent = "Overflow";
-    } else {
-        input1.textContent = display1;
-        input2.textContent = display2;
+
+window.onload = function()
+{
+    //Operator Buttons
+    document.getElementById("calc-btn-plus").onclick = function(){pushButton('+');};
+    eById("calc-btn-minus").onclick = function(){pushButton('-');};
+    eById("calc-btn-times").onclick = function(){pushButton('*');};
+    eById("calc-btn-divide").onclick = function(){pushButton('/');};
+    eById("calc-btn-negate").onclick = function(){pushButton('$');};
+    
+    //Number buttons
+    for(let i = 0; i<=9; i++) {
+        eById("calc-btn-"+i).onclick = function(){pushButton(''+i);};
     }
+    eById("calc-btn-decimal").onclick = function(){pushButton('.');};
+
+    //Clear, Backspace, Equals
+    eById("calc-btn-clear").onclick = function(){pushButton('C');};
+    eById("calc-btn-backspace").onclick = function(){pushButton('⌫');};
+    eById("calc-btn-equals").onclick = function(){pushButton('=');};
 }
