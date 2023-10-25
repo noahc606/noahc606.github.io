@@ -47,11 +47,15 @@ a.no-underline { color: #e0d4eb; }
 
 /*
     Specific text styling:
-    - Bold, centering
+    - Bold, italic, centering
     - Special text
+    - Font size
 */
 .bold { font-weight: bolder; }
+.text-bold { font-weight: bold; }
+.text-italic { font-style: italic; }
 .text-center { text-align: center; }
+.text-right { text-align: right; }
 .special {
     color:#AA6600;
     font-style: italic;
@@ -179,5 +183,34 @@ table.subtable { width: 100%; }
         padding-bottom: 16px;
         min-width: 100%;
     }
+}
 
+.calculator {
+    max-width: 210px;
+    min-height: 280px;
+    table-layout: fixed;
+    border-color: #08C;
+}
+
+.calculator table tr th button {
+    min-width: 35px;
+    min-height: 35px;
+    background-color: cyan;
+    border-color: #08C;
+}
+
+.calculator table tr th .calculator-equals {
+    min-height: 80px;
+}
+
+.calculator table tr td span.display1 {
+    font-family: monospace;
+    font-size: 1.2em;
+    color:rgb(43, 113, 148);
+    font-style: italic;
+}
+
+.calculator table tr td span.display2 {
+    font-size: 1.6em;
+    font-family: monospace;
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || Calculator #1</title>
+    <link rel="stylesheet" href="styles/default.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+	<script src="scripts/calculator_try.js" defer></script>
+</head>
+<body>
+    <div>
+        <header>
+            <nch-header></nch-header>
+        </header>
+        <main>
+			<div class="div-background-alt" id ="div-background">
+                <div class="div-main div-floating" id="div-main">
+                    <h2>Calculator Attempt</h2>
+                    <hr class="dashed">
+                    <h3>Note 1</h3>
+                    <p>I was able to build this calculator without the FCC tutorial.</p>
+                    <h3>Note 2</h3>
+                    <p>The Windows 10/11 Microsoft calculator gives results on the fly as you type in operators (+, -, etc). Thus, that calculator does not do order of operations unless you explicitly type in parentheses. </p>
+                    <p>This calculator calculates whatever you put in it as a single expression, taking into account order of operations. As a result, it is comparable to the results you would get if you typed in a math expression into the Google search bar.</p>
+                    <h3>Calculator</h3>
+                    <form>
+                        <fieldset class="calculator">
+                            <table class="tableform calculator">
+                                <tr>
+                                    <th colspan="4">Calculator</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right"><span id="display1" class="display1">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right"><span id="display2" class="display2">0</span></td>
+                                </tr>
+                                <tr>
+                                    <th><button type="button" onclick="pushButton('+')">+</button></th>
+                                    <th><button type="button" onclick="pushButton('-')">-</button></th>
+                                    <th><button type="button" onclick="pushButton('*')">x</button></th>
+                                    <th><button type="button" onclick="pushButton('/')">÷</button></th>
+                                </tr>
+                                <tr>
+                                    <th><button type="button" onclick="pushButton('7')">7</button></th>
+                                    <th><button type="button" onclick="pushButton('8')">8</button></th>
+                                    <th><button type="button" onclick="pushButton('9')">9</button></th>
+                                    <th><button type="button" onclick="pushButton('C')"><span class="bold">C</span></button></th>
+                                </tr>
+                                <tr>
+                                    <th><button type="button" onclick="pushButton('4')">4</button></th>
+                                    <th><button type="button" onclick="pushButton('5')">5</button></th>
+                                    <th><button type="button" onclick="pushButton('6')">6</button></th>
+                                    <th><button type="button" onclick="pushButton('⌫')">⌫</button></th>
+                                </tr>
+                                <tr>
+                                    <th><button type="button" onclick="pushButton('1')">1</button></th>
+                                    <th><button type="button" onclick="pushButton('2')">2</button></th>
+                                    <th><button type="button" onclick="pushButton('3')">3</button></th>
+                                    <th rowspan="2"><button type="button" class="calculator-equals" onclick="pushButton('=')">=</button></th>
+                                </tr>
+                                <tr>
+                                    <th><button type="button" onclick="pushButton('$')">+/-</button></th>
+                                    <th><button type="button" onclick="pushButton('0')">0</button></th>
+                                    <th><button type="button" onclick="pushButton('.')">.</button></th>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                    <hr class="dashed">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nch-footer></nch-footer>
+        </footer>
+    </div>
+    
+</body>
+</html>

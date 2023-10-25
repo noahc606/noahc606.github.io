@@ -21,7 +21,8 @@ class NCH_Header extends HTMLElement {
                         <a href="firstscripts.html">First JavaScripts</a> |
                         <a href="byo_intro.html">BYO Intro</a> |
                         <a href="emmet.html">Emmet</a> |
-                        <a href="project_1.html">Project 1</a>
+                        <a href="project_1.html">Project 1</a> |
+                        <a href="calculator_try.html">Calculator 1</a>
                     </nav>
                     <nav>
                         <a href="stuff/( ͡❛ ͜ʖ ͡❛) A WEBPAGE file!.htm">Bad Design</a>
