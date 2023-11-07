@@ -15,7 +15,11 @@ class NCH_Footer extends HTMLElement {
                     <a href="https://www.codecademy.com/profiles/noahc606">Codecademy</a> |
                     <a href="https://www.linkedin.com/in/nh606/">LinkedIn</a>
                 </nav>
-                <p>© 2023 Designed by <a href="hi.biz/">Hebert, Inc.</a></p>
+                <p>
+                © 2023 Designed by 
+                <a href="hi.biz/">Hebert, Inc</a>.
+                <a href="https://freecodecamp.org/certification/noahc606/responsive-web-design">Certified</a>
+                in JS.</p>
                 <a href="https://validator.w3.org/nu/?doc=`+window.location.href+`" target="_blank" class="no-underline">
                     <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
                 </a>

@@ -39,10 +39,26 @@ img {
     - Hover is crimson color
     - Active is pink color
 */
-a { color: #3c6604 }
-a:visited { color: #3c6604; }
+a { color: #6152a3; }
+nav.nch-nav-1 > a { color:#443485 }
+nav.nch-nav-2 > a { color:#6152a3; }
+nav.nch-nav-3 > a { color:#8373cc; }
+
+a:visited { color: #477010; }
+nav.nch-nav-1 > a:visited { color:#283f0b; }
+nav.nch-nav-2 > a:visited { color:#477010; }
+nav.nch-nav-3 > a:visited { color:#548f07; }
+
 a:hover { color: crimson; }
-a:active { color: rgb(255, 145, 163); }
+nav.nch-nav-1 > a:hover {color:#9c0624}
+nav.nch-nav-2 > a:hover {color:crimson}
+nav.nch-nav-3 > a:hover {color:#f35373}
+
+a:active { color: #ff91a3; }
+nav.nch-nav-1 > a:active {color:#eb6279}
+nav.nch-nav-2 > a:active {color:#ff91a3}
+nav.nch-nav-3 > a:active {color:#fdb7c3}
+
 a.no-underline { color: #e0d4eb; }
 
 /*
@@ -153,7 +169,7 @@ table.subtable { width: 100%; }
 .div-footer {
     background-color: #e0d4eb;
     max-width: 1100px;
-    border-image: linear-gradient(#5920b4, #093e69) 30;
+    border-image: linear-gradient(#022646, #3b0492) 30;
 }
 .div-fill {
     height: 100%;

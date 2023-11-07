@@ -11,20 +11,22 @@ class NCH_Header extends HTMLElement {
                     <h1>Noah Hebert's ITIS3135 Site</h1>
                 </div>
                 <div class="div-subheader div-floating">
-                    <nav>
-                        <a href="index.html">Home</a> |
+                    <nav class="nch-nav-1">
+                        <a class="x" href="index.html">Home</a> |
                         <a href="introduction.html">Introduction</a> |
-                        <a href="contract.html">Contract</a> |
+                        <a href="contract.html">Contract</a>
+                    </nav>
+                    <nav class="nch-nav-2">
                         <a href="tables.html">Tables</a> |
                         <a href="forms.html">Forms</a> |
-                        <a href="website_evaluations.html">Website Evaluations</a> |
-                        <a href="firstscripts.html">First JavaScripts</a> |
+                        <a href="website_evaluations.html">Site Evaluations</a> |
+                        <a href="firstscripts.html">First JS</a> |
                         <a href="byo_intro.html">BYO Intro</a> |
                         <a href="emmet.html">Emmet</a> |
                         <a href="project_1.html">Project 1</a> |
-                        <a href="calculator_try.html">Calculator 1</a>
+                        <a href="calculator_try.html">Calculator</a>
                     </nav>
-                    <nav>
+                    <nav class="nch-nav-3">
                         <a href="stuff/( ͡❛ ͜ʖ ͡❛) A WEBPAGE file!.htm">Bad Design</a>
                     </nav>
                 </div>
