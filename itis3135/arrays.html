@@ -15,7 +15,31 @@
     <main>
         <div class="div-background-alt" id ="div-background">
             <div class="div-main div-floating">
-                <h2>asdfasdfasdf</h2>
+                <h2>Arrays</h2>
+                <form>
+                    <table>
+                        <tr><td>Input name:</td>    <td><input type="text" id="name-input" required></td></tr>
+                        <tr><td>Input salary:</td>  <td><input type="text" id="salary-input" required></td></tr>
+                        <tr>
+                            <td><button type="button" id="add-salary-button" onclick="addSalaryButton()">Add salary</button></td> 
+                            <td><input type="checkbox" id="update-real-time" onclick="onCheckboxClicked(this)">Update data in real time?</td> 
+                        </tr>
+                    </table>
+                </form>
+                <br>
+                <button type="button" onclick="displayResults()">Display results</button>
+                <button type="button" onclick="displaySalary()">Display salary</button>
+                <br>
+                <select id="employee-selection">
+                    <option value="0">Select Employee</option>
+                </select>
+                <div id="results" class="div-results">
+                    <h2>Company Analytics</h2>
+                    <p id="results_avg"></p>
+                    <p id="results_max"></p>
+                    <table id="results_table" class="table">
+                    </table>
+                </div>
             </div>    
         </div>
     </main>
