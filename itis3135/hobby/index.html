@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's C++ Game Programming</title>
+	<script src="components/bte-footer.js" defer></script>
+    <style>
+        :root {
+            --footer-bg-color: rgb(255, 255, 255);
+        }
+
+        * {
+            color: white;
+        }
+
+        .no-underline {
+            color: var(--footer-bg-color);
+        }
+
+        body h1 {
+            text-align: center;
+            margin: auto;
+            color: white;
+            background-color: black;
+        }
+
+        body h4 {
+            text-align: center;
+            margin: auto;
+            color: white;
+            margin-bottom: 32px;
+
+        }
+
+        body {
+            background-color: black;
+            background-image: url("images/site-background.png");
+        }
+
+        a {
+            color: lightskyblue;
+        }
+
+        .div-bte {
+            width: 70%;
+            margin: auto;
+            border: 16px;
+            border-width: 8px;
+            border-color: darkblue;
+            border-style: ridge;
+        }
+
+        .div-main {
+            background: repeating-linear-gradient(0deg, rgb(15, 15, 15) 0px, rgb(20, 20, 20) 4px, rgb(30, 30, 30) 8px);
+            padding: 16px;
+        }
+
+        .div-header {
+            background: rgb(15, 15, 15);
+            padding: 2px 16px 16px 16px;
+        }
+
+        .div-header p {
+            margin-bottom: 4px;
+        }
+        .div-bte h2, .div-main h3 {
+            font-family:'Times New Roman', Times, serif;
+        }
+        .div-bte p, .div-bte li, .div-bte figure, .div-bte nav {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .figure {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-style: italic;
+
+            position: relative;
+            width: 50%;
+            max-width: 100px;
+        }
+
+        figcaption {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .show-one {
+            max-width: 70%;
+            max-height: 600px;
+        }
+        .show-one-table {
+            min-width: 100%;
+            max-width: 100%;
+        }
+        .show-two {
+            max-width: 48%;
+            min-height: 450px;
+            max-height: 500px;
+        }
+        .show-icon {
+            text-align: center;
+            margin: auto;
+            width: 64px;
+        }
+
+        [hidden] { display: none; }
+    </style>
+    <script>
+        window.onload = function() {
+            hideAllExcept('sec-what');
+        }
+
+        function hideAllExcept(id) {
+            document.getElementById('sec-what').hidden = true;
+            document.getElementById('sec-who').hidden = true;
+            document.getElementById('sec-why').hidden = true;
+            document.getElementById('sec-how').hidden = true;
+            document.getElementById('sec-when').hidden = true;
+            document.getElementById('sec-where').hidden = true;
+
+            document.getElementById(id).hidden = false;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Noah's C++ Game Programming</h1>
+        <h4>w/ the SDL2 libraries</h4>
+        <div class="div-header div-bte">
+            <p>Navigate Through Pages:</p>
+            <nav>
+                <a href="#" onclick="hideAllExcept('sec-what')">Home</a> |
+                <a href="#" onclick="hideAllExcept('sec-who')">Background</a> |
+                <a href="#" onclick="hideAllExcept('sec-why')">Why Bother?</a> |
+                <a href="#" onclick="hideAllExcept('sec-how')">How's Development?</a> |
+                <a href="#" onclick="hideAllExcept('sec-when')">When Done?</a> |
+                <a href="#" onclick="hideAllExcept('sec-where')">Where to Go From Here?</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="div-main div-bte">
+            <section id="sec-what" hidden>
+                <h2>Home</h2>
+                <h3>Introduction</h3>
+                <p>
+                    This is my video game, "Back to Earth".
+                </p>
+
+                <figure>
+                    <img src="./images/game.png" class="show-one figure">
+                    <figcaption class="show-one figure">A top-down view of a 3D tile map</figcaption>
+                </figure>
+    
+                <h3>What am I looking at?</h3>
+                <p>
+                    You are looking at a video game that I built in C++, using a minimal number of external libraries (SDL2, SDL_image, SDL_mixer).
+                    Specifically we are in a top-down view of a procedurally generated world of tiles (much like Minecraft).
+                    However, the main difference is that this game will primarily be 2D in nature.
+                    Here, the brightest tiles represent tiles with the highest altitude.
+                    By contrast, the darker tiles represent ground that is "lower down" and the pitch-black tiles that you can't see represents anything that is inside of a wall.
+                    Within the game itself you will eventually have the option to have multiple "views" (like looking up, horizontally, etc). But right now, the only view that is currently implemented and shown is the "down" view.
+                </p>
+                <p>
+                    As the name suggests, this will be a sci-fi themed video game with open world elements - similar to those of Minecraft and other survival games.
+                </p>
+                <p>
+                    Here are what the title screen and controls menu look like:
+                </p>
+
+                <table>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="./images/intro-title.png" class="show-one-table figure">
+                                <figcaption class="show-one figure">The title screen</figcaption>
+                            </figure>            
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./images/intro-controls.png" class="show-one-table figure">
+                                <figcaption class="show-one figure">The controls screen</figcaption>
+                            </figure> 
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="sec-who" hidden>
+                <h2>Background & Motivation</h2>
+                <figure>
+                    <img src="./images/icon.png" class="show-icon figure">
+                    <figcaption class="show-one figure">Back to Earth.</figcaption>
+                </figure>
+                <p>
+                    I developed this application over the last two years.
+                    Right now I would say the base framework of the application (UI, audio, utility classes, file handling, etc) is done.
+                    I also now have enough physical features in the application that makes it worth showing off (hence the reason why I built this site).
+                </p>
+                <p>
+                    What encourages me the most, however, is overcoming the development of the 3D tile map that makes up the world.
+                    The 2D view of the 3D world I showed you previously incorporates level-of-detailing techniques to make it so that the application doesn't slow down when zoomed out really far.
+                    Side scrolling, scaling, and drawing of entities all work very well in this current framework too.
+                    In addition to that, the world is practically infinite (until you get billions of tiles away from the origin, at least).
+                </p>
+                <p>
+                    All of that, in addition to saving artificial tiles placed/destroyed by the player, has been implemented with very few serious bugs.
+                    These are all relatively recent developments - the hard part is out of the way and now actually implementing cool features is going to be much easier.
+                </p>
+                <p>
+                    Oh, and just to make one last thing clear - I don't plan on ever making money off of this, nor do I plan on going into game design in general.
+                    This is just a thing I'd like to do on the side, just to see how far I can get with it.
+                    I also think it helps to have more examples out there of how to work with the SDL2 libraries, since in my experience I have had quite some trouble with them.
+                    The documentation out there on the internet isn't the best in my opinion.
+                </p>
+            </section>
+            <section id="sec-why" hidden>
+                <h2>Why Bother?</h2>
+                <p>
+                    Any person might ask a few questions that somewhat go along the lines of these:
+                </p>
+                <ul>
+                    <li>Why use C++ instead of Java/Python/etc?</li>
+                    <li>Why not use a game API or engine, like OpenGL/Unity/etc?</li>
+                    <li>Why not use a library for X?</li>
+                </ul>
+                <p>
+                    The answer to all of the above is that I wanted to see how cross-platform I could get my application to be while only having basic tools available.
+                    Or... I guess a more accurate way of putting it: I wanted it to make it hard on purpose. This was so that I could learn the basics of C/C++ (especially those tricky pointer variables).
+                    I would say that my programming skill has grown considerably as a result of this project.
+                    Though, there are downsides that come with that:
+                    the codebase is getting bigger, and old code I wrote a year ago either doesn't make sense to me, or just turns out to be badly written upon any second inspection.
+                </p>
+                <figure>
+                    <img src="./images/underground-maze.png" class="show-one figure">
+                    <figcaption class="show-one figure">"Lost in the maze".</figcaption>
+                </figure>   
+                <p>
+                    Another motivation I have for doing things this way is the lack of "good" documentation out there for SDL2 in general.
+                    I'm sure most people in my position two years ago would have had to do a lot of work building things from the ground up rather than having examples and documentation out there to work off of.
+                </p>
+            </section>
+            <section id="sec-how" hidden>
+                <h2>How Has Development Gone?</h2>
+                <p>
+                    Surprisingly, I would say development is going very smooth.
+                    The hardest (and latest) thing I've been working on is the level saving I briefly mentioned in the "Background" section.
+                    Right now, that feature is in mostly working order, although it is not implemented within the world just yet.
+                </p>
+                <p>
+                    The C++ language, much like its parent, C, is known to be hard to debug compared to higher-level alternatives like Java.
+                    All it takes is a "segmentation fault (core dumped)" error which could result in a who-knows-how-much amount of work to find a single piece of memory that wasn't handled correctly.
+                    A general rule of thumb that I've learned is to not use pointers if possible, as they can be dangerous if misued.
+                    Unfortunately, a lot of the codebase still suffers from having pointers all over the place, back when I was just learning the basics of C/C++.
+                    And in addition to that, there's a lot of little issues that pop up here and there that I have to fix.
+                </p>
+                <p>
+                    To help deal with all those things, I made a debug screen. Here you can see two examples: one at the title screen and one in-game:
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="./images/title-debug-still.png" class="show-one-table figure">
+                                <figcaption class="show-one figure">Debugging title screen</figcaption>
+                            </figure>            
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./images/world-debug-still.png" class="show-one-table figure">
+                                <figcaption class="show-one figure">Debugging world</figcaption>
+                            </figure> 
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Additionally, there exist the beginnings of a command prompt which normal users can't access, unless they type in a secret password only I know.
+                    It allows for special debug tasks, like showing sprite sheets on the screen, teleportation throughout the world, and other cool things.
+                    That functionality is really useful, combined with the ability to dynamically reload assets using F9.
+                    You can see all these things in action in this video (you may have to <i>Right-click</i> & <i>Open in new tab</i> to play it).
+                </p>
+                <video controls class="figure show-one">
+                    <source src="./images/bte debugging.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Notes:
+                    <ol>
+                        <li>You can see me typing the commands in at the far bottom of the screen (you may have to move your cursor off the video).</li>
+                        <li>The first teleportation command teleported me into the ground, resulting in an all black screen.</li>
+                        <li>The second teleportation command was successful.</li>
+                        <li>At the end of the video I destroy some of the terrain and fly up/down vertically.</li>
+                    </ol>
+                </p>
+            </section>
+            <section id="sec-when" hidden>
+                <h2>So, When Will It Be Done?</h2>
+                <p>
+                    You can run Back to Earth right now, if you are on Windows or Linux.
+                    Just download and extract the repository files onto your computer, from <a href="https://github.com/noahc606/Back-to-Earth" target="_blank">here</a>.
+                    After that, it's as simple as going into the "/bin" folder and selecting the appropriate "Back-to-Earth" executable file.
+                    It <i>should theoretically</i> run on your computer without any major problems (I would REALLY like to know if there are issues).
+                </p>
+
+                <figure>
+                    <img src="./images/game-guide.png" class="show-two figure">
+                    <figcaption class="show-one figure">Guide to Gaming.</figcaption>
+                </figure>
+
+                <p>
+                    There is one big issue I am having regarding cross-platform compatibility: automatic directory and file creation.
+                    I have it working perfectly on Linux but not on Windows, which results in many textfile-based settings not saving for Windows users (in some cases).
+                    But that is the only major thing plaguing this piece of work right now. Fortunately, I have gotten other file operations, such as image and audio loading, to work reliably on both platforms.
+                </p>
+            </section>
+            <section id="sec-where" hidden>
+                <h2>Where Do We Go From Here?</h2>
+                <p>
+                    As I alluded to on the home page, this will be an open world, sci-fi-themed survival game.
+                    Here are some things that may be implemented in the near future:
+                </p>
+                <ol>
+                    <li>A Health bar and Oxygen bar that the player must keep track of to stay alive.</li>
+                    <li>The need to wear a space suit when on most planets, or in space.</li>
+                    <li>A proper inventory system where you can interact with items. Currently I have the GUI set up, but nothing beyond that.</li>
+                    <li>Basic enemies in the world.</li>
+                </ol>
+                <p>
+                    I am pretty confident I will keep working on this for some time.
+                    Regarding a specific list of features: I don't really have an set goal in mind, and it'll likely end up being me adding random things if I feel they should be in the game.
+                    However, there will be a definite beginning and end (hopefully in the near future).
+                    The beginning involves the player having to survive stranded on an extrasolar planet with limited resources.
+                    The mid-game would involve the player building their first rocket to another planet and expanding their tech capabilities.
+                    And finally, the end-game would involve the player building an artificial wormhole to finally get back to Earth.
+                </p>
+                <p>And there are a ton of things I have in mind for the far future. Here are just a few of them:</p>
+                <ol>
+                    <li>Building pressurized space habitats.</li>
+                    <li>Mining machines to harvest raw metal resources in the ground.</li>
+                    <li>Rockets to other planets, each with their own native resources.</li>
+                    <li>Cargo rockets shipping resources between planets.</li>
+                    <li>Dungeons with tons of enemies.</li>
+                    <li>Building a starship, allowing you to fly though space and shoot at other enemy ships.</li>
+                </ol>
+                </p>
+                <p>
+                    It's a long list of stuff, but I'm going to be developing this for a long time.
+                    I might even update this page every few months if I get enough people interested.
+                </p>
+
+                <figure>
+                    <figcaption class="show-one figure">Hope to see you again soon...</figcaption>
+                    <img src="./images/icon.png" class="show-icon figure">
+                </figure>
+
+            </section>    
+        </div>
+    </main>
+    <footer>
+        <div class="div-header div-bte">
+            <p>
+                © 2023 Designed by 
+                <a href="../hi.biz/">Hebert, Inc</a>.
+                <a href="https://freecodecamp.org/certification/noahc606/responsive-web-design">Certified</a>
+                in JS.
+            </p>
+            <a href="https://validator.w3.org/nu/?doc=`+window.location.href+`" target="_blank" class="no-underline">
+                <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=`+window.location.href+`" target="_blank" class="no-underline">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="ValidCSS!">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
