@@ -25,7 +25,8 @@ class NCH_Header extends HTMLElement {
                         <a href="emmet.html">Emmet</a> |
                         <a href="project_1.html">Project 1</a> |
                         <a href="calculator_try.html">Calculator</a> |
-                        <a href="arrays.html">Arrays</a>
+                        <a href="arrays.html">Arrays</a> |
+                        <a href="fizzbuzz.html">Fizzbuzz</a>
                     </nav>
                     <nav class="nch-nav-3">
                         <a href="stuff/( ͡❛ ͜ʖ ͡❛) A WEBPAGE file!.htm">Bad Design</a> |
