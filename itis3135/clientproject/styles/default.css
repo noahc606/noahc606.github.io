@@ -1,3 +1,16 @@
+body.app-intro {
+    background-color: rgb(217, 234, 247);
+}
+
+body.app-intro > header > h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+div.app-intro {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+}
+
 textarea.no-resize {
     resize: none;
     width: 80%;
