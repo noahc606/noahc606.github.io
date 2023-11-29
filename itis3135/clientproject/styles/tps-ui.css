@@ -1,0 +1,117 @@
+/********************************************************************************************************************************/
+
+/* TPS UIs' properties */
+div.tps-ui {
+    position: fixed;
+    border-style: ridge;
+    border-width: 0.5em;
+    border-color: orange;
+    background-color: #ffbb00;
+}
+
+/* Buttons within all TPS UIs */
+div.tps-ui button:hover {
+    border-color: #508118 !important;
+    background-color: #75ad35 !important;
+}
+div.tps-ui button.selected {
+    font-weight: 1000;
+    border-color: #35ad6b !important;
+    border-width: 4px;
+    background-color: #00ffaa !important;
+}
+div.tps-ui button.grayed-out {
+    border-color: #505050 !important;
+    background-color: #363636 !important;
+}
+
+/* Tables within all TPS UIs */
+div.tps-ui > table {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+button.tps-ui-genericBtn {
+    margin-top: 0.3em;
+    border-color: #a52a2a;
+    border-width: 4px;
+    background-color:#f07b7b;
+}
+
+/********************************************************************************************************************************/
+
+/* TPS base UI */
+div.tps-ui-base {
+    bottom: 1em;
+}
+
+/* Bottom spacer for base UI */
+div.tps-bottom-spacer {
+    height: 16em;
+}
+
+/* Table within base UI */
+div.tps-ui-base > table {
+    max-width: 21.7em;
+    max-height: 5em;
+    margin-left: 0.5em;
+}
+
+/* Rows 2-4 for base UI */
+div.tps-ui-base table tr:nth-child(n+2):nth-child(-n+4) button {
+    width: 11.7em;
+}
+
+/* Column 1, Row 2/4 for base UI */
+div.tps-ui-base table tr:nth-child(n+2):nth-child(-n+4) td:nth-child(1) button {
+    height: 3em;
+    border-color: #a52a2a;
+    background-color: #fc2f2f;
+}
+
+/* Row 5 for base UI */
+div.tps-ui-base table tr:nth-child(5) {
+    text-align: left;
+    position: relative;
+    left: 1em;
+}
+
+/* Row 6 for base UI */
+div.tps-ui-base table tr:nth-child(6) button {
+    width: 8em;
+    border-color: #a52a2a;
+    border-width: 4px;
+    background-color:rgb(247, 131, 48);
+    position: relative;
+    left: -0.1em;
+    margin-left: 0.16em;
+    margin-right: 0.16em;
+}
+
+/********************************************************************************************************************************/
+/* Table within select UI */
+div.tps-ui-select > table {
+    width: 16em;
+    height: 8em;
+    margin-left: 0.5em;
+}
+
+div.tps-ui-select table button {
+    min-width: 10em;
+}
+
+button.tps-ui-cancel {
+    width: 20em;
+    border-color: #a52a2a;
+    border-width: 4px;
+    background-color:rgb(247, 131, 48);
+    position: relative;
+    margin-top: 0.5em;
+}
+
+div.tps-ui-select {
+    width: 18em;
+    height: 12em;
+    position: relative;
+    margin: 0 auto;
+}
