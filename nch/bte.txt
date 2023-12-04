@@ -21,9 +21,7 @@ if ($NCH_cont -eq 'y' -or $NCH_cont -eq 'Y') {
     Move-Item .\BTE\Back-to-Earth-main\bin\Back-to-Earth-windows.exe .\
     Move-Item .\BTE\Back-to-Earth-main\bin\Back-to-Earth-unix .\
     Move-Item .\BTE\Back-to-Earth-main\bin\*.dll .\
-    Move-Item .\BTE\Back-to-Earth-main\bin\ .\
 
-    Remove-Item .\bin -R
     Remove-Item .\BTE -R
     Remove-Item .\BTE.zip -R
     $ProgressPreference = 'Continue'
