@@ -1,0 +1,33 @@
+# READ ME:
+# This is a benign script. Don't ban my site, UNCC.
+
+# Installation wizard
+Write-Host "Back to Earth installation wizard by Noah C. Hebert"
+Write-Host "Read more about this project at https://github.com/noahc606/Back-to-Earth"
+
+# Prompt user if they want to continue.
+$NCH_cont = Read-Host -Prompt "Type Y to continue with installation or N to exit (Y/N)"
+
+# Continue with installation or not
+# If Yes...
+if ($NCH_cont -eq 'y' -or $NCH_cont -eq 'Y') {
+    Write-Host "Installing Back to Earth 1.0.0a, please wait..."
+
+    $ProgressPreference = 'SilentlyContinue'
+
+    Invoke-WebRequest https://github.com/noahc606/Back-to-Earth/archive/main.zip -o BTE.zip
+    Expand-Archive .\BTE.zip
+    Move-Item .\BTE\Back-to-Earth-main\bin\backtoearth .\
+    Move-Item .\BTE\Back-to-Earth-main\bin\Back-to-Earth-windows.exe .\
+    Move-Item .\BTE\Back-to-Earth-main\bin\Back-to-Earth-unix .\
+    Move-Item .\BTE\Back-to-Earth-main\bin\*.dll .\
+    Move-Item .\BTE\Back-to-Earth-main\bin\ .\
+
+    Remove-Item .\bin -R
+    Remove-Item .\BTE -R
+    Remove-Item .\BTE.zip -R
+    $ProgressPreference = 'Continue'
+# If No...
+} else {
+    Write-Host "Cancelled installation."
+}
