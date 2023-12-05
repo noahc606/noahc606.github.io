@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || Interactive Drawing</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+    <script src="scripts/sketch.js"></script>
+</head>
+<body class="body">
+	<div>
+		<header>
+			<nch-header></nch-header>
+		</header>
+		<main>
+			<div class="div-background-alt">
+				<div class="div-main div-floating" id="interactive-drawing">
+					<h2>Interactive Drawing</h2>
+					<hr class="dashed">
+                    <h3>Options</h3>
+                    <table class="tableform">
+                        <tr>
+                            <td>Brush Size (px)</td>
+                            <td>
+                                <input size="1" id="brushSize">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Brush Color (0-255)</td>
+                            <td>
+                                Red: <input size="1" id="brushColorRed">
+                                Green: <input size="1" id="brushColorGreen">
+                                Blue: <input size="1" id="brushColorBlue">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span class="special">All fields entered above must be a number from 0 to 255.</span></td>
+                        </tr>
+                    </table>
+                    <h3>Canvas</h3>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<nch-footer></nch-footer>
+		</footer>
+	</div>
+</body>
+</html>

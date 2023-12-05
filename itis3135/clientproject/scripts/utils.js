@@ -5,6 +5,11 @@ function eById(elementId) {
     return document.getElementById(elementId);
 }
 
+function eDivMain()
+{
+    return eById("div-main");
+}
+
 function create(elementName) {
     return document.createElement(elementName);
 }
@@ -71,4 +76,34 @@ function gotoIfNew(pagename)
         return;
     }
     window.location.href = pagename;
+}
+
+function specSublocationToPagename(sl)
+{
+    let nsl = Number(sl);
+
+    switch(sl) {
+        case SubLocations.Index: { return "index"; }
+        case SubLocations.AboutMe: { return "aboutme"; }
+        case SubLocations.Resume: { return "resume"; }
+        case SubLocations.Contacts: { return "contacts"; }
+        case SubLocations.Project_1: { return "project1"; }
+    }
+
+    if( nsl>=102 && nsl<=999 ) {
+        return "projectx";
+    }
+
+    return null;
+}
+
+function sublocationToPagename()
+{
+    let sl = lsget("sublocation");
+    return specSublocationToPagename(sl);
+}
+
+function getTpsVersion()
+{
+    return "tps-1.1";
 }

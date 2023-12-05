@@ -1,13 +1,29 @@
-body.app-intro {
+body.app {
     background-color: rgb(217, 234, 247);
 }
 
-body.app-intro > header > h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+body.app > header > h1 {
+    font-family: 'Courier New', Courier, monospace;
 }
 
-div.app-intro {
-    font-family: 'Courier New', Courier, monospace;
+div.app > h2,
+div.app > h3,
+div.app > h4,
+div.app > h5,
+div.app > h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.app > h2 {
+    color:rgb(0, 89, 255);
+}
+
+div.app > h3 {
+    color:rgb(34, 77, 78)
+}
+
+div.app {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aquamarine;
 }
 

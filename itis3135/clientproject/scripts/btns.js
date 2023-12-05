@@ -43,10 +43,10 @@ function btnBaseYourSite()
     let sl = "";
     switch( lsgetSublocation() ) {
         case SubLocations.Index: sl = "index"; break;
-        case SubLocations.AboutMe: sl = "about_me"; break;
+        case SubLocations.AboutMe: sl = "aboutme"; break;
         case SubLocations.Resume: sl = "resume"; break;
         case SubLocations.Contacts: sl = "contacts"; break;
-        case SubLocations.Project_1: sl = "project_1"; break;
+        case SubLocations.Project_1: sl = "project1"; break;
     }
     gotoIfNew("user_"+sl+".html");
 }
@@ -61,6 +61,13 @@ function btnBaseAdvanced()
 
 function btnTest(){}
 
+function postBtnSelectNew()
+{
+    saveWebObjs();
+    buildPageContent();
+    btnSelectCancel();
+}
+
 function btnSelectNew()
 {
     let tpsSelScreen = eById("tps-ui-select");
@@ -71,39 +78,27 @@ function btnSelectNew()
 
 function btnSelectNewH()
 {
-    let size = Number(prompt("Select the header's size (1-6):"));
-    if( !(size>=1 && size<=6) ) {
+    //Prompt user for heading priority
+    let priority = Number(prompt("Select the heading's priority (1-6).\nThe smaller this value, the larger the size of the heading."));
+    if( !(priority>=1 && priority<=6) ) {
         alert("Enter a valid number between 1-6 and try again.");
         return;
     }
 
-    let div = eById("div-main");
-    let wo = new WebObj();
-    wo.htmlTag = "h";
-    wo.tagHSize = size;
-    wo.textContent = "[HEADING"+size+"]:";
+    //Build web object UI
+    buildWebObjUiH(new WebObj("h", "<h"+priority+">:"));
 
-    buildWebObjUiH(div, wo);
-
-    saveWebObjs();
-    buildPageContent();
-
-    btnSelectCancel();
+    //Post-buttonselect operations
+    postBtnSelectNew();
 }
 
 function btnSelectNewP()
 {
-    let div = eById("div-main");
-    let wo = new WebObj();
-    wo.htmlTag = "h";
-    wo.textContent = "[PARAGRAPH]:";
+    //Build web object UI
+    buildWebObjUiP(new WebObj("p", "<p>:"));
 
-    buildWebObjUiH(div, wo);
-
-    saveWebObjs();
-    buildPageContent();
-
-    btnSelectCancel();
+    //Post-buttonselect operations
+    postBtnSelectNew();
 }
 
 

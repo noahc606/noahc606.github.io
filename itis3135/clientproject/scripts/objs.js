@@ -9,7 +9,7 @@ const SubLocations = {
     AboutMe: "1",
     Resume: "2",
     Contacts: "3",
-    Project_1: "101"
+    Project_1: "101",
     // Project 2 would be "102", project 3 would be "103", etc.
 }
 
@@ -21,11 +21,10 @@ const TpsStates = {
 class WebObj {
     htmlTag = "";
     id = -1;
-    class = "";
+    classes = "";
+    attributes = "";
     textContent = "";
     children = [];
-
-    tagHSize = 0;
 
     constructor(htmlTag, textContent) {
         this.htmlTag = htmlTag;

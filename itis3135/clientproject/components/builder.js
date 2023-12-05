@@ -88,7 +88,7 @@ function buildTpsInterfaceBase()
         //Cell 1
         let td6a = create("td"); td6a.setAttribute("colspan", "3");
             insertTpsButton(td6a, "Instructions", "tps-btn-instructions", "btnBaseInstructions()");
-            insertTpsButton(td6a, "My Site", "tps-btn-yoursite", "btnBaseYourSite()");
+            insertTpsButton(td6a, "Your Site", "tps-btn-yoursite", "btnBaseYourSite()");
             insertTpsButton(td6a, "Advanced...", "tps-btn-advanced", "btnBaseAdvanced()");
         insertInto(tr6, td6a);
         //Cell 2
@@ -127,7 +127,7 @@ function buildTpsSelectionScreen()
     let tr2 = create("tr");
         //Cell 1
         let td2a = create("td");
-            insertTpsButtonGeneric(td2a, "Header", "tps-new-h", "btnSelectNewH()");
+            insertTpsButtonGeneric(td2a, "Heading", "tps-new-h", "btnSelectNewH()");
             insertTpsButtonGeneric(td2a, "Paragraph", "tps-new-p", "btnSelectNewP()");
             insertTpsButtonGeneric(td2a, "Ordered List", "tps-new-ol", "btnSelectNewOl()");
             insertTpsButtonGeneric(td2a, "Unordered List", "tps-new-ul", "btnSelectNewUl()");
@@ -152,7 +152,7 @@ function buildTpsSelectionScreen()
     insertInto(eById("body-main"), div);
 }
 
-function buildWebObjRaw()
+function buildWebObjsRaw()
 {
     let webObjs = loadWebObjs();
 
@@ -161,19 +161,26 @@ function buildWebObjRaw()
         let div = eById("div-main");
         let tag = wo.htmlTag;
 
+        let elem = null;
         switch(tag) {
             case "p": {
-                let elem = create("p");
-                addText(elem, wo.textContent.substring(12));
-                insertInto(div, elem);        
+                elem = create("p");
+                addText(elem, wo.textContent.substring(4));
             } break;
             case "h": {
-                let elem = create("h"+wo.tagHSize);
-                let str = wo.textContent;
-                addText(elem, str.substring(11));
-                insertInto(div, elem);
-            }
-        }        
+                elem = create("h"+wo.textContent.substring(2,3));
+                addText(elem, wo.textContent.substring(5));
+            } break;
+            default: {
+                elem = create("x");
+                addText(elem, "<Unknown element detected here>");
+            } break;
+        }
+
+        //Add element if not null
+        if(elem!=null) {
+            insertInto(div, elem);
+        }
     }
 }
 
@@ -186,32 +193,40 @@ function buildWebObjRemoveBtn(div, wo)
     insertInto(div, btn);
 }
 
-function buildWebObjUiH(div, wo)
+function buildWebObjUiGeneric(div, wo)
 {
     let txt = create("textarea");
     txt.value = wo.textContent;
     setId(txt, wo.id);
     setAttr(txt, "rows", 1);
     setClass(txt, "no-resize");
-    insertInto(div, txt);
 
-    buildWebObjRemoveBtn(div, wo);
+    return txt;
 }
 
-function buildWebObjUiP(div, wo)
+function buildWebObjUiH(wo)
 {
-    let txt = create("textarea");
-    txt.value = wo.textContent;
-    setId(txt, wo.id);
-    setAttr(txt, "rows", 8);
-    setClass(txt, "no-resize");
-    insertInto(div, txt);
+    let div = eDivMain();
+    let wog = buildWebObjUiGeneric(div, wo);
+    setAttr(wog, "rows", 1);
+    insertInto(div, wog);
 
-    buildWebObjRemoveBtn(div, wo);
+    buildWebObjRemoveBtn(div, wog);
 }
 
-function buildWebObjUi()
+function buildWebObjUiP(wo)
 {
+    let div = eDivMain();
+    let wog = buildWebObjUiGeneric(div, wo);
+
+    setAttr(wog, "rows", 8);
+    insertInto(div, wog);
+
+    buildWebObjRemoveBtn(div, wog);
+}
+
+function buildWebObjsUi()
+{    
     let webObjs = loadWebObjs();
     let div = eById("div-main");
 
@@ -219,18 +234,17 @@ function buildWebObjUi()
         let wo = webObjs[i];
 
         switch(wo.htmlTag) {
-            case "p": {
-                buildWebObjUiP(div, wo);
-            } break;
-            case "h": {
-                buildWebObjUiH(div, wo);
-            }
+            case "p": { buildWebObjUiP(wo); } break;
+            case "h": { buildWebObjUiH(wo); } break;
+            default: { buildWebObjUiP(wo); } break;
         }
     }
 
+    //Create newline
     let btnNewP = create("p");
     insertInto(div, btnNewP);
 
+    //Create "New Element" button
     let btnNew = create("button");
     addText(btnNew, "New Element");
     setId(btnNew, "tps-ui-new-element");
@@ -245,13 +259,13 @@ function buildNavbar()
         addText(nav, " | ");
         insertNavAnchor(nav, "Index", "nav_a1", "user_index.html");
         addText(nav, " | ");
-        insertNavAnchor(nav, "About Me", "nav_a2", "user_about_me.html");
+        insertNavAnchor(nav, "About Me", "nav_a2", "user_aboutme.html");
         addText(nav, " | ");
         insertNavAnchor(nav, "Resume", "nav_a3", "user_resume.html");
         addText(nav, " | ");
         insertNavAnchor(nav, "Contacts", "nav_a4", "user_contacts.html");        
         addText(nav, " | ");
-        insertNavAnchor(nav, "Project 1", "nav_a5", "user_project_1.html");        
+        insertNavAnchor(nav, "Project 1", "nav_a5", "user_projectx.html");        
         addText(nav, " | ");
     insertInto(eById("body-header"), nav);
 }

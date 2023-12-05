@@ -13,14 +13,55 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/objs.js"></script>
 </head>
-<body class="app-intro">
+<body class="app">
     <header id="body-header">
         <h1>Advanced Options</h1>
-        <button id="btn-reset-user-index">
-            Reset "user_index" web contents
-        </button>
     </header>
-    <main id="body-main"></main>
+    <main id="body-main">
+        <div class="app">
+            <h2>Title Options</h2>
+            <p>Site title (all pages):</p>
+            <p>Site icon (all pages):</p>
+            <h2>Header & Footer Options</h2>
+            <p>Site header (all pages):</p>
+            <h2>CSS Options</h2>
+            <h3>Navigation Bar</h3>
+            <table>
+                <tr>
+                    <td>Style:</td>
+                    <td>Top-Horizontal</td>
+                    <td>Left-Vertical</td>
+                    <td>Right-Vertical</td>
+                </tr>
+            </table>
+            <h3>Headings</h3>
+            <p>Heading 1 font and color:</p>
+            <h3>Background</h3>
+            
+
+
+            <h2>Data Management</h2>
+            <h3>Get Web Contents</h3>
+            <p>Here, you can get the raw HTML code of each of your pages. They will be copied to your clipboard as a formatted string.</p>
+            <p>NOTE: Any link elements will have the "user_" prefix omitted, so make sure that is reflected in your filenames as well.</p>
+            <button id="btn-get-data-index">index.html</button>
+            <button id="btn-get-data-aboutme">aboutme.html</button>
+            <button id="btn-get-data-resume">resume.html</button>
+            <button id="btn-get-data-contact">contact.html</button>
+            <button id="btn-get-data-project1">project1.html</button>
+            <h3>Reset Web Contents</h3>
+            <ul>
+                <li><button id="btn-reset-user-index">Reset "user_index" web contents</button></li>
+                <li><button id="btn-reset-user-aboutme">Reset "user_aboutme" web contents</button><br></li>
+                <li><button id="btn-reset-user-resume">Reset "user_resume" web contents</button><br></li>
+                <li><button id="btn-reset-user-contacts">Reset "user_contacts" web contents</button><br></li>
+                <li><button id="btn-reset-user-project1">Reset "user_project1" web contents</button><br></li>
+            </ul>
+            <h3>Wipe All Data</h3>
+            <button id="btn-wipe-all-data">Wipe all data</button>
+        </div>
+        <div class="tps-bottom-spacer"></div>
+    </main>
     <footer id="body-footer"></footer>
 </body>
 </html>
