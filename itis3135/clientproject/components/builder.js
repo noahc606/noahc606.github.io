@@ -169,7 +169,7 @@ function buildWebObjExtraBtns(div, wo)
     addText(btnNew, "+");
     setAttr(btnNew, "title", "Insert a new element at the end");
     setClass(btnNew, "no-resize tps-ui-new tps-ui-genericBtn");
-    btnNew.onclick = function(){ btnWebObjNew( wo.id.substring(7) ); };
+    btnNew.onclick = function(){ btnSelectNew(); };
     insertInto(div, btnNew);
 
     //Up arrow button
