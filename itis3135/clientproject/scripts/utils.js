@@ -56,13 +56,29 @@ function lsget(key)
 {
     return localStorage.getItem(key);
 }
+function lsgetArray(key) {
+    let arr = null;
 
+    if( lsget(key)!=null ) {
+        arr = lsget(key).split(",");
+        return arr;
+    } else {
+        console.log("Storage \""+key+"\" could not be loaded");
+        return null;        
+    }
+}
 function lsgetLocation() { return lsget("location"); }
-function lsgetSublocation() { return lsget("sublocation"); }
+function lsgetSublocation() { return lsget(UserStorage.SubLocation); }
 
 function lsset(key, val)
 {
     localStorage.setItem(key, val);
+}
+function lssetArray(key, arr)
+{
+    let str = String(arr);
+    console.log("Saved into "+key+": "+str);
+    lsset(key, str);
 }
 
 /**
@@ -99,11 +115,11 @@ function specSublocationToPagename(sl)
 
 function sublocationToPagename()
 {
-    let sl = lsget("sublocation");
+    let sl = lsget(UserStorage.SubLocation);
     return specSublocationToPagename(sl);
 }
 
 function getTpsVersion()
 {
-    return "tps-1.1";
+    return "tps-1.2.2";
 }

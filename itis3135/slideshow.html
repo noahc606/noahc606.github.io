@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noah Hebert || Neat Horse || ITIS3135 || Slideshow Gallery</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<link rel="stylesheet" href="styles/slideshow.css">
+	<script src="components/nch-header.js" defer></script>
+	<script src="components/nch-footer.js" defer></script>
+	<script src="scripts/slideshow.js" defer></script>
+</head>
+<body class="body">
+	<div>
+		<header>
+			<nch-header></nch-header>
+		</header>
+		<main>
+            <div class="div-background-alt">
+                <div class="div-main div-floating">
+                    <h2>Slideshow Gallery</h2>
+					<hr class="dashed">
+					<div class="container">
+						<!-- Full-width images with number text -->
+						<div class="mySlides">
+						  	<div class="numbertext">1 / 10</div> <img src="images/slideshow/1n.jpg" class="slideshow-img" alt="N for Nature">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">2 / 10</div><img src="images/slideshow/2o.jpg" class="slideshow-img" alt="O for Ocean">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">3 / 10</div><img src="images/slideshow/3a.jpg" class="slideshow-img" alt="A for Airplane">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">4 / 10</div><img src="images/slideshow/4h.jpg" class="slideshow-img" alt="H for Horse">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">5 / 10</div><img src="images/slideshow/5h.png" class="slideshow-img" alt="H for House">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">6 / 10</div><img src="images/slideshow/6e.jpg" class="slideshow-img" alt="E for Earth">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">7 / 10</div><img src="images/slideshow/7b.jpg" class="slideshow-img" alt="B for Black Hole">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">8 / 10</div><img src="images/slideshow/8e.jpg" class="slideshow-img" alt="E for Eclipse">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">9 / 10</div><img src="images/slideshow/9r.jpg" class="slideshow-img" alt="R for Rocket">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">10 / 10</div><img src="images/slideshow/10t.jpg" class="slideshow-img" alt="T for Time">
+						</div>
+					  
+						<!-- Next and previous buttons -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					  
+						<!-- Image text -->
+						<div class="caption-container">
+						  	<p id="caption"></p>
+						</div>
+					  
+						<!-- Thumbnail images -->
+						<div class="row">
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/1n.jpg" style="width:100%" onclick="currentSlide(1)" alt="N for Nature">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/2o.jpg" style="width:100%" onclick="currentSlide(2)" alt="O for Ocean">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/3a.jpg" style="width:100%" onclick="currentSlide(3)" alt="A for Airplane">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/4h.jpg" style="width:100%" onclick="currentSlide(4)" alt="H for Horse">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/5h.png" style="width:100%" onclick="currentSlide(5)" alt="H for House">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/6e.jpg" style="width:100%" onclick="currentSlide(6)" alt="E for Earth">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/7b.jpg" style="width:100%" onclick="currentSlide(7)" alt="B for Black Hole">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/8e.jpg" style="width:100%" onclick="currentSlide(8)" alt="E for Eclipse">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/9r.jpg" style="width:100%" onclick="currentSlide(9)" alt="R for Rocket">
+						  	</div>
+						  	<div class="column">
+								<img class="demo cursor" src="images/slideshow/10t.jpg" style="width:100%" onclick="currentSlide(10)" alt="T for Time">
+						  	</div>
+						</div>
+					</div>
+					<hr class="dashed">
+
+                </div>
+            </div>
+		</main>
+		<footer>
+			<nch-footer></nch-footer>
+		</footer>
+	</div>
+</body>
+</html>

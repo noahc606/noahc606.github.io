@@ -152,45 +152,43 @@ function buildTpsSelectionScreen()
     insertInto(eById("body-main"), div);
 }
 
-function buildWebObjsRaw()
+function buildWebObjExtraBtns(div, wo)
 {
-    let webObjs = loadWebObjs();
+    //- Button
+    let btnRemove = create("button");
+    setId(btnRemove, "btn-remove-"+wo.id)
+    addText(btnRemove, "-");
+    setAttr(btnRemove, "title", "Remove this element");
+    setClass(btnRemove, "no-resize tps-ui-remove tps-ui-genericBtn");
+    btnRemove.onclick = function(){ btnWebObjRemove( wo.id.substring(7) ); };
+    insertInto(div, btnRemove);
 
-    for( let i = 0; i<webObjs.length; i++ ) {
-        let wo = webObjs[i];
-        let div = eById("div-main");
-        let tag = wo.htmlTag;
+    //+ Buton
+    let btnNew = create("button");
+    setId(btnNew, "btn-new-"+wo.id);
+    addText(btnNew, "+");
+    setAttr(btnNew, "title", "Insert a new element at the end");
+    setClass(btnNew, "no-resize tps-ui-new tps-ui-genericBtn");
+    btnNew.onclick = function(){ btnWebObjNew( wo.id.substring(7) ); };
+    insertInto(div, btnNew);
 
-        let elem = null;
-        switch(tag) {
-            case "p": {
-                elem = create("p");
-                addText(elem, wo.textContent.substring(4));
-            } break;
-            case "h": {
-                elem = create("h"+wo.textContent.substring(2,3));
-                addText(elem, wo.textContent.substring(5));
-            } break;
-            default: {
-                elem = create("x");
-                addText(elem, "<Unknown element detected here>");
-            } break;
-        }
+    //Up arrow button
+    let btnUp = create("button");
+    setId(btnUp, "btn-up-"+wo.id);
+    addText(btnUp, "^");
+    setAttr(btnUp, "title", "Move this element up by one");
+    setClass(btnUp, "no-resize tps-ui-up tps-ui-genericBtn");
+    btnUp.onclick = function(){ btnWebObjUp( wo.id.substring(7) ); };
+    insertInto(div, btnUp);
 
-        //Add element if not null
-        if(elem!=null) {
-            insertInto(div, elem);
-        }
-    }
-}
-
-function buildWebObjRemoveBtn(div, wo)
-{
-    let btn = create("button");
-    setId(btn, "btn-remove-"+wo.id)
-    addText(btn, "Remove");
-    setClass(btn, "no-resize");
-    insertInto(div, btn);
+    //Down arrow button
+    let btnDown = create("button");
+    setId(btnDown, "btn-down-"+wo.id);
+    addText(btnDown, "v");
+    setAttr(btnDown, "title", "Move this element down by one");
+    setClass(btnDown, "no-resize tps-ui-down tps-ui-genericBtn");
+    btnDown.onclick = function(){ btnWebObjDown( wo.id.substring(7) ); };
+    insertInto(div, btnDown);
 }
 
 function buildWebObjUiGeneric(div, wo)
@@ -211,61 +209,63 @@ function buildWebObjUiH(wo)
     setAttr(wog, "rows", 1);
     insertInto(div, wog);
 
-    buildWebObjRemoveBtn(div, wog);
+    buildWebObjExtraBtns(div, wog);
 }
 
 function buildWebObjUiP(wo)
 {
     let div = eDivMain();
     let wog = buildWebObjUiGeneric(div, wo);
-
     setAttr(wog, "rows", 8);
     insertInto(div, wog);
 
-    buildWebObjRemoveBtn(div, wog);
-}
-
-function buildWebObjsUi()
-{    
-    let webObjs = loadWebObjs();
-    let div = eById("div-main");
-
-    for( let i = 0; i<webObjs.length; i++ ) {
-        let wo = webObjs[i];
-
-        switch(wo.htmlTag) {
-            case "p": { buildWebObjUiP(wo); } break;
-            case "h": { buildWebObjUiH(wo); } break;
-            default: { buildWebObjUiP(wo); } break;
-        }
-    }
-
-    //Create newline
-    let btnNewP = create("p");
-    insertInto(div, btnNewP);
-
-    //Create "New Element" button
-    let btnNew = create("button");
-    addText(btnNew, "New Element");
-    setId(btnNew, "tps-ui-new-element");
-    setClass(btnNew, "tps-ui tps-ui-genericBtn");
-    setAttr(btnNew, "onclick", "btnSelectNew()");
-    insertInto(div, btnNew);
+    buildWebObjExtraBtns(div, wog);
 }
 
 function buildNavbar()
 {
+    //Remove old nav if it exists.
+    let oldNav = eById("user-nav");
+    if(oldNav!=null) {
+        oldNav.remove();
+    }
+
+    let pageLinks = loadPageLinks();
+    let pageTitles = loadPageTitles();
+    if( pageLinks.length!=pageTitles.length ) {
+        console.warn("pageLinks has length "+pageLinks.length+"but pageTitles has length "+pageTitles.length);
+    }
+
     let nav = create("nav");
+        setId(nav, "user-nav");
         addText(nav, " | ");
-        insertNavAnchor(nav, "Index", "nav_a1", "user_index.html");
-        addText(nav, " | ");
-        insertNavAnchor(nav, "About Me", "nav_a2", "user_aboutme.html");
-        addText(nav, " | ");
-        insertNavAnchor(nav, "Resume", "nav_a3", "user_resume.html");
-        addText(nav, " | ");
-        insertNavAnchor(nav, "Contacts", "nav_a4", "user_contacts.html");        
-        addText(nav, " | ");
-        insertNavAnchor(nav, "Project 1", "nav_a5", "user_projectx.html");        
-        addText(nav, " | ");
+        for( let i = 0; i<pageLinks.length; i++ ) {
+            //Skip removed pages (removed pages never TRULY get removed, but it's simpler that way, trust me)
+            if( pageLinks[i]==="" && pageTitles[i]==="" ) {
+                continue;
+            }
+
+            if( i>=0 && i<=4 ) {
+                insertNavAnchor(nav, pageTitles[i], "nav_a"+i, "user_"+pageLinks[i]+".html");
+            } else {
+                insertNavAnchor(nav, pageTitles[i], "nav_a"+i, "user_projectx.html");
+            }
+            addText(nav, " | ");
+        }
     insertInto(eById("body-header"), nav);
+
+    //Set nav attributes
+    eById("nav_a0").onclick = function(){ lsset(UserStorage.SubLocation, SubLocations.Index); };
+    eById("nav_a1").onclick = function(){ lsset(UserStorage.SubLocation, SubLocations.AboutMe); };
+    eById("nav_a2").onclick = function(){ lsset(UserStorage.SubLocation, SubLocations.Resume); };
+    eById("nav_a3").onclick = function(){ lsset(UserStorage.SubLocation, SubLocations.Contacts); };
+    eById("nav_a4").onclick = function(){ lsset(UserStorage.SubLocation, SubLocations.Project_1); };
+
+    //Account for navs above a4
+    for( let i = 0; i<100; i++) {
+        let potentialNavLink = eById( "nav_a"+(i+5) );
+        if( potentialNavLink!=null ) {
+            potentialNavLink.onclick =  function() { lsset( UserStorage.SubLocation, (""+(102+i)) ); };
+        }
+    }
 }

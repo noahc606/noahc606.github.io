@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading...</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/tps-ui.css">
     <link rel="stylesheet" href="styles/default.css">
     <script src="components/tps-base.js" defer></script>
     <script src="components/builder.js"></script>
+    <script src="scripts/app.js"></script>
     <script src="scripts/btns.js"></script>
     <script src="scripts/utils.js"></script>
     <script src="scripts/main.js"></script>
@@ -15,47 +17,88 @@
 </head>
 <body class="app">
     <header id="body-header">
-        <h1>Advanced Options</h1>
+        <h1>Technical Portfolio Studio</h1>
+        <h4>A web app by Noah Hebert</h4>
     </header>
     <main id="body-main">
         <div class="app">
+            <h1>Advanced Settings</h1>
             <h2>Title Options</h2>
-            <p>Site title (all pages):</p>
-            <p>Site icon (all pages):</p>
-            <h2>Header & Footer Options</h2>
-            <p>Site header (all pages):</p>
-            <h2>CSS Options</h2>
-            <h3>Navigation Bar</h3>
             <table>
                 <tr>
-                    <td>Style:</td>
-                    <td>Top-Horizontal</td>
-                    <td>Left-Vertical</td>
-                    <td>Right-Vertical</td>
+                    <td>Site title (all pages):</td>
+                    <td><textarea rows="1" cols="25" id="tps-settings-title"></textarea></td>
                 </tr>
             </table>
+  
+            <h2>Header Options</h2>
+            <table>
+                <tr>
+                    <td>Main header (all pages):</td>
+                    <td><textarea rows="1" cols="25" id="tps-settings-mainheader"></textarea></td>
+                </tr>
+            </table>
+
+            <h2>CSS Options</h2>
+
+            <h3>Navigation Bar</h3>
+
+            <table>
+                <tr>
+                    <td>Alignment:</td>
+                    <td>
+                        <input type="radio" id="al" name="fav_language" value="Left">
+                        <label for="al">Left</label><br>
+                    </td>
+                    <td>
+                        <input type="radio" id="ac" name="fav_language" value="Centered">
+                        <label for="ac">Centered</label><br>
+                    </td>
+                    <td>
+                        <input type="radio" id="ar" name="fav_language" value="Right">
+                        <label for="ar">Right</label>      
+                    </td>
+                </tr>
+            </table>
+            <p></p>
             <h3>Headings</h3>
-            <p>Heading 1 font and color:</p>
+            <table>
+                <tr>
+                    <td>Heading 1 font:</td>
+                    <td><textarea rows="1" cols="25" id="tps-settings-h1-font"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Headings >1 font:</td>
+                    <td><textarea rows="1" cols="25" id="tps-settings-hx-font"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Paragraph font:</td>
+                    <td><textarea rows="1" cols="25" id="tps-settings-p-font"></textarea></td>
+                </tr>
+            </table>
+            
+            
             <h3>Background</h3>
+            <table>
+                <tr>
+                    <td>Color:</td>
+                    <td><textarea rows="1" cols="10" id="tps-settings-hx-font"></textarea></td>
+                    <td>(example: #123456)</td>
+                </tr>
+            </table>
             
 
 
             <h2>Data Management</h2>
             <h3>Get Web Contents</h3>
-            <p>Here, you can get the raw HTML code of each of your pages. They will be copied to your clipboard as a formatted string.</p>
-            <p>NOTE: Any link elements will have the "user_" prefix omitted, so make sure that is reflected in your filenames as well.</p>
-            <button id="btn-get-data-index">index.html</button>
-            <button id="btn-get-data-aboutme">aboutme.html</button>
-            <button id="btn-get-data-resume">resume.html</button>
-            <button id="btn-get-data-contact">contact.html</button>
-            <button id="btn-get-data-project1">project1.html</button>
+            <p>Use CTRL+S while in the "Preview Mode" to get the HTML page data. Unfortunately, the data comes out really messy and you will have to do indentation/newlines yourself. </p>
             <h3>Reset Web Contents</h3>
             <ul>
-                <li><button id="btn-reset-user-index">Reset "user_index" web contents</button></li>
-                <li><button id="btn-reset-user-aboutme">Reset "user_aboutme" web contents</button><br></li>
-                <li><button id="btn-reset-user-resume">Reset "user_resume" web contents</button><br></li>
-                <li><button id="btn-reset-user-contacts">Reset "user_contacts" web contents</button><br></li>
-                <li><button id="btn-reset-user-project1">Reset "user_project1" web contents</button><br></li>
+                <li><button id="btn-reset-user-index">Reset "index.html" web contents</button></li>
+                <li><button id="btn-reset-user-aboutme">Reset "aboutme.html" web contents</button><br></li>
+                <li><button id="btn-reset-user-resume">Reset "resume.html" web contents</button><br></li>
+                <li><button id="btn-reset-user-contacts">Reset "contacts.html" web contents</button><br></li>
+                <li><button id="btn-reset-user-project1">Reset "project1.html" web contents</button><br></li>
             </ul>
             <h3>Wipe All Data</h3>
             <button id="btn-wipe-all-data">Wipe all data</button>

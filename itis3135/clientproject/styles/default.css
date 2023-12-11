@@ -4,6 +4,13 @@ body.app {
 
 body.app > header > h1 {
     font-family: 'Courier New', Courier, monospace;
+    color:green;
+}
+
+body .app > header > h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+    text-align: center;
 }
 
 div.app > h2,
