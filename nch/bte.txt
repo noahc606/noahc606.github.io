@@ -26,7 +26,7 @@ if ($NCH_cont -eq 'y' -or $NCH_cont -eq 'Y') {
     Remove-Item .\BTE.zip -R
     $ProgressPreference = 'Continue'
 
-    Write-Host "Run the \"Back-to-Earth-windows.exe\" file within the new folder."
+    Write-Host "Run the 'Back-to-Earth-windows.exe' file within the new folder."
 # If No...
 } else {
     Write-Host "Cancelled installation."
