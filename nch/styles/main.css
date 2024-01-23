@@ -39,28 +39,16 @@ table.intro {
     background-color: var(--dusk);
 }
 
-table.intro h2 {
-    color: var(--ocean);
-}
+table.intro h2 { color: var(--ocean); }
+table.intro h4 { color: var(--earth) }
 
-table.intro h4 {
-    color: var(--earth)
-}
-
-td.welcome {
-    background-color: black;
-}
-
-td.sidepanel {
-    background-color: var(--dark-blue);
-}
-
-td.bottompanel {
-    background-color: var(--blue);
-}
+td.sidepanel { background-color: var(--dark-blue); }
+td.bottompanel { background-color: var(--blue); }
 
 table.intro tr td.welcome {
+    background-color: black;
     padding: 2em 2em 2em 2em;
+    width: 500em;
 }
 table.intro tr td {
     padding: 0.5em;
