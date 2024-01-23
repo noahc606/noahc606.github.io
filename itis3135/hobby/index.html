@@ -121,6 +121,7 @@
             document.getElementById('sec-how').hidden = true;
             document.getElementById('sec-when').hidden = true;
             document.getElementById('sec-where').hidden = true;
+            document.getElementById('sec-download').hidden = true;
 
             document.getElementById(id).hidden = false;
         }
@@ -129,16 +130,17 @@
 <body>
     <header>
         <h1>Noah's C++ Game Programming</h1>
-        <h4>w/ the SDL2 libraries</h4>
+        <h4>w/ SDL2</h4>
         <div class="div-header div-bte">
-            <p>Navigate Through Pages:</p>
+            <p>Sections</p>
             <nav>
                 <a href="#" onclick="hideAllExcept('sec-what')">Home</a> |
                 <a href="#" onclick="hideAllExcept('sec-who')">Background</a> |
                 <a href="#" onclick="hideAllExcept('sec-why')">Why Bother?</a> |
                 <a href="#" onclick="hideAllExcept('sec-how')">How's Development?</a> |
                 <a href="#" onclick="hideAllExcept('sec-when')">When Done?</a> |
-                <a href="#" onclick="hideAllExcept('sec-where')">Where to Go From Here?</a>
+                <a href="#" onclick="hideAllExcept('sec-where')">Where to Go From Here?</a> |
+                <a href="#" onclick="hideAllExcept('sec-download')">Download</a>
             </nav>
         </div>
     </header>
@@ -297,17 +299,8 @@
             <section id="sec-when" hidden>
                 <h2>So, When Will It Be Done?</h2>
                 <p>
-                    You can run Back to Earth right now, if you are on Windows or Linux.
-                    Just download and extract the repository files onto your computer, from <a href="https://github.com/noahc606/Back-to-Earth" target="_blank">here</a>.
-                    After that, it's as simple as going into the "/bin" folder and selecting the appropriate "Back-to-Earth" executable file.
-                    It <i>should theoretically</i> run on your computer without any major problems (I would REALLY like to know if there are issues).
+                    To download the latest version of Back to Earth, visit <a href="#" onclick="hideAllExcept('sec-download')">this page</a>.
                 </p>
-
-                <figure>
-                    <img src="./images/game-guide.png" class="show-two figure">
-                    <figcaption class="show-one figure">Guide to Gaming.</figcaption>
-                </figure>
-
                 <p>
                     There is one big issue I am having regarding cross-platform compatibility: automatic directory and file creation.
                     I have it working perfectly on Linux but not on Windows, which results in many textfile-based settings not saving for Windows users (in some cases).
@@ -349,13 +342,20 @@
                     It's a long list of stuff, but I'm going to be developing this for a long time.
                     I might even update this page every few months if I get enough people interested.
                 </p>
-
+            </section>
+            <section id="sec-download" hidden>
+                <h2>Download</h2>
+                <p>
+                    You can run the latest version of Back to Earth if you are on Windows or Linux.
+                    Just download and extract the repository files onto your computer, from <a href="https://github.com/noahc606/Back-to-Earth" target="_blank">here</a>.
+                    After that, it's as simple as going into the "/bin" folder and selecting the appropriate "Back-to-Earth" executable file.
+                    If I setup everything correctly, it <i>should</i> run on your computer without any major problems (I would REALLY like to know if there are issues).
+                </p>
                 <figure>
-                    <figcaption class="show-one figure">Hope to see you again soon...</figcaption>
-                    <img src="./images/icon.png" class="show-icon figure">
+                    <img src="./images/game-guide.png" class="figure show-one">
+                    <figcaption class="show-one figure"></figcaption>
                 </figure>
-
-            </section>    
+            </section>
         </div>
     </main>
     <footer>

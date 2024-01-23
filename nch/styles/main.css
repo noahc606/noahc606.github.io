@@ -1,0 +1,77 @@
+:root {
+    --midnight: #0b132b;
+    --dusk: #1c2541;
+    --dark-blue: #000022;
+    --blue: #000033;
+    --dark_lavender: #835471; 
+    --lavender: #9e768f;
+    --turquoise: #00a985;
+    --ocean: #5bc0be;
+    --underground: #794c0a;
+    --earth: #c57432;
+
+    --font-titles: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-paragraphs: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--midnight);
+}
+
+p, a, li {
+    font-family: var(--font-paragraphs);
+    color: wheat;
+}
+
+table.intro {
+    font-family: var(--font-titles);
+}
+
+table.intro {
+    width: 50em;
+    height: 40em;
+    margin: 0 auto;
+    margin-top: 10em;
+
+    padding: 10px 10px 10px 10px;
+
+    border-width: 10px;
+    background-color: var(--dusk);
+}
+
+table.intro h2 {
+    color: var(--ocean);
+}
+
+table.intro h4 {
+    color: var(--earth)
+}
+
+td.welcome {
+    background-color: black;
+}
+
+td.sidepanel {
+    background-color: var(--dark-blue);
+}
+
+td.bottompanel {
+    background-color: var(--blue);
+}
+
+table.intro tr td.welcome {
+    padding: 2em 2em 2em 2em;
+}
+table.intro tr td {
+    padding: 0.5em;
+}
+
+table.intro tr td.welcome img {
+    display: block;
+    margin: 0 auto;
+
+    image-rendering: pixelated;
+    text-align: center;
+    width: 25%;
+}
+
