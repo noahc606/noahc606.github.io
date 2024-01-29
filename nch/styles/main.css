@@ -15,7 +15,17 @@
 }
 
 body {
-    background-color: var(--midnight);
+    background-image: linear-gradient(to bottom right, black, var(--dusk));
+    background-size: 100rem 100rem;
+}
+
+footer {
+    padding-top: 1em;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 p, a, li {
@@ -23,12 +33,20 @@ p, a, li {
     color: wheat;
 }
 
+a:visited {
+    color: var(--dark_lavender)
+}
+
+a:hover {
+    color: var(--turquoise);
+}
+
 table.intro {
     font-family: var(--font-titles);
 }
 
 table.intro {
-    width: 50em;
+    max-width: 50em;
     height: 40em;
     margin: 0 auto;
     margin-top: 10em;
@@ -61,5 +79,6 @@ table.intro tr td.welcome img {
     image-rendering: pixelated;
     text-align: center;
     width: 25%;
+    min-width: 10em;
 }
 
