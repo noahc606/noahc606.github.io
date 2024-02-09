@@ -6,7 +6,7 @@
     --dark_lavender: #835471; 
     --lavender: #9e768f;
     --turquoise: #00a985;
-    --ocean: #5bc0be;
+    --ocean: #3bcfcd;
     --underground: #794c0a;
     --earth: #c57432;
 
@@ -28,9 +28,18 @@ footer a {
     text-decoration: none;
 }
 
-p, a, li {
+p, li {
     font-family: var(--font-paragraphs);
     color: wheat;
+}
+
+a {
+    color: var(--underground)
+}
+
+b {
+    font-family: var(--font-paragraphs);
+    color: var(--earth);
 }
 
 a:visited {
@@ -38,7 +47,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--turquoise);
+    color: var(--ocean);
 }
 
 table.intro {
@@ -57,11 +66,14 @@ table.intro {
     background-color: var(--dusk);
 }
 
-table.intro h2 { color: var(--ocean); }
+table.intro h2 { color: var(--turquoise); }
 table.intro h4 { color: var(--earth) }
 
 td.sidepanel { background-color: var(--dark-blue); }
-td.bottompanel { background-color: var(--blue); }
+td.bottompanel {
+    min-width: 32em;
+    background-color: var(--blue);
+}
 
 table.intro tr td.welcome {
     background-color: black;
@@ -81,3 +93,16 @@ table.intro tr td.welcome img {
     min-width: 5em;
 }
 
+table.certs {
+    margin-left: 1em;
+    margin-right: 1em;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid var(--lavender);;
+    border-width: 1px;
+    background-color: var(--dark-blue);
+}
+
+table.certs tr {
+    border: 2px solid var(--dark_lavender);
+}
