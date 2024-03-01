@@ -50,6 +50,11 @@ a:hover {
     color: var(--ocean);
 }
 
+a.no-underline {
+    text-decoration: none;
+    border: 0 !important;
+}
+
 table.intro {
     font-family: var(--font-titles);
 }

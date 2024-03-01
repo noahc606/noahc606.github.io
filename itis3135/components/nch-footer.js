@@ -16,10 +16,13 @@ class NCH_Footer extends HTMLElement {
                     <a href="https://www.linkedin.com/in/nh606/">LinkedIn</a>
                 </nav>
                 <p>
-                © 2023 Designed by 
-                <a href="hi.biz/">Hebert, Inc</a>.
-                <a href="https://freecodecamp.org/certification/noahc606/responsive-web-design">Certified</a>
-                in JS.</p>
+                    © 2023 Designed by 
+                    <a href="hi.biz/">Hebert, Inc</a>.
+                    Certified in
+                    <a href="https://freecodecamp.org/certification/noahc606/responsive-web-design" target="_blank">Responsive Web Design</a>
+                    and
+                    <a href="https://www.freecodecamp.org/certification/noahc606/javascript-algorithms-and-data-structures" target="_blank">JavaScript</a>.
+                </p>
                 <a href="https://validator.w3.org/nu/?doc=`+window.location.href+`" target="_blank" class="no-underline">
                     <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
                 </a>
