@@ -1,6 +1,3 @@
-# READ ME:
-# This is a benign script. Don't ban my site, UNCC.
-
 # Installation wizard
 Write-Host "Back to Earth installation wizard by Noah C. Hebert"
 Write-Host "Read more about this project at https://github.com/noahc606/Back-to-Earth"
