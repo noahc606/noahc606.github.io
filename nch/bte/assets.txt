@@ -3,7 +3,6 @@ backtoearth/resources/audio/missing.wav
 backtoearth/resources/audio/music/blender_engine.mp3
 backtoearth/resources/audio/music/cyber_city.mp3
 backtoearth/resources/audio/music/entering_orbit.mp3
-backtoearth/resources/audio/music/kalliope.mp3
 backtoearth/resources/audio/music/kc/50_million_year_trip.mp3
 backtoearth/resources/audio/music/kc/alien_ruins.mp3
 backtoearth/resources/audio/music/kc/digital_sunset.mp3
