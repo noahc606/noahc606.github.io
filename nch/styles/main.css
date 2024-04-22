@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right, black, var(--dusk));
+    background-image: linear-gradient(to bottom left, black, var(--dusk));
     background-size: 100% 100rem;
 }
 
@@ -110,4 +110,11 @@ table.certs {
 
 table.certs tr {
     border: 2px solid var(--dark_lavender);
+}
+
+@media (max-width: 576px) {
+    body {
+        background-image: linear-gradient(to bottom left, black, var(--dusk));
+        background-size: 200% 180%
+    }
 }
