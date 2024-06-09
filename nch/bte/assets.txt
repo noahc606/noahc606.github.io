@@ -3,6 +3,7 @@ backtoearth/resources/textures/icon.png
 backtoearth/resources/textures/gui/button.png
 backtoearth/resources/textures/gui/save_selector.png
 backtoearth/resources/textures/gui/title_icon.png
+backtoearth/resources/textures/gui/misc.png
 backtoearth/resources/textures/gui/font/bte.png
 backtoearth/resources/textures/gui/font/robot.png
 backtoearth/resources/textures/gui/window.png
