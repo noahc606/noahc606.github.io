@@ -52,6 +52,7 @@ backtoearth/resources/audio/music/kc/distant_planet.mp3
 backtoearth/resources/audio/music/space_travel.mp3
 backtoearth/resources/audio/world/heartbeat.wav
 backtoearth/resources/audio/world/plasma_cannon.mp3
+backtoearth/resources/audio/world/air_release_1.ogg
 backtoearth/resources/audio/world/distant_explosion.mp3
 backtoearth/resources/audio/world/implosion.mp3
 libFLAC-8.dll
