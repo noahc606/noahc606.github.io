@@ -23,7 +23,7 @@ class NCH_Header extends HTMLElement {
                         <a href="firstscripts.html">First JS</a> |
                         <a href="byo_intro.html">BYO Intro</a> |
                         <a href="emmet.html">Emmet</a> |
-                        <a href="project_1.html">Project Outline</a> |
+                        <a hidden href="project_1.html">Project Outline</a>
                         <a href="calculator_try.html">Calculator</a> |
                         <a href="arrays.html">Arrays</a> |
                         <a href="fizzbuzz.html">Fizzbuzz</a> |
@@ -32,8 +32,7 @@ class NCH_Header extends HTMLElement {
                     </nav>
                     <nav class="nch-nav-3">
                         <a href="stuff/( ͡❛ ͜ʖ ͡❛) A WEBPAGE file!.htm">Bad Design</a> |
-                        <a href="hobby/index.html">Hobby Page</a> |
-                        <a href="clientproject/index.html">Client Project</a>
+                        <a href="hobby/index.html">Hobby Page</a>
                     </nav>
                 </div>
             </div>
