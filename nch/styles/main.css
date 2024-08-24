@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("fonts/Orbitron.ttf") format("truetype");
+}
+
 :root {
     --midnight: #0b132b;
     --dusk: #1c2541;
@@ -5,36 +10,45 @@
     --blue: #000033;
     --dark_lavender: #835471; 
     --lavender: #9e768f;
+    --deep-blue: #0045c5;
     --turquoise: #00a985;
     --ocean: #3bcfcd;
-    --underground: #794c0a;
-    --earth: #c57432;
+    --underground: #c57432;
+    --earth: #97663d;
 
-    --font-titles: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --font-paragraphs: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-titles-old: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-titles: "Orbitron";
+    --font-paragraphs: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 
 body {
     background-image: linear-gradient(to bottom left, black, var(--dusk));
     background-size: 100% 100rem;
+    height: 100%;
 }
 
-footer {
+.footer-holder {
     padding-top: 1em;
     text-align: center;
+    margin-bottom: 5em;
+}
+.footer-holder a { text-decoration: none; }
+
+h1 {
+    font-family: var(--font-titles);
+    font-weight: 1000;
+    color: var(--deep-blue);
 }
 
-footer a {
-    text-decoration: none;
-}
-
-p, li {
+p, li, span {
     font-family: var(--font-paragraphs);
     color: wheat;
 }
 
 a {
-    color: var(--underground)
+    color: var(--underground);
+    font-family: var(--font-paragraphs);
 }
 
 b {
@@ -55,47 +69,13 @@ a.no-underline {
     border: 0 !important;
 }
 
-table.intro {
-    font-family: var(--font-titles);
+table.main {
+    width: 100%;
 }
 
-table.intro {
-    max-width: 50em;
-    height: 40em;
-    margin: 0 auto;
-    margin-top: 10em;
-
-    padding: 10px 10px 10px 10px;
-
-    border-width: 10px;
-    background-color: var(--dusk);
-}
-
-table.intro h2 { color: var(--turquoise); }
-table.intro h4 { color: var(--earth) }
-
-td.sidepanel { background-color: var(--dark-blue); }
-td.bottompanel {
-    min-width: 32em;
-    background-color: var(--blue);
-}
-
-table.intro tr td.welcome {
-    background-color: black;
-    padding: 2em 2em 2em 2em;
-}
-table.intro tr td {
-    padding: 0.5em;
-}
-
-table.intro tr td.welcome img {
-    display: block;
-    margin: 0 auto;
-
-    image-rendering: pixelated;
-    text-align: center;
-    width: 25%;
-    min-width: 5em;
+table.navbar {
+    width: 10em;
+    background-color: midnightblue;
 }
 
 table.certs {

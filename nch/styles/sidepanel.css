@@ -1,0 +1,57 @@
+div.sidepanel {
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    overflow-x: hidden;
+    background-color: var(--dark-blue);
+}
+
+div.sidepanel a.sidepanel-toggle {
+    float: right;
+}
+
+div.sidepanel a.sidepanel-toggle img {
+    width: 2.5em;
+    padding: 0.5em;
+}
+
+div.sidepanel-navbar-holder {
+    height: 100%;
+    width: 18em;
+    top: 0; left: 0;
+    overflow-x: hidden;
+    background-color: rgb(1, 0, 22);
+}
+
+div.sidepanel-navbar {
+    margin-right: 0.5em;
+    background-color:black;
+}
+
+div.sidepanel-top {
+    height: 3em;
+    background-color: rgb(1, 0, 22);
+}
+
+div.sidepanel-navbar nav a {
+    font-size: 18px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.25em;
+    text-align: left;
+    display: block;
+    font-family: var(--font-paragraphs);
+}
+
+div.sidepanel-top h2 {
+    margin-left: 0.5em;
+    color: var(--deep-blue);
+    font-family: var(--font-titles);
+}
+
+a.random-link {
+    color: chartreuse;
+}
+a.random-link:hover {
+    color: var(--ocean);
+}

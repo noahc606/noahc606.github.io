@@ -1,0 +1,52 @@
+table.intro {
+    font-family: var(--font-titles);
+    max-width: 50em;
+    min-width: 25em;
+    height: 40em;
+    margin: 0 auto;
+    margin-top: 5em;
+
+    padding: 10px;
+
+    border-width: 10px;
+    background-color: var(--dusk);
+}
+
+table.intro h1 {
+    text-align: center;
+}
+table.intro h2 {
+    color: var(--turquoise);
+}
+table.intro h4 { color: var(--earth) }
+
+table.intro tr td.sidepanel {
+    width: 8em;
+    background-color: var(--dark-blue);
+}
+table.intro tr td.sidepanel img.social-icon {
+    min-width: 6em;
+    object-fit: cover;
+}
+
+table.intro tr td.bottompanel {
+    background-color: var(--blue);
+}
+
+table.intro tr td.welcome {
+    background-color: black;
+    padding: 2em 2em 2em 2em;
+}
+table.intro tr td {
+    padding: 0.5em;
+}
+
+table.intro tr td.welcome img {
+    display: block;
+    margin: 0 auto;
+
+    image-rendering: pixelated;
+    text-align: center;
+    width: 25%;
+    min-width: 5em;
+}

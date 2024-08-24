@@ -3,93 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah's Webpsace</title>
+    <title>Noah's Web-Space</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidepanel.css">
+    <link rel="stylesheet" href="styles/window.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="components/footer.js" defer></script>
+    <script src="scripts/sidepanel.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="sidepanel">
+            <a href="#" onclick="spBtnClick()" onmouseover="spBtnHover()" onmouseleave="spBtnLeave()" class="sidepanel-toggle">
+                <img id="sidepanel-btn-img" src="images/sidebar-btn-light.png">
+            </a>
             
-        </nav>
+            <div class="sidepanel-navbar-holder" id="sidepanel-navbar-holder">
+                <div class="sidepanel-navbar">
+                    <div class="sidepanel-top">
+                        <h2>Noah's Web-Space</h2>
+                    </div>
+                    <nav>
+                        <a class="no-underline" href="/nch/index.html">Home</a>
+                        <!-- <a href="index.html">Out of This World Software</a> -->
+                        <a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming</a>
+                        <a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a>
+                        <!-- <a href="index.html">School/Old/Misc. projects</a> -->
+                        <a class="no-underline random-link" href="#" onclick="spLinkRandomPage()">Random page</a>
+                        <!-- <a href="index.html">Cookie settings</a> -->
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
-        <table class="intro">
-            <tr>
-                <td class="welcome">
-                    <a href="#">
-                        <img src="images/favicon.png" title="This is a description. But something you may not have realized is that this description is also a description of a description. Further, this description is also a description of a description of a description. Thus, this description is something impossible for any human mind to describe, as it needs to describe itself an endless number of times. Yet, it exists anyway...">
-                    </a>
-                    <h2>You have reached: Noah's Webspace.</h2>
-                    <p>This is a magical portal to other sites and projects that I have worked on.</p>
-                    <p hidden>To look around the site, use the navigation bar on the left side.</p>
-                </td>
-                <td colspan="1" class="sidepanel">
-                    <h4>Quick Links</h4>
-                    <nav>
-                        <a href="../itis3135/">ITIS 3135 Home</a><br>
-                        <a href="../itis3135/hobby/">SDL2 Programming</a><br>
-                        <a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a><br>
-                        <a href="../itis4166/">ITIS 4166 Projects</a><br>
-                    </nav>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" class="bottompanel">
-                    <h2>Platforms that I have made projects on</h2>
-                    <ul>
-                        <li>Websites: This one, ITIS3135, Noah's Game Programming</li>
-                        <li>Android Mobile Apps: SkyGazer</li>
-                        <li>Desktop Applications: Back to Earth</li>
-                        <li hidden>Raspberry Pi: Some of this site's functionality (soon)</li>
-                    </ul>
-                    <h2>Tools that I have utilized</h2>
-                    <ul>
-                        <li>Languages: Java, Python, C/C++, HTML+CSS+JS, SQL, PowerShell, Bash</li>
-                        <li>APIs: SDL2, Android sensors, Java's stdlib network functions</li>
-                        <li>CLI tools: Shell scripting basics, Linux commands</li>
-                        <li>Networking: Remote Desktop Connection, RealVNC, X11 forwarding, nginx, apache, ssh, scp</li>
-                        <li>Virtualization: VirtualBox, KVM, QEMU</li>
-                    </ul>
-                </td>
-                <td class="sidepanel">
-                    <h4>Socials</h4>
-                    <a href="https://www.linkedin.com/in/nh606/" target="_blank" class="no-underline">
-                        <img src="images/socials/linkedin.png" width="32" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/noahc606" target="_blank" class="no-underline">
-                        <img src="images/socials/github.png" width="32" alt="GitHub">
-                    </a>
-                    <a href="mailto:nhebert1@uncc.edu" target="_blank" class="no-underline">
-                        <img src="images/socials/uncc-email.png" width="32" alt="UNC Charlotte Student Email">
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="sidepanel">
-                    <h4>Contact</h4>
-                    <p>1 980-636-2986</p>
-                    <a href="mailto:noah.c.h@outlook.com" target="_blank" class="no-underline">
-                        <img src="images/socials/personal-email.png" width="32" alt="Personal Email">
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <div class="intro">
+            <table class="intro">
+                <tr>
+                    <td class="welcome" colspan="2">
+                        <h1>Noah's Web-Space</h1>
+                        <a href="#">
+                            <img src="images/favicon.png" title="This is a description. But something you may not have realized is that this description is also a description of a description. Further, this description is also a description of a description of a description. Thus, this description is something impossible for any human mind to describe, as it needs to describe itself an endless number of times. Yet, it exists anyway...">
+                        </a>
+                        <p>This is a magical portal to other sites and projects that I have worked on.</p>
+                        <p>To look around the site: Use the navigation bar on the left or use the quick links below.</p>
+                        <h4 hidden>Search</h4>
+                        <input hidden placeholder="">
+                        <h4>Quick Links</h4>
+                        <nav>
+                            <span>[</span><a href="../itis3135/hobby/">SDL2 Programming</a><span>]</span>
+                            <span>[</span><a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a><span>]</span>
+                            <span>[</span><a href="../itis3135/">ITIS 3135 Home</a><span>]</span>
+                            <span>[</span><a href="../itis4166/">ITIS 4166 Project</a><span>]</span>
+                        </nav>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="bottompanel">
+                        <h2>Platforms</h2>
+                        <ul>
+                            <li>Websites: This one, ITIS3135, Noah's Game Programming</li>
+                            <li>Android Mobile Apps: SkyGazer</li>
+                            <li>Desktop Applications: Back to Earth</li>
+                        </ul>
+                        <h2>Utilized Tools</h2>
+                        <ul>
+                            <li>Languages: Java, Python, C/C++, HTML+CSS+JS, SQL, PowerShell, Bash</li>
+                            <li>Libs/APIs: <a href="https://github.com/noahc606/nch-cpp-utils" target="_blank">nch-cpp-utils</a>, SDL2, FFmpeg, Android sensors, Java's stdlib network functions</li>
+                            <li>CLI tools: Shell scripting basics, Linux commands</li>
+                            <li>Networking: Remote Desktop Connection, RealVNC, X11 forwarding, nginx, apache, ssh, scp</li>
+                            <li>Virtualization: VirtualBox, KVM, QEMU</li>
+                        </ul>
+                    </td>
+                    <td class="sidepanel">
+                        <h4>Socials</h4>
+                        <a href="https://www.linkedin.com/in/nh606/" target="_blank" class="no-underline">
+                            <img class="social-icon" src="images/socials/linkedin.png" height="32" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/noahc606" target="_blank" class="no-underline">
+                            <img class="social-icon" src="images/socials/github.png" height="32" alt="GitHub">
+                        </a>
+                        <a href="mailto:nhebert1@uncc.edu" target="_blank" class="no-underline">
+                            <img class="social-icon" src="images/socials/uncc-email.png" height="32" alt="UNC Charlotte Email">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sidepanel">
+                        <h4>Contact</h4>
+                        <p>1 980-636-2986</p>
+                        <a href="mailto:noah.c.h@outlook.com" target="_blank" class="no-underline">
+                            <img src="images/socials/personal-email.png" width="32" alt="Personal Email">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </main>
-    <footer>
+    <footer class="footer-holder">
         <nch-footer></nch-footer>
     </footer>
-
-    <!--
-    <div style="background-color: #1c2541; color: white">This is a div.</div>
-    <div style="background-color: #0b132b; color: white">This is a div.</div>
-    <div style="background-color: #9e768f; color: white">This is a div.</div>
-    <div style="background-color: #835471; color: white">This is a div.</div>
-    <div style="background-color: #5bc0be; color: white">This is a div.</div>
-    <div style="background-color: #00a985; color: white">This is a div.</div>
-    <div style="background-color: #c0885b; color: white">This is a div.</div>
-    <div style="background-color: #a96500; color: white">This is a div.</div>
-    -->
 </body>
 </html>
