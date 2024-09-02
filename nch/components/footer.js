@@ -1,3 +1,5 @@
+let lastUpdate = "4:29pm on 02 September 2024";
+
 class NCH_Footer extends HTMLElement {
     constructor() {
         super();
@@ -13,6 +15,9 @@ class NCH_Footer extends HTMLElement {
                 <a href="https://jigsaw.w3.org/css-validator/validator?uri=`+window.location.href+`" target="_blank" class="no-underline">
                     <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="ValidCSS!">
                 </a>
+            </div>
+            <div>
+                <p>Site was last updated at `+lastUpdate+`.</p>
             </div>
         </div>
         <div class="div-background-alt">
