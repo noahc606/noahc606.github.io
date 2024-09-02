@@ -13,6 +13,7 @@ div.sidepanel a.sidepanel-toggle {
 div.sidepanel a.sidepanel-toggle img {
     width: 2.5em;
     padding: 0.5em;
+    cursor: pointer;
 }
 
 div.sidepanel-navbar-holder {
@@ -49,10 +50,16 @@ div.sidepanel-navbar nav div a {
     font-family: "BackToEarth";
 }
 
+div.sidepanel-navbar p {
+    font-family: "BackToEarth";
+    filter: url(fonts/crispify.svg);
+}
+
 div.sidepanel-top h2 {
     margin-left: 0.5em;
     color: var(--deep-blue);
     font-family: var(--font-titles);
+    font-style: normal;
 }
 
 a.random-link {

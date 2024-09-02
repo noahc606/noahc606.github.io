@@ -1,3 +1,27 @@
+window.onload = function() {    
+    onSidebarStateChanged();
+}
+
+function onSidebarStateChanged()
+{
+    let snb = document.getElementById("sidepanel-navbar-holder");   if(snb==null) return;
+    let header = document.getElementsByTagName("header")[0];        if(header==null) return;
+    let main = document.getElementsByTagName("main")[0];            if(main==null) return;
+    let footer = document.getElementsByTagName("footer")[0];        if(footer==null) return;
+
+    let collapsedSidebarStyle = "margin-left: 20.5em; width: 100%-20.5em";
+    let expandedSidebarStyle = "margin-left: 2.5em; width: 100%-2.5em";
+    if(snb.hidden) {
+        header.style=expandedSidebarStyle;
+        main.style=expandedSidebarStyle;
+        footer.style=expandedSidebarStyle;
+    } else {
+        header.style=collapsedSidebarStyle;
+        main.style=collapsedSidebarStyle;
+        footer.style=collapsedSidebarStyle;
+    }
+}
+
 function spBtnClick()
 {
     let snb = document.getElementById("sidepanel-navbar-holder");
@@ -7,6 +31,7 @@ function spBtnClick()
     } else {
         snb.hidden = true;
     }
+    onSidebarStateChanged();
 }
 
 function spBtnHover()
@@ -27,7 +52,6 @@ function spLinkRandomPage()
     //We don't want user to go to certain uninteresting pages (ex: itis3135/stuff/*)
     //List of pages that could be chosen:
     let pages = [
-        "/itis3135/hi.biz/index",
         "/itis3135/hobby/index",
         "/itis3135/arrays",
         "/itis3135/byo_intro",

@@ -20,11 +20,11 @@ table.intro h2 {
 }
 table.intro h4 { color: var(--earth) }
 
-table.intro tr td.sidepanel {
+table.intro tr td.sidecell {
     width: 8em;
     background-color: var(--dark-blue);
 }
-table.intro tr td.sidepanel img.social-icon {
+table.intro tr td.sidecell img.social-icon {
     min-width: 6em;
     object-fit: cover;
 }
