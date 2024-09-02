@@ -23,24 +23,30 @@ div.sidepanel-navbar-holder {
     background-color: rgb(1, 0, 22);
 }
 
-div.sidepanel-navbar {
-    margin-right: 0.5em;
-    background-color:black;
-}
-
 div.sidepanel-top {
     height: 3em;
     background-color: rgb(1, 0, 22);
 }
 
-div.sidepanel-navbar nav a {
+div.sidepanel-navbar {
+    margin-right: 0.5em;
+    padding-bottom: 0.25em;
+    background-color: black;
+}
+
+div.sidepanel-navbar nav div {
     font-size: 18px;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 0.25em;
+    margin-left: 0.25em;    margin-right: 0.25em;
+    margin-top: 0.25em;    margin-bottom: 0.25em;
     text-align: left;
     display: block;
-    font-family: var(--font-paragraphs);
+
+    background-color:rgb(14, 14, 14);
+}
+
+div.sidepanel-navbar nav div a {
+    margin-left: 0.75em;
+    font-family: "BackToEarth";
 }
 
 div.sidepanel-top h2 {

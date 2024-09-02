@@ -3,6 +3,11 @@
     src: url("fonts/Orbitron.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "BackToEarth";
+    src: url("fonts/BackToEarth.ttf") format("truetype");
+}
+
 :root {
     --midnight: #0b132b;
     --dusk: #1c2541;
