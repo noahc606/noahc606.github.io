@@ -9,16 +9,16 @@ function onSidebarStateChanged()
     let main = document.getElementsByTagName("main")[0];            if(main==null) return;
     let footer = document.getElementsByTagName("footer")[0];        if(footer==null) return;
 
-    let collapsedSidebarStyle = "margin-left: 20.5em; width: 100%-20.5em";
-    let expandedSidebarStyle = "margin-left: 2.5em; width: 100%-2.5em";
+    let expandedSidebarStyle = "margin-left: 24em; width: 100%-24em";
+    let collapsedSidebarStyle = "margin-left: 3.5em; width: 100%-3.5em";
     if(snb.hidden) {
-        header.style=expandedSidebarStyle;
-        main.style=expandedSidebarStyle;
-        footer.style=expandedSidebarStyle;
-    } else {
         header.style=collapsedSidebarStyle;
         main.style=collapsedSidebarStyle;
         footer.style=collapsedSidebarStyle;
+    } else {
+        header.style=expandedSidebarStyle;
+        main.style=expandedSidebarStyle;
+        footer.style=expandedSidebarStyle;
     }
 }
 
