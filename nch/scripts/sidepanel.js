@@ -37,13 +37,13 @@ function spBtnClick()
 function spBtnHover()
 {
     let sbi = document.getElementById("sidepanel-btn-img");
-    sbi.src = "images/sidebar-btn-light-x1.png";
+    sbi.src = "/nch/images/sidebar-btn-light-x1.png";
 }
 
 function spBtnLeave()
 {
     let sbi = document.getElementById("sidepanel-btn-img");
-    sbi.src = "images/sidebar-btn-light.png";
+    sbi.src = "/nch/images/sidebar-btn-light.png";
 }
 
 function spLinkRandomPage()

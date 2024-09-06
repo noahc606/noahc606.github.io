@@ -7,7 +7,7 @@ class NCH_SidePanel extends HTMLElement {
         this.innerHTML = `
         <div class="sidepanel">
             <a onclick="spBtnClick()" onmouseover="spBtnHover()" onmouseleave="spBtnLeave()" class="sidepanel-toggle">
-                <img id="sidepanel-btn-img" src="images/sidebar-btn-light.png" alt="Sidepanel Toggle Button">
+                <img id="sidepanel-btn-img" src="/nch/images/sidebar-btn-light.png" alt="Button: Sidepanel Toggle">
             </a>
             
             <div class="sidepanel-navbar-holder" hidden id="sidepanel-navbar-holder">
@@ -17,7 +17,10 @@ class NCH_SidePanel extends HTMLElement {
                     </div>
                     <nav>
                         <div><a class="no-underline" href="/nch/index.html">Home</a></div>
-                        <!-- <a href="index.html">Out of This World Software</a> -->
+                        <div>
+                            <a class="no-underline" href="/nch/.ootws/index.html">Out of This World Software</a>
+                            <a onclick="spBtnClick()" class="expander-btn"><img id="expander-btn-img" src="/nch/images/expander-btn-light.png" alt="Button: Expand Group"></a>
+                        </div>
                         <div><a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming</a></div>
                         <div><a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a></div>
                         <!-- <a href="index.html">School/Old/Misc. projects</a> -->
