@@ -17,9 +17,9 @@ class NCH_SidePanel extends HTMLElement {
                     </div>
                     <nav>
                         <div><a class="no-underline" href="/nch/index.html">Home</a></div>
-                        <div>
-                            <a class="no-underline" href="/nch/.ootws/index.html">Out of This World Software</a>
-                            <a onclick="spBtnClick()" class="expander-btn"><img id="expander-btn-img" src="/nch/images/expander-btn-light.png" alt="Button: Expand Group"></a>
+                        <div hidden>
+                            <a hidden class="no-underline" href="/nch/.ootws/index.html">Out of This World Software</a>
+                            <a hidden onclick="spBtnClick()" class="expander-btn"><img id="expander-btn-img" src="/nch/images/expander-btn-light.png" alt="Button: Expand Group"></a>
                         </div>
                         <div><a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming</a></div>
                         <div><a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a></div>

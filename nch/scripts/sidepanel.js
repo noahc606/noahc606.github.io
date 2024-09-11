@@ -75,5 +75,5 @@ function spLinkRandomPage()
 
     //Select a random index from the array 'pages'
     let index = Math.floor(Math.random()*pages.length);
-    window.location.href = pages[index];
+    window.location.href = pages[index]+".html";
 }
