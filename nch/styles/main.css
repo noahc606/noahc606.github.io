@@ -39,7 +39,7 @@ body {
 }
 .footer-holder a { text-decoration: none; }
 
-h1 {
+h1, h2 {
     font-family: var(--font-titles);
     font-weight: 1000;
     color: var(--deep-blue);
