@@ -46,7 +46,6 @@ class NCH_SidePanel extends HTMLElement {
                         <div><a class="no-underline random-link" href="#" onclick="spLinkRandomPage()">Random page</a></div>
                         <!-- <a href="index.html">Cookie settings</a> -->
                     </nav>
-                    <p hidden>This is a test.</p>
                 </div>
             </div>
         </div>

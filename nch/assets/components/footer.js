@@ -1,4 +1,4 @@
-let lastUpdate = "5:39pm on 12 September 2024";
+let lastUpdate = "6:17pm on 12 September 2024";
 
 class NCH_Footer extends HTMLElement {
     constructor() {
@@ -17,8 +17,6 @@ class NCH_Footer extends HTMLElement {
                 </a>
                 <p>Site was last updated at `+lastUpdate+`.</p>
             </div>
-        </div>
-        <div class="div-background-alt">
         </div>
         `;
     }
