@@ -3,7 +3,8 @@ div.sidepanel {
     position: fixed;
     top: 0; left: 0;
     overflow-x: hidden;
-    background-color: var(--dark-blue);
+    background-color: var(--midnight);
+    border-right: 4px groove var(--dark-blue);
 }
 
 div.sidepanel a.sidepanel-toggle {
@@ -14,6 +15,7 @@ div.sidepanel a.sidepanel-toggle img {
     width: 2.5em;
     padding: 0.5em;
     cursor: pointer;
+    image-rendering: pixelated;
 }
 
 div.sidepanel-navbar-holder {
@@ -21,18 +23,18 @@ div.sidepanel-navbar-holder {
     width: 20em;
     top: 0; left: 0;
     overflow-x: hidden;
-    background-color: rgb(1, 0, 22);
+    background: linear-gradient(90deg, black, var(--dark-blue));
+
+    border-right: 2px solid var(--deep-blue);
 }
 
 div.sidepanel-top {
     height: 3em;
-    background-color: rgb(1, 0, 22);
 }
 
 div.sidepanel-navbar {
     margin-right: 0.5em;
     padding-bottom: 0.25em;
-    background-color: black;
 }
 
 div.sidepanel-navbar nav div {
@@ -42,7 +44,14 @@ div.sidepanel-navbar nav div {
     text-align: left;
     display: block;
 
-    background-color:rgb(14, 14, 14);
+    border-width: 2px;
+    border-style: groove;
+    border-color: var(--dark-blue);
+    background-color:black;
+}
+
+div.sidepanel-navbar nav div.expandables div {
+    border-style: none;
 }
 
 div.sidepanel-navbar nav div a {
@@ -51,11 +60,16 @@ div.sidepanel-navbar nav div a {
     font-family: "BackToEarth";
 }
 
+div.expandables div div a { color: var(--regolith); }
+div.expandables div div a:visited { color: var(--lavender); }
+div.expandables div div a:hover { color: var(--water); }
+
 div.sidepanel-navbar nav div a.expander-btn img {
     position: fixed;
     left: 13.5em;
     padding: 0.175em;
     cursor: pointer;
+    image-rendering: pixelated;
 }
 
 div.sidepanel-navbar nav div a.expander-btn {
@@ -75,5 +89,5 @@ a.random-link {
     color: chartreuse;
 }
 a.random-link:hover {
-    color: var(--ocean);
+    color: var(--water);
 }

@@ -10,6 +10,7 @@
 
 :root {
     --midnight: #0b132b;
+    --dawn: #38487e;
     --dusk: #1c2541;
     --dark-blue: #000022;
     --blue: #000033;
@@ -18,6 +19,8 @@
     --deep-blue: #0045c5;
     --turquoise: #00a985;
     --ocean: #3bcfcd;
+    --water: #00fffb;
+    --regolith: #f3ac71;
     --underground: #c57432;
     --earth: #97663d;
 
@@ -73,10 +76,6 @@ a.no-underline {
     border: 0 !important;
 }
 
-table.main {
-    width: 100%;
-}
-
 table.navbar {
     width: 10em;
     background-color: midnightblue;
@@ -98,7 +97,7 @@ table.certs tr {
 
 @media (max-width: 576px) {
     body {
-        background-image: linear-gradient(to bottom left, black, var(--dusk));
-        background-size: 200% 180%
+        background-image: linear-gradient(to bottom, black, var(--dusk));
+        background-size: 400% 180%
     }
 }

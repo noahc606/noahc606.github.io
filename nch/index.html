@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah's Web-Space</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/sidepanel.css">
-    <link rel="stylesheet" href="styles/window.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="components/footer.js" defer></script>
-    <script src="components/sidepanel.js" defer></script>
-    <script src="scripts/sidepanel.js" defer></script>
+    <link rel="stylesheet" href="/nch/assets/styles/main.css">
+    <link rel="stylesheet" href="/nch/assets/styles/sidepanel.css">
+    <link rel="stylesheet" href="/nch/assets/styles/window.css">
+    <link rel="icon" type="image/png" href="/nch/assets/images/favicon.png">
+    <script src="/nch/assets/components/footer.js" defer></script>
+    <script src="/nch/assets/components/sidepanel.js" defer></script>
+    <script src="/nch/assets/scripts/window_resize_listener.js" defer></script>
 </head>
-<body>
+<body onload=updateSocialImagesSize()>
     <header>
         <nch-sidepanel></nch-sidepanel>
     </header>
     <main>
-        <div class="intro">
-            <table class="intro">
+        <div class="bte floating main">
+            <table class="bte">
                 <tr>
                     <td class="welcome" colspan="2">
                         <h1>Noah's Web-Space</h1>
                         <a href="#">
-                            <img src="images/favicon.png" title="This is a description. But something you may not have realized is that this description is also a description of a description. Further, this description is also a description of a description of a description. Thus, this description is something impossible for any human mind to describe, as it needs to describe itself an endless number of times. Yet, it exists anyway...">
+                            <img src="/nch/assets/images/favicon.png" title="This is a description. But something you may not have realized is that this description is also a description of a description. Further, this description is also a description of a description of a description. Thus, this description is something impossible for any human mind to describe, as it needs to describe itself an endless number of times. Yet, it exists anyway...">
                         </a>
                         <p>This is a portal to other sites and projects that I have worked on.</p>
                         <p>To look around the site, use the sidebar on the left or use the quick links below.</p>
@@ -61,13 +61,13 @@
                     <td class="sidecell">
                         <h4>Socials</h4>
                         <a href="https://www.linkedin.com/in/nh606/" target="_blank" class="no-underline">
-                            <img class="social-icon" src="images/socials/linkedin.png" height="32" alt="LinkedIn">
+                            <img class="social-icon" src="/nch/assets/images/socials/linkedin.png" width="128" alt="LinkedIn">
                         </a>
                         <a href="https://github.com/noahc606" target="_blank" class="no-underline">
-                            <img class="social-icon" src="images/socials/github.png" height="32" alt="GitHub">
+                            <img class="social-icon" src="/nch/assets/images/socials/github.png" width="128" alt="GitHub">
                         </a>
                         <a href="mailto:nhebert1@uncc.edu" target="_blank" class="no-underline">
-                            <img class="social-icon" src="images/socials/uncc-email.png" height="32" alt="UNC Charlotte Email">
+                            <img class="social-icon" src="/nch/assets/images/socials/uncc_email.png" width="128" alt="UNC Charlotte Email">
                         </a>
                     </td>
                 </tr>
@@ -75,7 +75,7 @@
                     <td class="sidecell">
                         <h4>Contact</h4>
                         <a href="mailto:noah.c.h@outlook.com" target="_blank" class="no-underline">
-                            <img src="images/socials/personal-email.png" width="32" alt="Personal Email">
+                            <img src="/nch/assets/images/socials/personal_email.png" width="32" alt="Personal Email">
                         </a>
                     </td>
                 </tr>
