@@ -95,7 +95,7 @@ table.certs tr {
     border: 2px solid var(--dark_lavender);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 825px) {
     body {
         background-image: linear-gradient(to bottom, black, var(--dusk));
         background-size: 400% 180%

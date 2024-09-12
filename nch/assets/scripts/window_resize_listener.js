@@ -21,7 +21,7 @@ function updateSocialImagesSize()
 
         
 
-        if(cw<600) {
+        if(cw<825) {
             socialImgs[i].src = root+id+"_tiny.png";
             socialImgs[i].width = "32";
 
