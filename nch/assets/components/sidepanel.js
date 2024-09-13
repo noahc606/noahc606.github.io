@@ -22,28 +22,56 @@ class NCH_SidePanel extends HTMLElement {
                             <a onclick="spBtnClick()" class="expander-btn"><img id="expander-btn-img" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group"></a>
                         </div>
                         <div class="expandables" id="1">
-                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)" href="#">About</a>
+                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">Professional</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a class="no-underline" href="/nch/ResumeFall2024.pdf">Resume</a></div>
-                                <div><a class="no-underline" href="/nch/certs.html">Certifications</a></div>
+                                <div><a href="/nch/ResumeFall2024.pdf">Resume</a></div>
+                                <div><a href="/nch/certs.html">Certifications</a></div>
                             </div>
                         </div>
-                        <div><a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming</a></div>
-                        <div><a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main">SkyGazer (team effort)</a></div>
                         <div class="expandables" id="2">
-                            <a class="no-underline" onclick="spExpandableToggle(2)" onmouseover="spExpandableHover(2)" onmouseleave="spExpandableLeave(2)" href="#">School & Misc. Projects</a>
+                            <a class="no-underline" href="/nch/ootws">Out of This World Software</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(2)" onmouseover="spExpandableHover(2)" onmouseleave="spExpandableLeave(2)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a class="no-underline" href="/itis3135">ITIS3135 - Web Based Application Design & Development</a></div>
-                                <div><a class="no-underline" href="/itis4166">ITIS4166 - Net Based Application Development</a></div>
+                                <div>
+                                    <span>Games & Entertainment</span>
+                                    <div><a href="https://github.com/noahc606/Back-to-Earth" target="_blank">Back to Earth</a></div>
+                                    <div><a href="https://github.com/noahc606/Luminescence" target="_blank">Luminescence</a></div>
+                                </div>
+                                <div>
+                                    <span>Multimedia</span>
+                                    <div><a href="https://github.com/noahc606/NoahMediaStreamPlayer" target="_blank">NMSP</a></div>
+                                </div>
+                                <div>
+                                    <span>Tools</span>
+                                    <div><a href="https://github.com/noahc606/NoahSimpleEncryption" target="_blank">Noah's Simple Encryption</a></div>
+                                    <div><a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">SkyGazer</a></div>
+                                    <div><a href="https://github.com/noahc606/CalculatorPlusPlus" target="_blank">Calculator++</a></div>
+                                </div>
+                                <div>
+                                    <span>Libraries & Engines</span>
+                                    <div><a href="https://github.com/noahc606/nch-cpp-utils" target="_blank">NCH-CPP-Utils</a></div>
+                                    <div><a href="https://github.com/noahc606/SDL-3D-Engine" target="_blank">SDL-3D</a></div>
+                                </div>                      
                             </div>
                         </div>
-                        <div><a class="no-underline random-link" href="#" onclick="spLinkRandomPage()">Random page</a></div>
+                        <div><a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming (Oct. 2023)</a></div>
+                        <div><a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">SkyGazer repo (Dec. 2023)</a></div>
+                        <div class="expandables" id="3">
+                            <a class="no-underline" onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)">School & Misc. Projects</a>
+                            <a class="expander-btn">
+                                <img onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
+                            </a>
+                            <div style="display: none;">
+                                <div><a href="/itis3135">ITIS3135 - Web Based Application Design & Development</a></div>
+                                <div><a href="/itis4166">ITIS4166 - Net Based Application Development</a></div>
+                            </div>
+                        </div>
+                        <div><a class="no-underline random-link" onclick="spLinkRandomPage()">Random page</a></div>
                         <!-- <a href="index.html">Cookie settings</a> -->
                     </nav>
                 </div>

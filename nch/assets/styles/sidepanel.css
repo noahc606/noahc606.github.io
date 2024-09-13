@@ -54,9 +54,16 @@ div.sidepanel-navbar nav div.expandables div {
     border-style: none;
 }
 
+div.sidepanel-navbar nav div span {
+    margin-left: 0.55em;
+    font-size: 21px;
+    font-family: "BackToEarth";
+}
+
 div.sidepanel-navbar nav div a {
     margin-left: 0.75em;
     font-size: 21px;
+    cursor: pointer;
     font-family: "BackToEarth";
 }
 

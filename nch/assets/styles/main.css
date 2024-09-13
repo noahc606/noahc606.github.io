@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Orbitron";
-    src: url("fonts/Orbitron.ttf") format("truetype");
+    src: url("/nch/assets/styles/fonts/Orbitron.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "BackToEarth";
-    src: url("fonts/BackToEarth.ttf") format("truetype");
+    src: url("/nch/assets/styles/fonts/BackToEarth.ttf") format("truetype");
 }
 
 :root {
@@ -48,6 +48,16 @@ h1, h2 {
     color: var(--deep-blue);
 }
 
+h3 {
+    font-family: var(--font-titles);
+    color: var(--turquoise);
+}
+
+h4 {
+    font-family: var(--font-titles);
+    color: var(--earth);
+}
+
 p, li, span {
     font-family: var(--font-paragraphs);
     color: wheat;
@@ -86,13 +96,42 @@ table.certs {
     margin-right: 1em;
     table-layout: fixed;
     border-collapse: collapse;
-    border: 1px solid var(--lavender);;
+    border: 1px solid var(--lavender);
     border-width: 1px;
     background-color: var(--dark-blue);
+
+    font-family: var(--font-paragraphs);
 }
 
 table.certs tr {
     border: 2px solid var(--dark_lavender);
+    color: wheat;
+}
+
+table.generic {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid var(--lavender);
+    border-width: 1px;
+    background-color: var(--dark-blue);
+
+    width: 100%;
+
+    font-family: var(--font-paragraphs);
+}
+
+table.generic tr {
+    border: 2px solid var(--dark_lavender);
+    color: wheat;
+}
+
+.figure {
+    display: block;
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    width: 100%;
 }
 
 @media (max-width: 825px) {
