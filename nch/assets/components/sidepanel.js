@@ -67,8 +67,8 @@ class NCH_SidePanel extends HTMLElement {
                                 <img onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a href="/itis3135">ITIS3135 - Web Based Application Design & Development</a></div>
-                                <div><a href="/itis4166">ITIS4166 - Net Based Application Development</a></div>
+                                <div><a href="/itis3135" target="_blank">ITIS3135 - Web Based Application Design & Development</a></div>
+                                <div><a href="/itis4166" target="_blank">ITIS4166 - Net Based Application Development</a></div>
                             </div>
                         </div>
                         <div><a class="no-underline random-link" onclick="spLinkRandomPage()">Random page</a></div>
