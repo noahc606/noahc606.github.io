@@ -67,6 +67,7 @@ div.sidepanel-navbar nav div a {
     font-family: "BackToEarth";
 }
 
+div.expandables div span { color: wheat; }
 div.expandables div div a { color: var(--regolith); }
 div.expandables div div a:visited { color: var(--lavender); }
 div.expandables div div a:hover { color: var(--water); }
@@ -92,9 +93,20 @@ div.sidepanel-top h2 {
     font-style: normal;
 }
 
+a.no-underline {
+    color: var(--underground);
+    text-decoration: none;
+    border: 0
+    !important;
+}
+a:visited { color: var(--dark_lavender) }
+a:hover { color: var(--ocean); }
+
+
 a.random-link {
     color: chartreuse;
 }
 a.random-link:hover {
     color: var(--water);
 }
+

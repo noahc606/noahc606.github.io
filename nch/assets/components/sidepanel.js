@@ -27,7 +27,7 @@ class NCH_SidePanel extends HTMLElement {
                                 <img onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a href="/nch/ResumeFall2024.pdf">Resume</a></div>
+                                <div><a target="_blank" href="/nch/ResumeFall2024.pdf">Resume</a></div>
                                 <div><a href="/nch/certs.html">Certifications</a></div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@ class NCH_SidePanel extends HTMLElement {
                                 <img onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a href="/itis3135" target="_blank">ITIS3135 - Web Based Application Design & Development</a></div>
-                                <div><a href="/itis4166" target="_blank">ITIS4166 - Net Based Application Development</a></div>
+                                <div><a href="/itis3135">ITIS3135 - Web Based Application Design & Development</a></div>
+                                <div><a href="/itis4166">ITIS4166 - Net Based Application Development</a></div>
                             </div>
                         </div>
                         <div><a class="no-underline random-link" onclick="spLinkRandomPage()">Random page</a></div>
@@ -84,10 +84,10 @@ class NCH_SidePanel extends HTMLElement {
 customElements.define('nch-sidepanel', NCH_SidePanel);
 
 window.onload = function() {
-    try {
-        updateSocialImagesSize();
-    } catch(ReferenceError) {}
-    
+    try { updateSocialImagesSize(); } catch(ReferenceError) {}
+    try { hideAllExcept('sec-what'); } catch(ReferenceError) {}
+    try { itis3135ArraysOnLoad(); } catch(ReferenceError) {}
+    try { itis3135FizzbuzzOnLoad(); } catch(ReferenceError) {}
 
     console.log("Loaded new window...");
 
@@ -256,30 +256,36 @@ function spLinkRandomPage()
 {
     //Send the user to a random (interesting) page.
     //We don't want user to go to certain uninteresting pages (ex: itis3135/stuff/*)
-    //List of pages that could be chosen:
+    //List of pages that could be chosen [<page url>, <open in new tab>]:
     let pages = [
-        "/itis3135/hobby/index",
-        "/itis3135/arrays",
-        "/itis3135/byo_intro",
-        "/itis3135/calculator_try",
-        "/itis3135/firstscripts",
-        "/itis3135/fizzbuzz",
-        "/itis3135/forms",
-        "/itis3135/index",
-        "/itis3135/interactiveDrawing",
-        "/itis3135/introduction",
-        "/itis3135/slideshow",
-        "/itis3135/tables",
-        "/itis4166/index",
-        "/itis4166/Project1/index",
-        "/itis4166/Project1/item",
-        "/itis4166/Project1/items",
-        "/itis4166/Project1/new",
-        "/nch/certs",
-        "/nch/index"
+        [ "/itis3135/hobby/index", false ],
+        [ "/itis3135/arrays", false ],
+        [ "/itis3135/byo_intro", false ],
+        [ "/itis3135/calculator_try", false ],
+        [ "/itis3135/firstscripts", false ],
+        [ "/itis3135/fizzbuzz", false ],
+        [ "/itis3135/forms", false ],
+        [ "/itis3135/index", false ],
+        [ "/itis3135/interactiveDrawing", false ],
+        [ "/itis3135/introduction", false ],
+        [ "/itis3135/slideshow", false ],
+        [ "/itis3135/tables", false ],
+        [ "/itis4166/index", false ],
+        [ "/itis4166/Project1/index", true ],
+        [ "/itis4166/Project1/item", true ],
+        [ "/itis4166/Project1/items", true ],
+        [ "/itis4166/Project1/new", true ],
+        [ "/nch/certs", false ],
+        [ "/nch/index", false ],
+        [ "/nch/ootws/index", false ],
     ];
 
     //Select a random index from the array 'pages'
     let index = Math.floor(Math.random()*pages.length);
-    window.location.href = pages[index]+".html";
+
+    if(pages[index][1]) {
+        window.open(pages[index][0]+".html");
+    } else {
+        window.location.href = pages[index][0]+".html";
+    }
 }

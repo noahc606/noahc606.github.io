@@ -109,6 +109,8 @@
 
         [hidden] { display: none; }
     </style>
+    <link rel="stylesheet" href="/nch/assets/styles/bte-assets.css">
+    <link rel="stylesheet" href="/nch/assets/styles/sidepanel.css">
     <script>
         window.onload = function() {
             hideAllExcept('sec-what');
@@ -126,6 +128,7 @@
             document.getElementById(id).hidden = false;
         }
     </script>
+    <script src="/nch/assets/components/sidepanel.js" defer></script>
 </head>
 <body>
     <header>
@@ -143,6 +146,7 @@
                 <a href="#" onclick="hideAllExcept('sec-download')">Download</a>
             </nav>
         </div>
+        <nch-sidepanel></nch-sidepanel>
     </header>
     <main>
         <div class="div-main div-bte">

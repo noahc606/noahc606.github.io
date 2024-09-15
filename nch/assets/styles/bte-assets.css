@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("/nch/assets/styles/fonts/Orbitron.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BackToEarth";
+    src: url("/nch/assets/styles/fonts/BackToEarth.ttf") format("truetype");
+}
+
+:root {
+    --midnight: #0b132b;
+    --dawn: #38487e;
+    --dusk: #1c2541;
+    --dark-blue: #000022;
+    --blue: #000033;
+    --dark_lavender: #835471; 
+    --lavender: #9e768f;
+    --deep-blue: #0045c5;
+    --turquoise: #00a985;
+    --ocean: #3bcfcd;
+    --water: #00fffb;
+    --regolith: #f3ac71;
+    --underground: #c57432;
+    --earth: #97663d;
+
+    --font-titles: "Orbitron";
+    --font-paragraphs: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    --mobileMaxWidth: 825px;
+}

@@ -40,7 +40,8 @@ function fizzBuzzCustom(primes, words, element) {
     element.textContent = res;
 }
 
-window.onload = function() {
+function itis3135FizzbuzzOnLoad()
+{
     fizzBuzzCustom(
         [3, 5],
         ['fizz', 'buzz'],
@@ -52,4 +53,8 @@ window.onload = function() {
         ['fizz', 'buzz', 'BANG', 'BOOM', "Bazinga"],
         document.getElementById('fizzbuzzepic')
     );
+}
+
+window.onload = function() {
+    itis3135FizzbuzzOnLoad();
 }

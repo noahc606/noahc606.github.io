@@ -138,11 +138,16 @@ function onCheckboxClicked(checkbox) {
     }
 }
 
-window.onload = function() {
+function itis3135ArraysOnLoad()
+{
     addSalary('Allison',    136000);
     addSalary('Bernard',    231000);
     addSalary('Cathy',      220000);
     addSalary('Dylan',      122000);
 
     displayEverything();
+}
+
+window.onload = function() {
+    itis3135ArraysOnLoad();
 }
