@@ -22,7 +22,7 @@ class NCH_SidePanel extends HTMLElement {
                             <a onclick="spBtnClick()" class="expander-btn"><img id="expander-btn-img" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group"></a>
                         </div>
                         <div class="expandables" id="1">
-                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">Professional</a>
+                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">About</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
@@ -32,7 +32,7 @@ class NCH_SidePanel extends HTMLElement {
                             </div>
                         </div>
                         <div class="expandables" id="2">
-                            <a class="no-underline" href="/nch/ootws">Out of This World Software</a>
+                            <a class="no-underline" href="/nch/ootws">Out of this World Software</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(2)" onmouseover="spExpandableHover(2)" onmouseleave="spExpandableLeave(2)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>

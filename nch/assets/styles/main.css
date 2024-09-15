@@ -26,6 +26,8 @@
 
     --font-titles: "Orbitron";
     --font-paragraphs: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    --mobileMaxWidth: 825px;
 }
 
 

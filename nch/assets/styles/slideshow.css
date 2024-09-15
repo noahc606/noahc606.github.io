@@ -50,7 +50,8 @@
   
 .caption-container {
     text-align: center;
-    background-color: var(--deep-blue);
+    background: linear-gradient(180deg, var(--deep-blue), var(--dark-blue));
+    border: 2px groove var(--deep-blue);
     padding: 2px 16px;
     color: white;
 }
