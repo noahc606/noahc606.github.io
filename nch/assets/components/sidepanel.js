@@ -18,12 +18,11 @@ class NCH_SidePanel extends HTMLElement {
                     <nav>
                         <div><a class="no-underline" href="/nch/index.html">Home</a></div>
                         <div class="expandables" id="1">
-                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">About</a>
+                            <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">Professional</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a target="_blank" href="/nch/ResumeFall2024.pdf">Resume</a></div>
                                 <div><a href="/nch/certs.html">Certifications</a></div>
                             </div>
                         </div>
