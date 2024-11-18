@@ -1,5 +1,5 @@
-let siteVersion = "1.1.6";
-let lastUpdate = "6:18pm, 17 October 2024";
+let siteVersion = "1.1.7";
+let lastUpdate = "2:02pm, 18 November 2024";
 
 class NCH_Footer extends HTMLElement {
     constructor() {
