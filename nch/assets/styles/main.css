@@ -16,7 +16,7 @@ h1, h2 {
     color: var(--deep-blue);
 }
 
-h3 {
+h3, th {
     font-family: var(--font-titles);
     color: var(--turquoise);
 }

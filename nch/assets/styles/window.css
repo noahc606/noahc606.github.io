@@ -6,6 +6,49 @@ div.bte {
     display: flex;
 }
 
+div.ootws {
+    border: 0.6em ridge var(--dawn);
+    background-color: var(--darker-blue);
+    padding: 4px;
+}
+div.ootws h1 { text-align: center; }
+
+table.ootws {
+    border: 0.4em ridge var(--dawn);
+    max-width: 80em;
+    margin-bottom: 1em;
+}
+table.ootws tbody tr td
+{
+    border: 2px var(--midnight);
+    background-color: var(--darker-blue);
+    border-style: outset;
+    padding: 5px;
+}
+table.ootws tbody tr th
+{
+    border: 2px var(--deep-blue);
+    background-color: var(--blue);
+    border-style: outset;
+    padding: 1em;
+}
+table.ootws tbody tr td h4 { text-align: center; }
+table.ootws tbody tr td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.ootws {
+    display: block;
+    margin: 0 auto;
+
+    width: 25%;
+    min-width: 2em;
+
+    margin-top: 2em;
+}
+
 div.floating {
     font-family: var(--font-titles);
     min-width: 23.5em;
@@ -25,6 +68,7 @@ div.logo-holder img {
     margin-right: auto;
     display: block;
     max-width: 50%;
+    
 }
 
 div.floating.main {

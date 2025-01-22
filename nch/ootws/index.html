@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/nch/assets/styles/slideshow.css">
     <link rel="stylesheet" href="/nch/assets/styles/window.css">
     <link rel="icon" type="image/png" href="/nch/ootws/assets/images/favicon.png">
-    <script src="/nch/ootws/assets/scripts/slideshow.js" defer></script>
+    <!--<script src="/nch/ootws/assets/scripts/slideshow.js" defer></script>-->
+    <script src="/nch/ootws/assets/scripts/projectlists.js" defer></script>
     <script src="/nch/assets/components/footer.js" defer></script>
     <script src="/nch/assets/components/sidepanel.js" defer></script>
 </head>
@@ -19,115 +20,74 @@
         <nch-sidepanel></nch-sidepanel>
     </header>
     <main>
-        <div class="logo-holder">
-            <img src="/nch/ootws/assets/images/ootws.png" alt="Out of this World Software">
-        </div>
-        <div class="bte floating main">
+        <div class="ootws main">
+            <img src="/nch/ootws/assets/images/ootws.png" alt="Out of this World Software" title="Out of this World Software" class="ootws">
+            <h1>Repository</h1>
+            
             <div class="bte-holder">
-                <h2>Featured</h2>
-                <p>Only the best (that we've built so far).</p>
+            </div>
+            
+            
+            <div class="bte-holder">
+                <h2>Notes</h2>
                 <ul>
-                    <li>[1] Back to Earth (Windows >=10, Linux x64): <a href="https://github.com/noahc606/Back-to-Earth" target="_blank">Repository</a>; <a href="https://github.com/noahc606/Back-to-Earth/releases/tag/v1.1.0-alpha" target="_blank">latest release</a>.</li>
-                    <li>[5] SkyGazer (Android): <a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">Repository</a>; <a href="skygazer.apk" target="_blank">.apk download</a>.</li>
+                    <li>Page is WIP until 25 January.</li>
+                    <li>Due to reorganization, some repos will not be uploaded until that date.</li>
+                    <li>Demo videos for <i>all</i> projects will be added eventually.</li>
                 </ul>
-                <div class="div-background-alt">
-                    <div class="div-main div-floating">
-                        <h2>All Projects</h2>
-                        <p>All the software we've built.</p>
-                        <p>I helped build SkyGazer on a team with 4 other people.</p>
-                        <hr class="dashed">
-                        <div class="container">
-                            <!-- Full-width images with number text -->
-                            <div class="bte-slides">
-                                <div class="numbertext">1 / 8</div>
-                                <video controls class="figure">
-                                    <source src="https://github.com/user-attachments/assets/b01da03d-b784-4b52-8636-419d5d1fed2c" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">2 / 8</div>
-                                <video controls class="figure">
-                                    <source src="https://github.com/user-attachments/assets/64b74160-ff98-4e89-825c-6fd36365fe63" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">3 / 8</div>
-                                <video controls class="figure">
-                                    <source src="assets/nmsp-demo.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">4 / 8</div>
-                                <img src="assets/images/tb/nse.png" class="slideshow-img" alt="Noah's Simple Encryption">
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">5 / 8</div>
-                                <a href="assets/images/skygazer-poster.png" target="_blank"><img src="assets/images/skygazer-poster.png" class="slideshow-img" alt="SkyGazer (team product)"></a>
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">6 / 8</div>
-                                <img src="assets/images/tb/calcplusplus.png" class="slideshow-img" alt="Calculator++">
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">7 / 8</div>
-                                <video controls class="figure">
-                                    <source src="assets/ncu.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="bte-slides">
-                                <div class="numbertext">8 / 8</div>
-                                <img src="assets/images/tb/sdl3d.gif" class="slideshow-img" alt="SDL-3D">
-                            </div>
 
-                            <!-- Next and previous buttons -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                          
-                            <!-- Image text -->
-                            <div class="caption-container">
-                                  <p id="caption"></p>
-                            </div>
-                          
-                            <!-- Thumbnail images -->
-                            <div class="row">
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/bte.png" style="width:100%" onclick="currentSlide(1)" alt="[1] Back to Earth"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/lmse.png" style="width:100%" onclick="currentSlide(2)" alt="[2] Luminescence"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/nmsp.png" style="width:100%" onclick="currentSlide(3)" alt="[3] Noah's MediaStreamPlayer"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/nse.png" style="width:100%" onclick="currentSlide(4)" alt="[4] Noah's Simple Encryption"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/sg.png" style="width:100%" onclick="currentSlide(5)" alt="[5] SkyGazer (team product)"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/calcplusplus.png" style="width:100%" onclick="currentSlide(6)" alt="[6] Calculator++"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/ncu.png" style="width:100%" onclick="currentSlide(7)" alt="[7] Noah's C++ Utils"></div>
-                                <div class="column"><img class="demo cursor" src="assets/images/tb/sdl3d.gif" style="width:100%" onclick="currentSlide(8)" alt="[8] SDL-3D"></div>
-                            </div>
-                        </div>
-                        <hr class="dashed">
-    
-                    </div>
-                </div>
-
-
+                <br>
                 
-                <h2>Links</h2>
-                <h4>Games & Entertainment</h4>
-                <ul>
-                    <li>[1] Back to Earth (Windows >=10, Linux x64): <a href="https://github.com/noahc606/Back-to-Earth" target="_blank">Repository</a>; <a href="https://github.com/noahc606/Back-to-Earth/releases/tag/v1.1.0-alpha" target="_blank">latest release</a>.</li>
-                    <li>[2] Luminescence (Windows >=10, Linux x64, Linux armv7l): <a href="https://github.com/noahc606/Luminescence" target="_blank">Repository</a>.</li>
-                </ul>
-                <h4>Multimedia</h4>
-                <ul>
-                    <li>[3] Noah's MediaStreamPlayer (Linux x64): <a href="https://github.com/noahc606/NoahMediaStreamPlayer" target="_blank">Repository</a>.</li>
-                </ul>
-                <h4>Tools</h4>
-                <ul>
-                    <li>[4] Noah's Simple Encyption (Linux x64): <a href="https://github.com/noahc606/NoahSimpleEncryption" target="_blank">Repository</a>.</li>
-                    <li>[5] SkyGazer (Android): <a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">Repository</a>; <a href="skygazer.apk" target="_blank">.apk download</a>.</li>
-                    <li>[6] Calculator++ (Java console): <a href="https://github.com/noahc606/CalculatorPlusPlus" target="_blank">Repository</a>.</li>
-                </ul>
-                <h4>Libraries & Engines</h4>
-                <ul>
-                    <li>[7] NCH-CPP-Utils (Windows >=10, Linux x64, Linux armv7l): <a href="https://github.com/noahc606/nch-cpp-utils" target="_blank">Repository</a>.</li>
-                    <li>[8] SDL-3D (Linux x64): <a href="https://github.com/noahc606/SDL-3D-Engine" target="_blank">Repository</a>.</li>    
-                </ul>
+                <h2>Featured</h2>
+                <p>These are the best Out-of-this-World software projects so far.</p>
+                <table class="bte ootws" style="width: 100%">
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 35%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+
+                    <tbody id="project-holder-1">
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Built Using...</th>
+                            <th>Development Status</th>
+                            <th>Links</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <h2>All Projects</h2>
+                <h1 style="color: var(--turquoise);" id="loading-notifier">Loading...</h1>
+                <p id="projects-desc-2" hidden></p>
+                <table class="bte ootws" style="width: 100%">
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 35%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+
+                    <tbody id="project-holder-2">
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Built Using...</th>
+                            <th>Development Status</th>
+                            <th>Links</th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
