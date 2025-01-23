@@ -16,7 +16,9 @@ div.ootws h1 { text-align: center; }
 table.ootws {
     border: 0.4em ridge var(--dawn);
     max-width: 80em;
+    
     margin-bottom: 1em;
+    table-layout: fixed;
 }
 table.ootws tbody tr td
 {
@@ -73,6 +75,10 @@ div.logo-holder img {
 
 div.floating.main {
     margin-top: 5em;
+}
+
+table.bte {
+    table-layout: fixed;
 }
 
 table.bte h1 { text-align: center; }
