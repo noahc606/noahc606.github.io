@@ -61,6 +61,23 @@ function getLinkHTML(link)
     return p1Str+"<a href=\""+anchored+"\" target=\"_blank\">"+bracketed+"</a>"+p2Str;
 }
 
+function getDependencyHTML(dep)
+{
+    switch(dep) {
+        case "NCH-CPP-Utils":   return "<a href=\"https://github.com/noahc606/nch-cpp-utils\" target=\"_blank\">NCH-CPP-Utils</a>";
+        case "libclipboard":    return "<a href=\"https://github.com/jtanx/libclipboard\" target=\"_blank\">libclipboard</a>";
+        case "SDL2":            return "<a href=\"https://www.libsdl.org/\" target=\"_blank\">SDL2</a>";
+        case "cURL":            return "<a href=\"https://curl.se/\" target=\"_blank\">cURL</a>";
+        case "FFmpeg":          return "<a href=\"https://ffmpeg.org/\" target=\"_blank\">FFmpeg</a>";
+        case "OpenMP":          return "<a href=\"https://www.openmp.org/\" target=\"_blank\">OpenMP</a>";
+        case "nlohmann json":   return "<a href=\"https://github.com/nlohmann/json\" target=\"_blank\">nlohmann json</a>";
+        case "piper":           return "<a href=\"https://github.com/rhasspy/piper\" target=\"_blank\">piper</a>";
+        case "OpenAI API":      return "<a href=\"https://openai.com/api/\" target=\"_blank\">OpenAI API</a>";
+        case "GitHub Pages":      return "<a href=\"https://pages.github.com/\" target=\"_blank\">GitHub Pages</a>";
+    }
+    return dep;
+}
+
 let numProjRows = 0;
 function addProjectRow(projObj, tableID)
 {
@@ -94,7 +111,9 @@ function addProjectRow(projObj, tableID)
         }
         depsParagraphs = "<p>"; {
             for(let i = 0; i<projObj.deps.length; i++) {
-                depsParagraphs += projObj.deps[i];
+                
+
+                depsParagraphs += getDependencyHTML(projObj.deps[i]);
                 if(i<projObj.deps.length-1) { depsParagraphs += ", "; }
             }
             depsParagraphs += "</p>"
@@ -147,7 +166,7 @@ function ootwsProjectListsInit()
                 "A 2D game that I built originally to experiment with/learn the SDL2 libraries. As of 2025, I have stopped development since the project has grown to be very complicated.",
                 "A lot of good code from this project has been reused within the NCH-CPP-Utils library.",
             ],
-            [ "C++11", "SDL2", "cURL" ],
+            [ "C++11", "SDL2", "cURL", "nlohmann json", "NCH-CPP-Utils" ],
             [ "Finished", "Scrapped" ],
             [ "[GitHub@https://github.com/noahc606/Back-to-Earth]", "[Latest release@https://github.com/noahc606/Back-to-Earth/releases/tag/v1.1.0-alpha] (v1.1.0-alpha)" ]
         ));
@@ -178,15 +197,15 @@ function ootwsProjectListsInit()
             [
                 "A straightforward password generator.", "Generates secure passwords through repeatedly seeding C's rand() function."
             ],
-            [ "C++11" ],
+            [ "C++11", "libclipboard" ],
             [ "Finished" ],
-            [ "N/A, will be uploaded by 25 January." ]
+            [ "[GitHub@https://github.com/noahc606/EzPassword]" ]
         ));
         projs.push(new Project(
             [ "Luminescence", "assets/images/projects/luminescence-icon.png" ],
             [ "desktop", "game" ],
             [
-                "A cross-platform, high performance port of the puzzle game Lumines. Can dynamically load assets for custom levels (background video, level music, sound effects, tile textures).", "This project does not include any assets from the original game(s)."
+                "A cross-platform, high performance port of the puzzle game <i><a href=\"https://en.wikipedia.org/wiki/Lumines\" target=\"_blank\">Lumines</a></i>. Can dynamically load assets for custom levels (background video, level music, sound effects, tile textures).", "This project does not include any assets from the original game(s)."
             ],
             [ "C++11", "SDL2", "FFmpeg", "nlohmann json", "NCH-CPP-Utils" ],
             [ "Finished" ],
@@ -196,11 +215,11 @@ function ootwsProjectListsInit()
             [ "NCH-File-Indexer", "assets/images/projects/terminal-icon.png" ],
             [ "term", "tool", "experiment" ],
             [
-                "A file indexer which supports regex matching and directory blacklisting.", "With minimal modifications and OS/DE-dependent searchbar entry adding, this concept could be made to work cross-platform."
+                "A file indexer which supports regex matching and directory blacklisting.", "With minimal modifications and OS/DE-dependent searchbar entry adding, this concept could be made to work cross-platform.", "Some improvements may still be made to this project (OpenMP for parallelized entry filtering)."
             ],
             [ "C++11", "NCH-CPP-Utils" ],
             [ "Finished" ],
-            [ "N/A, will be uploaded by 25 January." ]
+            [ "Closed source" ]
         ));
         projs.push(new Project(
             [ "Noah's Web-Space", "assets/images/ootws.png" ],
@@ -209,7 +228,7 @@ function ootwsProjectListsInit()
                 "This website."
             ],
             [ "GitHub Pages", "HTML", "CSS", "JS" ],
-            [ "Finished, Continuing Development" ],
+            [ "Finished, Continued Development" ],
             [ "[GitHub@https://github.com/noahc606/noahc606.github.io]", "[Latest release@https://noahc606.github.io] (v"+siteVersion+")" ]
         ));
         projs.push(new Project(
@@ -238,9 +257,9 @@ function ootwsProjectListsInit()
             [
                 "[N]oah's [O]nline [E]xecutant, a command-line AI agent based on GPT-4o. Requires an OpenAI key to be used.", "Notably, it is implemented in C++ rather than Python. It has the ability to run C++ code (by its nature, faster than Python) and terminal commands that it knows about."
             ],
-            [ "C++11", "OpenAI API", "nlohmann json", "Piper text-to-speech", "libclipboard", "NCH-CPP-Utils" ],
+            [ "C++11", "OpenAI API", "nlohmann json", "piper", "libclipboard", "NCH-CPP-Utils" ],
             [ "In Development" ],
-            [ "N/A, will be uploaded by 25 January." ]
+            [ "Closed source" ]
         ));
         projs.push(new Project(
             [ "PixelShop (app)", "assets/images/projects/pixelshop-icon.png" ],
@@ -317,7 +336,7 @@ function ootwsProjectListsInit()
             [ "lib" ],
             [ "Noah Charles Hebert's C++ Utilities. Contains shared code for many of the projects listed here.", "Made up of 4 modules: cpp-utils, math-utils, sdl-utils, and ffmpeg-utils." ],
             [ "C++11", "SDL2", "FFmpeg" ],
-            [ "Finished", "Continuing Development" ],
+            [ "Finished", "Continued Development" ],
             [ "[GitHub@https://github.com/noahc606/nch-cpp-utils]" ]
         ));
     }
@@ -335,7 +354,7 @@ function ootwsProjectListsInit()
     }
 
     //Build table for featured projects
-    let featuredTitles = ["Back to Earth", "NCH-CPP-Utils", "Out-of-this-World Engine", "SkyGazer"]; {
+    let featuredTitles = ["Back to Earth", "NCH-CPP-Utils", "Noah's Web-Space", "Out-of-this-World Engine", "SkyGazer"]; {
         for(let i = 0; i<featuredTitles.length; i++) {
             //Add table row indicated by the current title
             for(let j = 0; j<projs.length; j++) {

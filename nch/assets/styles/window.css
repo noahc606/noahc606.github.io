@@ -33,6 +33,7 @@ table.ootws tbody tr th
     background-color: var(--blue);
     border-style: outset;
     padding: 1em;
+    text-align: center;
 }
 table.ootws tbody tr td h4 { text-align: center; }
 table.ootws tbody tr td img {
@@ -46,7 +47,7 @@ img.ootws {
     margin: 0 auto;
 
     width: 25%;
-    min-width: 2em;
+    min-width: 16em;
 
     margin-top: 2em;
 }
