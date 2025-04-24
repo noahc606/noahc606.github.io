@@ -16,7 +16,9 @@ class NCH_SidePanel extends HTMLElement {
                         <a class="no-underline" href="/nch/index.html"><h2>Noah's Web-Space</h2></a>
                     </div>
                     <nav>
-                        <div><a class="no-underline" href="/nch/index.html">Home</a></div>
+                        <div></div>
+                        <div><a class="no-underline" href="/nch/search.html">Search</a></div>
+                        <div><a class="no-underline" href="/nch/index.html">Homepage</a></div>
                         <div class="expandables" id="1">
                             <a class="no-underline" onclick="spExpandableToggle(1)" onmouseover="spExpandableHover(1)" onmouseleave="spExpandableLeave(1)">Professional</a>
                             <a class="expander-btn">
@@ -54,20 +56,26 @@ class NCH_SidePanel extends HTMLElement {
                                 </div>                      
                             </div>
                         </div>
-                        <div><a class="no-underline" href="/itis3135/hobby/index.html">SDL2 Programming (Oct. 2023)</a></div>
-                        <div><a class="no-underline" href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">SkyGazer repo (Dec. 2023)</a></div>
                         <div class="expandables" id="3">
-                            <a class="no-underline" onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)">School & Misc. Projects</a>
+                            <a class="no-underline" onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)">Old University Projects</a>
                             <a class="expander-btn">
                                 <img onclick="spExpandableToggle(3)" onmouseover="spExpandableHover(3)" onmouseleave="spExpandableLeave(3)" src="/nch/assets/images/expander-btn-light.png" alt="Button: Expand Group">
                             </a>
                             <div style="display: none;">
-                                <div><a href="/itis3135">ITIS3135 - Web Based Application Design & Development</a></div>
-                                <div><a href="/itis4166">ITIS4166 - Net Based Application Development</a></div>
+                                <div>
+                                    <span>Course sites</span>
+                                    <div><a href="/itis3135">ITIS3135</a></div>
+                                    <div><a href="/itis4166">ITIS4166</a></div>
+                                </div>
+                                <div>
+                                    <span>Misc.</span>
+                                    <div><a href="/itis3135/hobby/index.html">SDL2 Programming (Oct. 2023)</a></div>
+                                    <div><a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">SkyGazer repo (Dec. 2023)</a></div>
+                                </div>
                             </div>
                         </div>
                         <div><a class="no-underline random-link" onclick="spLinkRandomPage()">Random page</a></div>
-                        <!-- <a href="index.html">Cookie settings</a> -->
+                        <div hidden><a hidden class="no-underline" href="/nch/settings.html">Site settings</a></div>
                     </nav>
                 </div>
             </div>
@@ -84,12 +92,16 @@ window.onload = function() {
     try { itis3135ArraysOnLoad(); } catch(ReferenceError) {}
     try { itis3135FizzbuzzOnLoad(); } catch(ReferenceError) {}
     try { ootwsProjectListsInit(); } catch(ReferenceError) {}
+    try { ootwsProcessSearch(); } catch(ReferenceError) {}
+    try { nchUpdateSettings(); } catch(ReferenceError) {}
 
     console.log("Loaded new window...");
 
     //Update sidebar
+    if(sessionStorage.getItem("sidepanel.open")==null) {
+        sessionStorage.setItem("sidepanel.open", "true");
+    }
     if(sessionStorage.getItem("sidepanel.open")=="true") {
-        console.log("Loaded sidepanel.open==true");
         spBtnClick();
     } else {
         onSidebarStateChanged();

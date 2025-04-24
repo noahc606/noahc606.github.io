@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's Webspace - Site Settings</title>
+    <link rel="stylesheet" href="/nch/assets/styles/bte-assets.css">
+    <link rel="stylesheet" href="/nch/assets/styles/main.css">
+    <link rel="stylesheet" href="/nch/assets/styles/window.css">
+    <link rel="stylesheet" href="/nch/assets/styles/sitesettings.css">
+    <link rel="stylesheet" href="/nch/assets/styles/sidepanel.css">
+    <link rel="icon" type="image/png" href="/nch/assets/images/favicon.png">
+    <script src="/nch/assets/components/footer.js" defer></script>
+    <script src="/nch/assets/components/sidepanel.js" defer></script>
+    <script src="/nch/assets/scripts/settings_updater.js" defer></script>
+</head>
+<body class="bte-theme-0">
+    <header>
+        <nch-sidepanel></nch-sidepanel>
+    </header>
+    <main>
+        <div class="bte floating main">
+            <div class="bte-holder">
+                <h2>Site Settings</h2>
+                <p>These are customizable settings for the site. You may want to enable cookies to keep these settings saved between sessions.</p>
+
+                <form class="settings">
+                    <hr>
+                    <div>
+                        <p><span title="Whether to allow these settings to be saved across sessions.">Allow cookies:</span></p>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <p><span title="The theme to use for the background of the site.">Theme:</span></p>
+                        <select name="themeselect" id="themeselect" class="bteselect">
+                            <option value="theme-0">Entering Orbit - Dark</option>
+                            <option value="theme-1">Back to Earth - Dark</option>
+                            <option value="theme-2">Nova - Light</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p><span title="Have the demo run live on the homepage. May cause performance issues if on a low-end platform.">Preloaded Demo of the Day:</span></p>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <p><span title="Whether we should show the demo on the homepage.">Show Demo of the Day:</span></p>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <input type="submit" value="Apply Changes">
+                    </div>
+                    <hr>
+                </form>
+
+                <p>Click <a href="../">here</a> to return to the homepage.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-holder">
+        <nch-footer></nch-footer>
+    </footer>
+</body>
+</html>

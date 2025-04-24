@@ -1,7 +1,29 @@
+html {
+    padding: env(safe-area-inset);
+}
+
 body.bte-theme-0 {
-    background-image: linear-gradient(to bottom left, black, var(--dusk));
-    background-size: 100% 100rem;
-    height: 100%;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom left, black, var(--dusk));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.bte-theme-1 {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(170deg, #966266, #752d10, #3a3142, #6e5941);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.bte-theme-2 {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .footer-holder {
@@ -22,8 +44,10 @@ h3, th {
 }
 
 h4 {
+    text-align: center;
     font-family: var(--font-titles);
     color: var(--earth);
+    margin-bottom: 16px;
 }
 
 p, li, span {
@@ -90,9 +114,11 @@ table.generic tr {
     width: 100%;
 }
 
+td nav {
+    text-align: center;
+}
+
+
 @media (max-width: 825px) {
-    body {
-        background-image: linear-gradient(to bottom, black, var(--dusk));
-        background-size: 400% 180%
-    }
+
 }

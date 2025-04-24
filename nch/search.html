@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's Web-Space: Search</title>
+    <link rel="stylesheet" href="/nch/assets/styles/bte-assets.css">
+    <link rel="stylesheet" href="/nch/assets/styles/main.css">
+    <link rel="stylesheet" href="/nch/assets/styles/searchbar.css">
+    <link rel="stylesheet" href="/nch/assets/styles/sidepanel.css">
+    <link rel="stylesheet" href="/nch/assets/styles/slideshow.css">
+    <link rel="stylesheet" href="/nch/assets/styles/window.css">
+    <link rel="icon" type="image/png" href="/nch/assets/images/favicon.png">
+    <script src="/nch/assets/components/footer.js" defer></script>
+    <script src="/nch/assets/components/sidepanel.js" defer></script>
+    <script src="/nch/assets/components/search-index.js" defer></script>
+    <script src="/nch/assets/components/searchbar.js" defer></script>
+    <script src="/nch/assets/scripts/window_resize_listener.js" defer></script>
+</head>
+<body class="bte-theme-0">
+    <header>
+        <nch-sidepanel></nch-sidepanel>
+    </header>
+    <main>
+        <div class="ootws main">
+            <nch-searchbar></nch-searchbar>
+            <div class="bte-holder" id="search-results-list">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-holder">
+        <nch-footer></nch-footer>
+    </footer>
+</body>
+</html>

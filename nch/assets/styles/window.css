@@ -7,6 +7,7 @@ div.bte {
 }
 
 div.ootws {
+    margin-top: 4em;
     border: 0.6em ridge var(--dawn);
     background-color: var(--darker-blue);
     padding: 4px;

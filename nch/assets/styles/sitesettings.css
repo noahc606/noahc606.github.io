@@ -1,0 +1,64 @@
+form.settings {
+    margin-bottom: 2em;
+}
+form.settings div {
+    display: flex;
+    margin-bottom: -1em;
+}
+form.settings div span {
+    height: fit-content;
+    cursor: help;
+}
+
+form.settings hr {
+    border-style: none;
+    height: 2px;
+    background-color: var(--deep-blue);
+}
+
+form.settings hr:first-child {
+    position: relative;
+    top: 1em;
+}
+
+form.settings div:nth-last-child(2) {
+    margin-bottom: 0.5em;
+}
+
+form.settings div input[type="checkbox"] {
+    margin-left: 1em;
+    margin-top: 1.4em;
+}
+
+form.settings div select {
+    margin-top: 1em;
+    margin-left: 1em;
+    height: 100%;
+
+    border: 2px var(--deep-blue);
+    background-color: var(--blue);
+    border-style: outset;
+    text-align: center;
+
+    color: var(--regolith);
+}
+form.settings div select:hover {
+    cursor: pointer;
+    color: var(--ocean);
+}
+
+form.settings div input {
+    margin-top: 1em;
+    height: 100%;
+
+    border: 2px var(--deep-blue);
+    background-color: var(--blue);
+    border-style: outset;
+    text-align: center;
+
+    color: white;
+}
+form.settings div input:hover {
+    cursor: pointer;
+    color: var(--ocean);
+}

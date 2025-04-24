@@ -44,10 +44,9 @@ div.sidepanel-navbar nav div {
     text-align: left;
     display: block;
 
-    border-width: 2px;
-    border-style: groove;
-    border-color: var(--dark-blue);
-    background-color:black;
+    border: 2px var(--deep-blue);
+    border-style: outset;
+    background-color: var(--dark-blue);
 }
 
 div.sidepanel-navbar nav div.expandables div {

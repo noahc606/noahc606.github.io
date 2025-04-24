@@ -1,11 +1,12 @@
 class Project {
-    constructor(title, cats, desc, deps, status, links) {
+    constructor(title, cats, desc, deps, status, links, linkVideo = null) {
         this.title = title;
         this.cats = cats;
         this.desc = desc;
         this.deps = deps;
         this.status = status;
         this.links = links;
+        this.linkVideo = linkVideo;
     }
 }
 
@@ -69,6 +70,8 @@ function getDependencyHTML(dep)
         case "SDL2":            return "<a href=\"https://www.libsdl.org/\" target=\"_blank\">SDL2</a>";
         case "cURL":            return "<a href=\"https://curl.se/\" target=\"_blank\">cURL</a>";
         case "FFmpeg":          return "<a href=\"https://ffmpeg.org/\" target=\"_blank\">FFmpeg</a>";
+        case "GLM":             return "<a href=\"https://github.com/g-truc/glm\" target=\"_blank\">GLM</a>";
+        case "OpenGL":          return "<a href=\"https://www.opengl.org/\" target=\"_blank\">OpenGL</a>";
         case "OpenMP":          return "<a href=\"https://www.openmp.org/\" target=\"_blank\">OpenMP</a>";
         case "nlohmann json":   return "<a href=\"https://github.com/nlohmann/json\" target=\"_blank\">nlohmann json</a>";
         case "piper":           return "<a href=\"https://github.com/rhasspy/piper\" target=\"_blank\">piper</a>";
@@ -94,6 +97,7 @@ function addProjectRow(projObj, tableID)
     let depsParagraphs = "<p>Language: C++ >=11</p><p>C Libraries: SDL2, cURL</p>";
     let status = "Finished, Scrapped";
     let linkParagraphs = "N/A";
+    let linkVideo = null;
     //Customize row's contents from object
     try {
         title = projObj.title[0];
@@ -131,6 +135,7 @@ function addProjectRow(projObj, tableID)
                 linkParagraphs += "</p>";
             }
         }
+        linkVideo = projObj.linkVideo;
     } catch {}
     let iconPicAlt = "Icon for "+title;
     let imgTag = `<img src="`+iconPicSrc+`" class="slideshow-img" alt="`+iconPicAlt+`" title="`+iconPicAlt+`"></img>`;
@@ -140,17 +145,21 @@ function addProjectRow(projObj, tableID)
 
     //Modify the newly added row
     let row = document.getElementById("projRow-"+numProjRows);
-    row.innerHTML = `
+    let rowHTML = `
         <td>
             `+imgTag+`
-            <h4>`+title+`</h4>
+            <h4>`+title+`</h4>`;
+    if(linkVideo!=null) {
+        rowHTML += `<nav><span>[</span>`+getLinkHTML(linkVideo)+`<span>]</span></nav>`;
+    }
+    rowHTML += `
         </td>
         <td><p>`+cats+`</p></td>
         <td>`+descParagraphs+`</td>
         <td>`+depsParagraphs+`</td>
         <td><p>`+status+`</p></td>
-        <td>`+linkParagraphs+`</td>
-    `;
+        <td>`+linkParagraphs+`</td>`;
+    row.innerHTML = rowHTML;
 
     numProjRows++;
 }
@@ -168,7 +177,8 @@ function ootwsProjectListsInit()
             ],
             [ "C++11", "SDL2", "cURL", "nlohmann json", "NCH-CPP-Utils" ],
             [ "Finished", "Scrapped" ],
-            [ "[GitHub@https://github.com/noahc606/Back-to-Earth]", "[Latest release@https://github.com/noahc606/Back-to-Earth/releases/tag/v1.1.0-alpha] (v1.1.0-alpha)" ]
+            [ "[GitHub@https://github.com/noahc606/Back-to-Earth]", "[Latest release@https://github.com/noahc606/Back-to-Earth/releases/tag/v1.1.0-alpha] (v1.1.0-alpha)" ],
+            "[Video@/nch/ootws/assets/bte.mp4]"
         ));
         projs.push(new Project(
             [ "World Regions", "assets/images/projects/bte-regions-icon.png" ],
@@ -238,8 +248,9 @@ function ootwsProjectListsInit()
                 "[N]oah's [M]edia[S]tream[P]layer, an experimental video player. Used in \"Luminescence\" for the background videos in the levels. ", "Right now this video player can only decode entire videos at once (due to high RAM usage, only small video files will work) and does not support sound."
             ],
             [ "C++11", "SDL2", "FFmpeg", "NCH-CPP-Utils" ],
-            [ "Limited Use Cases, Hiatus on Development" ],
-            [ "[GitHub@https://github.com/noahc606/NoahMediaStreamPlayer]" ]
+            [ "Limited Use Cases, Scrapped" ],
+            [ "[GitHub@https://github.com/noahc606/NoahMediaStreamPlayer]" ],
+            "[Video@/nch/ootws/assets/nmsp-demo.mp4]"
         ));
         projs.push(new Project(
             [ "Noah's Simple Encryption", "assets/images/projects/terminal-icon.png" ],
@@ -282,16 +293,30 @@ function ootwsProjectListsInit()
             [ "[GitHub@https://github.com/noahc606/noahc606.github.io/tree/main/itis4166] (part of noahc606.github.io)", "[Webpage@https://noahc606.github.io/itis4166/Project1/]" ]
         ));
         projs.push(new Project(
-            [ "Out-of-this-World Engine", "assets/images/projects/ootwe-icon.png" ],
+            [ "Out-of-this-World Engine", "" ],
+            [ "desktop", "game", "lib" ],
+            [
+                "An OpenGL-based 3D graphics engine. In the video demo, mesh building of world chunks are greatly optimized by OpenMP (speedup by x4, x8, or x16 depending on the number of cores specified).",
+                "Will be the backbone of my future 3D projects and possibly a 3D version of Back to Earth.",
+                "This project is also closed source for now (this could change)."
+            ],
+            [ "C++11", "GLM", "OpenGL", "SDL2", "OpenMP", "NCH-CPP-Utils" ],
+            [ "Continued Development" ],
+            [ "Closed source" ],
+            "[Video@/nch/ootws/assets/ootwe.mp4]",
+        ));
+        projs.push(new Project(
+            [ "SDL-3D", "assets/images/projects/sdl-3d-icon.png" ],
             [ "desktop", "game", "lib", "experiment" ],
             [
-                "A (currently primitive) cross-platform 3D engine. Uses an original triangle fill <a href=\"https://github.com/noahc606/nch-cpp-utils/blob/main/include/nch/sdl-utils/z/gfx/TexUtils.h\" target=\"_blank\">algorithm</a>.",
-                "Targeted Hardware: Both high-end and low-end.",
-                "Takes concepts from <i>OneLoneCoder</i>'s 3D engine tutorial video: <a href=\"https://www.youtube.com/watch?v=ih20l3pJoeU\" target=\"_blank\">[link]</a>"
+                "A cross-platform (slow) 3D software renderer. Uses an original triangle fill <a href=\"https://github.com/noahc606/nch-cpp-utils/blob/main/include/nch/sdl-utils/z/gfx/TexUtils.h\" target=\"_blank\">algorithm</a>. Still interesting since it does not require OpenGL.",
+                "Takes concepts from <i>OneLoneCoder</i>'s 3D engine tutorial video: <a href=\"https://www.youtube.com/watch?v=ih20l3pJoeU\" target=\"_blank\">[link]</a>",
+                "This project has been succeeded by the closed-source Out-of-this-World Engine which DOES use OpenGL and GPU acceleration."
             ],
             [ "C++11", "SDL2", "OpenMP", "NCH-CPP-Utils" ],
-            [ "In Development" ],
-            [ "[GitHub@https://github.com/noahc606/SDL-3D-Engine]" ]
+            [ "Finished", "Scrapped" ],
+            [ "[GitHub@https://github.com/noahc606/SDL-3D-Engine]" ],
+            "[Video@/nch/ootws/assets/sdl-3d.mp4]",
         ));
         projs.push(new Project(
             [ "Mandelbrot SDL", "" ],
@@ -311,7 +336,8 @@ function ootwsProjectListsInit()
             ],
             [ "Java", "Several Android APIs" ],
             [ "Finished" ],
-            [ "[GitHub@https://github.com/SledgeThatJackal/SkyGazer]", "[.apk installer@https://noahc606.github.io/nch/ootws/skygazer.apk]" ]
+            [ "[GitHub@https://github.com/SledgeThatJackal/SkyGazer]", "[.apk installer@https://noahc606.github.io/nch/ootws/skygazer.apk]" ],
+            "[Video@/nch/ootws/assets/skygazer-demo.mp4]"
         ));
         projs.push(new Project(
             [ "VSCode-CMake-Project-Template", "" ],
@@ -337,7 +363,8 @@ function ootwsProjectListsInit()
             [ "Noah Charles Hebert's C++ Utilities. Contains shared code for many of the projects listed here.", "Made up of 4 modules: cpp-utils, math-utils, sdl-utils, and ffmpeg-utils." ],
             [ "C++11", "SDL2", "FFmpeg" ],
             [ "Finished", "Continued Development" ],
-            [ "[GitHub@https://github.com/noahc606/nch-cpp-utils]" ]
+            [ "[GitHub@https://github.com/noahc606/nch-cpp-utils]" ],
+            "[Video@/nch/ootws/assets/ncu.mp4]"
         ));
     }
 
@@ -354,7 +381,7 @@ function ootwsProjectListsInit()
     }
 
     //Build table for featured projects
-    let featuredTitles = ["Back to Earth", "NCH-CPP-Utils", "Noah's Web-Space", "Out-of-this-World Engine", "SkyGazer"]; {
+    let featuredTitles = ["Out-of-this-World Engine", "Back to Earth", "NCH-CPP-Utils", "Noah's Web-Space", "SDL-3D", "SkyGazer"]; {
         for(let i = 0; i<featuredTitles.length; i++) {
             //Add table row indicated by the current title
             for(let j = 0; j<projs.length; j++) {
