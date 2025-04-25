@@ -175,6 +175,7 @@ table.subtable { width: 100%; }
     background-color: #e0d4eb;
     max-width: 1100px;
     border-image: linear-gradient(#022646, #3b0492) 30;
+    
 }
 .div-fill {
     height: 100%;

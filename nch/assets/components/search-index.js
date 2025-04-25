@@ -24,6 +24,11 @@ function ootwsSearchIndexInit() {
                 [ "certs", "certified", "certifications", "noah", "linkedin", "mta", "microsoft", "database", "fundamentals", "admin", "webdesign", "javascript", "algorithms", "datastructures", "dev", "freecodecamp", "certiport"]
             ));
             sidx.push(new SearchItem(
+                "Out-of-this-World Software Repository", "/nch/ootws", "site",
+                "A list of software projects by Out-of-this-World Software.",
+                [ "world", "software", "repo", "portfolio", "noah", "project" ]
+            ));
+            sidx.push(new SearchItem(
                 "ITIS3135", "/itis3135", "site",
                 "This page holds all the projects from my Fall 2023 ITIS3135 class (Web Based Application Design & Development).",
                 [ "web", "dev", "school", "university", "project", "neathorse" ]
@@ -72,7 +77,7 @@ function ootwsSearchIndexInit() {
             sidx.push(new SearchItem(
                 "SkyGazer", "https://github.com/SledgeThatJackal/SkyGazer", "GitHub repository",
                 "The repository for SkyGazer, a team project I was a part of.",
-                [ "java", "3d", "view", "latitude", "longitude", "time", "ar", "augmentedreality", "star", "matrix", "matrices", "twinkle", "tap", "earth" ]
+                [ "java", "3d", "view", "latitude", "longitude", "time", "augmentedreality", "star", "matrix", "matrices", "twinkle", "tap", "earth" ]
             ));
             sidx.push(new SearchItem(
                 "Noah's C++ Utils", "https://github.com/noahc606/nch-cpp-utils", "GitHub repository",

@@ -13,7 +13,8 @@
     <script src="/nch/assets/components/footer.js" defer></script>
     <script src="/nch/assets/components/searchbar.js" defer></script>
     <script src="/nch/assets/components/sidepanel.js" defer></script>
-    <script src="/nch/assets/scripts/settings_updater.js" defer></script>
+    <script src="/nch/assets/scripts/demo-loader.js" defer></script>
+    <script src="/nch/assets/scripts/settings.js" defer></script>
     <script src="/nch/assets/scripts/window_resize_listener.js" defer></script>
 </head>
 <body>
@@ -34,12 +35,8 @@
                             <span>[</span><a href="/itis3135/hobby/">SDL2 Programming (Oct. 2023)</a><span>]</span> |
                             <span>[</span><a href="https://github.com/SledgeThatJackal/SkyGazer/tree/main" target="_blank">SkyGazer (Dec. 2023)</a><span>]</span>
                         </nav>
-                        <h2>Featured Demo</h2>
-                        <iframe src="/nch/emscripten/apps/nch-cpp-utils/index.html" style="display: block; margin: auto; width: 100%; height: 42em; border: groove blue"></iframe>
-                        <nav hidden>
-                            <span>[</span><a href="/nch/" onclick="asdf()">dismiss</a><span>]</span>
-                            <span>[</span><a href="/nch/" onclick="asdf()">Source</a><span>]</span>
-                        </nav>                    
+                        <div id="demo-of-the-day">
+                        </div>
                     </td>
                 </tr>
                 <tr>

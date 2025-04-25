@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="/nch/assets/images/favicon.png">
     <script src="/nch/assets/components/footer.js" defer></script>
     <script src="/nch/assets/components/sidepanel.js" defer></script>
-    <script src="/nch/assets/scripts/settings_updater.js" defer></script>
+    <script src="/nch/assets/scripts/settings.js" defer></script>
 </head>
 <body class="bte-theme-0">
     <header>
@@ -28,26 +28,26 @@
                     <hr>
                     <div>
                         <p><span title="Whether to allow these settings to be saved across sessions.">Allow cookies:</span></p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="settingAllowCookies">
                     </div>
                     <div>
                         <p><span title="The theme to use for the background of the site.">Theme:</span></p>
-                        <select name="themeselect" id="themeselect" class="bteselect">
+                        <select name="themeselect" id="settingThemeSelect" class="bteselect">
                             <option value="theme-0">Entering Orbit - Dark</option>
-                            <option value="theme-1">Back to Earth - Dark</option>
-                            <option value="theme-2">Nova - Light</option>
+                            <option value="theme-1">Nova - Light</option>
+                            <option value="theme-2">Back to Earth - Dark</option>
                         </select>
                     </div>
                     <div>
-                        <p><span title="Have the demo run live on the homepage. May cause performance issues if on a low-end platform.">Preloaded Demo of the Day:</span></p>
-                        <input type="checkbox">
+                        <p><span title="Have the demo of the day run live on the homepage. May cause performance issues if on a low-end platform.">Pre-load Demo of the Day:</span></p>
+                        <input type="checkbox" id="settingLiveDemo">
                     </div>
                     <div>
-                        <p><span title="Whether we should show the demo on the homepage.">Show Demo of the Day:</span></p>
-                        <input type="checkbox">
+                        <p><span title="Show the demo of the day on the homepage.">Enable Demo of the Day:</span></p>
+                        <input type="checkbox" id="settingShowDemo">
                     </div>
                     <div>
-                        <input type="submit" value="Apply Changes">
+                        <input type="submit" value="Apply Changes" onclick="saveSettings()">
                     </div>
                     <hr>
                 </form>

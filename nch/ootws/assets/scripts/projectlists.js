@@ -81,6 +81,18 @@ function getDependencyHTML(dep)
     return dep;
 }
 
+function getTruncatedTitle(title) {
+    let res = "";
+    for(let i = 0; i<title.length; i++) {
+        if(title[i]!=' ') {
+            res += title[i];
+        } else {
+            res += "-";
+        }
+    }
+    return res.trim().toLocaleLowerCase();
+}
+
 let numProjRows = 0;
 function addProjectRow(projObj, tableID)
 {
@@ -145,10 +157,11 @@ function addProjectRow(projObj, tableID)
 
     //Modify the newly added row
     let row = document.getElementById("projRow-"+numProjRows);
-    let rowHTML = `
-        <td>
-            `+imgTag+`
-            <h4>`+title+`</h4>`;
+    let rowHTML = `<td>`;
+    if(tableID==2) {
+        rowHTML += `<span id="project_`+getTruncatedTitle(title)+`"></a>`;
+    }
+    rowHTML += (imgTag+`<h4>`+title+`</h4>`);
     if(linkVideo!=null) {
         rowHTML += `<nav><span>[</span>`+getLinkHTML(linkVideo)+`<span>]</span></nav>`;
     }
@@ -181,14 +194,14 @@ function ootwsProjectListsInit()
             "[Video@/nch/ootws/assets/bte.mp4]"
         ));
         projs.push(new Project(
-            [ "World Regions", "assets/images/projects/bte-regions-icon.png" ],
+            [ "Infinite World Regions", "assets/images/projects/bte-regions-icon.png" ],
             [ "desktop", "game", "experiment" ],
             [
                 "A region loading system for infinite 3D worlds (horizontal and vertical). Onscreen it will show what the regions look like within the slice z=0.",
-                "Each blue region requires a 9x9x9 volume of regions to be loaded around it (purple). Each cyan requires a 3x3x3 of blue around them. Each green requires a 3x3x3 of cyan around them. And so on and so forth.",
+                "Somewhat outdated by now as it is very slow compared to the one used within the Out-of-this-World Engine demo."
             ],
             [ "C++11", "SDL2", "NCH-CPP-Utils" ],
-            [ "Finished" ],
+            [ "Finished", "Scrapped" ],
             [ "[GitHub@https://github.com/noahc606/InfiniteWorldRegions]" ]
         ));
         projs.push(new Project(
@@ -209,7 +222,8 @@ function ootwsProjectListsInit()
             ],
             [ "C++11", "libclipboard" ],
             [ "Finished" ],
-            [ "[GitHub@https://github.com/noahc606/EzPassword]" ]
+            [ "[GitHub@https://github.com/noahc606/EzPassword]" ],
+            "[Video@/nch/ootws/assets/ezpassword.mp4]"
         ));
         projs.push(new Project(
             [ "Luminescence", "assets/images/projects/luminescence-icon.png" ],
@@ -270,13 +284,15 @@ function ootwsProjectListsInit()
             ],
             [ "C++11", "OpenAI API", "nlohmann json", "piper", "libclipboard", "NCH-CPP-Utils" ],
             [ "In Development" ],
-            [ "Closed source" ]
+            [ "Closed source" ],
+            "[Video@/nch/ootws/assets/nox.mp4]",
         ));
         projs.push(new Project(
-            [ "PixelShop (app)", "assets/images/projects/pixelshop-icon.png" ],
+            [ "PixelShop", "assets/images/projects/pixelshop-icon.png" ],
             [ "desktop", "tool", "media" ],
             [
-                "An Paint-like image viewer and editor (maybe? eventually?). Much easier to use for small images/pixelart (in MS Paint you can only zoom in so much and there is no border around the pixel selected)."
+                "A drawing program written in SDL2. Very primitive in its current state.",
+                "If I ever get around to developing it, it will be a Paint-like image viewer and editor. It's intended for small images/pixelart, since in MS Paint you can only zoom in so much and there is no border around the pixel selected."
             ],
             [ "C++11", "SDL2", "NCH-CPP-Utils" ],
             [ "Hiatus on Development" ],
@@ -411,4 +427,9 @@ function ootwsProjectListsInit()
     desc1.hidden = false;
     desc1.textContent = "Showing "+projs.length+" projects.";
     document.getElementById("loading-notifier").remove();
+
+    //Move user to desired location if using hash
+    if(window.location.hash) {
+        window.location.href = "/nch/ootws/"+window.location.hash;
+    }
 }

@@ -75,7 +75,8 @@ class NCH_SidePanel extends HTMLElement {
                             </div>
                         </div>
                         <div><a class="no-underline random-link" onclick="spLinkRandomPage()">Random page</a></div>
-                        <div hidden><a hidden class="no-underline" href="/nch/settings.html">Site settings</a></div>
+                        <div><a class="no-underline" href="/nch/settings.html">Site settings</a></div>
+                        <div></div>
                     </nav>
                 </div>
             </div>
@@ -93,7 +94,10 @@ window.onload = function() {
     try { itis3135FizzbuzzOnLoad(); } catch(ReferenceError) {}
     try { ootwsProjectListsInit(); } catch(ReferenceError) {}
     try { ootwsProcessSearch(); } catch(ReferenceError) {}
-    try { nchUpdateSettings(); } catch(ReferenceError) {}
+    {
+        try { nchUpdatePageFromSettings(); } catch(ReferenceError) {}
+        try { nchDemoInit(); } catch(ReferenceError) {}
+    }
 
     console.log("Loaded new window...");
 

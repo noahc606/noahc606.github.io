@@ -72,9 +72,3 @@ div.search-result-head p {
 div.search-result h2 {
     margin-top: 0;
 }
-div.search-result h2 a {
-    text-decoration: none;
-}
-div.search-result h2 a:hover {
-    text-decoration: underline;
-}
