@@ -20,9 +20,10 @@ function nchUpdatePageFromSettings() {
     if(sessionStorage.getItem("settingShowDemo")==null) sessionStorage.setItem("settingShowDemo", "true");
 
     //Load cookies if we need to
-    if(getCookie("nchSettingAllowCookies"=="true")) {
+    if(getCookie("nchSettingAllowCookies")=="true") {
         console.log("Loaded site settings from cookies.");
 
+        sessionStorage.setItem("settingAllowCookies", getCookie("nchSettingAllowCookies"));
         sessionStorage.setItem("settingThemeSelect", getCookie("nchSettingThemeSelect"));
         sessionStorage.setItem("settingLiveDemo", getCookie("nchSettingLiveDemo"));
         sessionStorage.setItem("settingShowDemo", getCookie("nchSettingShowDemo"));
