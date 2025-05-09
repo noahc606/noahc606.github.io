@@ -207,15 +207,15 @@ function resetForm() {
 function exampleForm() {
     resetForm();
 
-    eById('name-input').value = "Noah Hebert";
-    eById('mascot-input').value = "Neat Horse";
+    eById('name-input').value = "Guy Mcperson";
+    eById('mascot-input').value = "Great Manatee";
 
-    eById('imgcaption-input').value = "In my mirror";
-    eById('personal-bg-input').value = "I was born on an American military base in South Korea and lived there for the first few years of my life. Being part of a military family I have also lived in many different places throughout the States. We moved to North Carolina about 6 years ago when my father retired from the Army and got a cybersecurity job.";
-    eById('professional-bg-input').value = "None related to computer science (yet). My father has many comp-sci connections at his workplace because he specializes in cybersecurity.";
-    eById('academic-bg-input').value = "I am a senior here at UNCC, and I will have a bachelor’s degree in Computer Science (concentration in Cybersecurity). I am also minoring in Mathematics. I only have 4 classes to do this semester and 3 to do next semester until I reach my 120 hrs in order to graduate.";
-    eById('webdev-bg-input').value = "I took a small web design class as an elective in high school. That's where I learned the basics of HTML/CSS and up until taking this class that’s where most of my knowledge of this subject came from.";
-    eById('pc-platforms-input').value = "Win11 (school notebook), Linux (home PC).";
+    eById('imgcaption-input').value = "A picture of me";
+    eById('personal-bg-input').value = "blah blah blah blah";
+    eById('professional-bg-input').value = "blah blah blah blah";
+    eById('academic-bg-input').value = "I graduated at blah blah blah with a major in blah blah blah";
+    eById('webdev-bg-input').value = "blah blah blah";
+    eById('pc-platforms-input').value = "Windows 95";
 
     addCourse();
     eById('courses-input-a-1').value = "MATH3163 - Intro to Modern Algebra";
@@ -230,8 +230,8 @@ function exampleForm() {
     eById('courses-input-a-4').value = "ITCS4155 - Software Development Projects";
     eById('courses-input-b-4').value = "This is my capstone course. I went with this one in particular because I would like to be experienced in both software development and networking/cybersecurity.";
 
-    eById('fun-detail-input').value = "I am good at math.";
-    eById('extra-input').value = "My main hobbies are video games, programming, technology, running, swimming, reading, and (occasional) writing.";
+    eById('fun-detail-input').value = "I eat dirt.";
+    eById('extra-input').value = "My main hobbies are: Breathing, drinking, eating, living.";
 }
 function submitForm() {
 
