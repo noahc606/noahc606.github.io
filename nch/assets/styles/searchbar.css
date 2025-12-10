@@ -51,7 +51,7 @@ div.search-result {
     border-style: double;
     border-color: var(--dusk);
     background-color: var(--dark-blue);
-    width: 100%-1em;
+    width: 100%;
     max-width: 80em;
     height: 100%;
 
