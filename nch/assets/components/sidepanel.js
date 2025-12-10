@@ -92,6 +92,7 @@ window.onload = function() {
     try { hideAllExcept('sec-what'); } catch(ReferenceError) {}
     try { itis3135ArraysOnLoad(); } catch(ReferenceError) {}
     try { itis3135FizzbuzzOnLoad(); } catch(ReferenceError) {}
+    try { ootwsSearchItemsInit(); } catch(ReferenceError) {}
     try { ootwsProjectListsInit(); } catch(ReferenceError) {}
     try { ootwsProcessSearch(); } catch(ReferenceError) {}
     {
