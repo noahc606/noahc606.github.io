@@ -1,5 +1,5 @@
-let siteVersion = "1.4.0";
-let lastUpdate = "4:21pm, 10 December 2025";
+let siteVersion = "1.4.1";
+let lastUpdate = "9:22pm, 1 January 2026";
 
 class NCH_Footer extends HTMLElement {
     constructor() {
@@ -16,7 +16,7 @@ class NCH_Footer extends HTMLElement {
                 <a href="https://jigsaw.w3.org/css-validator/validator?uri=`+window.location.href+`" target="_blank" class="no-underline">
                     <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="ValidCSS!">
                 </a>
-                <p>© 2025 Designed by Noah Hebert @ <a href="/nch/ootws/">Out of this World Software</a>.</p>
+                <p>© 2026 Designed by Noah Hebert @ <a href="/nch/ootws/">Out of this World Software</a>.</p>
                 <p>Site version: <b>`+siteVersion+`</b> (`+lastUpdate+`).</p>
             </div>
         </div>
