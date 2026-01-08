@@ -188,7 +188,7 @@ function ootwsSearchItemsInit()
             "[Video (on GitHub)@https://github.com/noahc606/Luminescence]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "NCH-File-Indexer", "assets/images/projects/terminal-icon.png" ], "",
+            [ "NCH-File-Indexer", "assets/images/projects/terminal-icon.png" ], "/nch/ootws/#project_nch-file-indexer",
             [ "experiment", "term", "tool" ],
             [
                 "A file indexer which supports regex matching and directory blacklisting.",
@@ -201,7 +201,7 @@ function ootwsSearchItemsInit()
             [ "Closed source" ]
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "NMSP", "assets/images/projects/nmsp-icon.png" ], "",
+            [ "NMSP", "assets/images/projects/nmsp-icon.png" ], "/nch/ootws/#project_nmsp",
             [ "desktop", "media", "tool", "lib" ],
             [
                 "[N]oah's [M]edia/[S]tream [P]layer, a lightweight video player which uses dynamically-linked libvlc as a backend and SDL2+RmlUi as a frontend.",
@@ -226,7 +226,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/nmsp-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "Noah's Simple Encryption", "assets/images/projects/terminal-icon.png" ], "",
+            [ "Noah's Simple Encryption", "assets/images/projects/terminal-icon.png" ], "https://github.com/noahc606/NoahSimpleEncryption",
             [ "lib", "term", "tool" ],
             [
                 "A simple, passkey-based, file encryptor/decryptor. It shifts characters around by a computed amount depending on their position within the file.", "A major flaw of this encryption algorithm is long strings of the same character could expose parts of the salt or encryption key. However it is still suitable for small-scale projects."
@@ -238,7 +238,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/nse-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "NOX", "assets/images/projects/nox-icon.png" ], "",
+            [ "NOX", "assets/images/projects/nox-icon.png" ], "/nch/ootws/#project_nox",
             [ "term", "tool" ],
             [
                 "[N]oah's [O]nline [E]xecutant, a command-line AI agent based on GPT-4o. Requires an OpenAI key to be used.", "Notably, it is implemented in C++ rather than Python. It has the ability to run C++ code (by its nature, faster than Python) and terminal commands that it knows about."
@@ -262,7 +262,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/pixelshop-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "OmniFetch", "" ], "",
+            [ "OmniFetch", "" ], "/nch/ootws/#project_omnifetch",
             [ "tool", "term", "lib" ],
             [
                 "A web scraping bot that physically controls a browser within a VM/container.",
@@ -276,21 +276,21 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/omnifetch-demo.mp4]",
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "Out-of-this-World Engine", "" ], "",
+            [ "Out-of-this-World Engine", "" ], "/nch/ootws/#project_out-of-this-world-engine",
             [ "lib", "desktop", "game" ],
             [
                 "An OpenGL-based 3D graphics engine. In the video demo, mesh building of world chunks are greatly optimized by OpenMP (speedup by x4, x8, or x16 depending on the number of cores specified).",
-                "Will be the backbone of my future 3D projects and possibly a 3D version of Back to Earth.",
+                "Will be the backbone of any future 3D projects.",
                 "This project is also closed source for now."
             ],
-            ["libraries", "library"],
+            ["libraries", "library", "openmp", "3d", "opengl"],
             [ "C++11", "GLM", "OpenGL", "SDL2", "OpenMP", "NCH-CPP-Utils" ],
             [ "In Development" ],
             [ "Closed source" ],
             "[Video@/nch/ootws/assets/ootwe.mp4]",
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "SDL-3D", "assets/images/projects/sdl-3d-icon.png" ], "",
+            [ "SDL-3D", "assets/images/projects/sdl-3d-icon.png" ], "https://github.com/noahc606/SDL-3D-Engine",
             [ "experiment", "desktop", "game", "lib" ],
             [
                 "A cross-platform (slow) 3D software renderer. Uses an original triangle fill <a href=\"https://github.com/noahc606/nch-cpp-utils/blob/main/include/nch/sdl-utils/z/gfx/TexUtils.h\" target=\"_blank\">algorithm</a>. Still interesting since it does not require OpenGL.",
@@ -304,7 +304,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/sdl-3d.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "Mandelbrot SDL", "" ], "",
+            [ "Mandelbrot SDL", "" ], "https://github.com/noahc606/Mandelbrot-SDL",
             [ "experiment", "desktop" ],
             [
                 "Draws a single frame of the Mandelbrot Set and that's it.", "Used to experiment with per-pixel drawing."
@@ -316,7 +316,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/mandelbrot-sdl-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "SkyGazer", "assets/images/projects/skygazer-icon.png" ], "",
+            [ "SkyGazer", "assets/images/projects/skygazer-icon.png" ], "https://github.com/SledgeThatJackal/SkyGazer",
             [ "mobile", "tool" ],
             [
                 "An Android astronomy app. This was a 5-member team project that I was a part of." , "I developed the matrix math for 3D graphics and the star database network interface.", 
@@ -328,7 +328,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/skygazer-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "VSCode-CMake-Project-Template", "" ], "",
+            [ "VSCode-CMake-Project-Template", "" ], "https://github.com/noahc606/VSCode-CMake-Project-Template",
             [ "lib" ],
             [
                 "A template project for C++ projects that use CMake and external C/C++ libraries."
@@ -341,8 +341,8 @@ function ootwsSearchItemsInit()
         ootwsSearchItems.push(new SearchItem(
             [ "NCH-CPP-Utils", "" ], "https://github.com/noahc606/nch-cpp-utils",
             [ "lib" ],
-            [ "Noah Charles Hebert's C++ Utilities. Contains shared code for many of the projects listed here.", "NCH library modules: cpp-utils, math-utils, sdl-utils, ffmpeg-utils, and xml-utils." ],
-            [ "2d", "3d", "ffmpeg", "sdl", "sdl2", "cpp", "c++", "matrix", "matrices", "math", "libraries", "library", "util", "xml" ],
+            [ "Noah Charles Hebert's C++ Utilities. Contains shared code for many of the projects listed here.", "NCH library modules: cpp-utils, math-utils, sdl-utils, ffmpeg-utils, xml-utils, json-utils, opengl-utils." ],
+            [ "2d", "3d", "ffmpeg", "sdl", "sdl2", "cpp", "c++", "matrix", "matrices", "math", "libraries", "library", "util", "xml", "opengl" ],
             [ "C++11", "SDL2", "FFmpeg", "libxml2" ],
             [ "Finished", "Continued Development" ],
             [ "[GitHub@https://github.com/noahc606/nch-cpp-utils]" ],
