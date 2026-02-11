@@ -61,6 +61,7 @@ function getDependencyHTML(dep)
         case "FFmpeg":          return "<a href=\"https://ffmpeg.org\" target=\"_blank\">FFmpeg</a>";
         case "GitHub Pages":    return "<a href=\"https://pages.github.com\" target=\"_blank\">GitHub Pages</a>";
         case "GLM":             return "<a href=\"https://github.com/g-truc/glm\" target=\"_blank\">GLM</a>";
+        case "GLSDL":           return "<a href=\"https://github.com/noahc606/GLSDL\" target=\"_blank\">GLSDL</a>";
         case "libclipboard":    return "<a href=\"https://github.com/jtanx/libclipboard\" target=\"_blank\">libclipboard</a>";
         case "libvlc":          return "<a href=\"https://videolan.videolan.me/vlc/libvlc.html\" target=\"_blank\">libvlc</a>";
         case "libxml2":         return "<a href=\"https://github.com/GNOME/libxml2\" target=\"_blank\">libxml2</a>";
@@ -241,7 +242,7 @@ function ootwsSearchItemsInit()
             [ "NOX", "assets/images/projects/nox-icon.png" ], "/nch/ootws/#project_nox",
             [ "term", "tool" ],
             [
-                "[N]oah's [O]nline [E]xecutant, a command-line AI agent based on GPT-4o. Requires an OpenAI key to be used.", "Notably, it is implemented in C++ rather than Python. It has the ability to run C++ code (by its nature, faster than Python) and terminal commands that it knows about."
+                "[N]oah's [O]nline [E]xecutant, a command-line AI agent based on GPT-4o. Requires an OpenAI key to be used."
             ],
             [ "cpp", "ai", "openai", "api", "llm" ],
             [ "C++11", "OpenAI API", "nlohmann json", "piper", "libclipboard", "NCH-CPP-Utils" ],
@@ -279,15 +280,13 @@ function ootwsSearchItemsInit()
             [ "Out-of-this-World Engine", "" ], "/nch/ootws/#project_out-of-this-world-engine",
             [ "lib", "desktop", "game" ],
             [
-                "An OpenGL-based 3D graphics engine. In the video demo, mesh building of world chunks are greatly optimized by OpenMP (speedup by x4, x8, or x16 depending on the number of cores specified).",
-                "Will be the backbone of any future 3D projects.",
-                "This project is also closed source for now."
+                "An OpenGL-based 3D graphics engine built off of GLSDL, nch/opengl-utils, and other technologies."
             ],
             ["libraries", "library", "openmp", "3d", "opengl"],
-            [ "C++11", "GLM", "OpenGL", "SDL2", "OpenMP", "NCH-CPP-Utils" ],
+            [ "C++11", "GLM", "OpenGL", "SDL2", "OpenMP", "GLSDL", "NCH-CPP-Utils", "NCH-RmlUi-Utils" ],
             [ "In Development" ],
             [ "Closed source" ],
-            "[Video@/nch/ootws/assets/ootwe.mp4]",
+            "[Video@/nch/ootws/assets/bte-3d-demo.mp4]",
         ));
         ootwsSearchItems.push(new SearchItem(
             [ "SDL-3D", "assets/images/projects/sdl-3d-icon.png" ], "https://github.com/noahc606/SDL-3D-Engine",
@@ -338,6 +337,7 @@ function ootwsSearchItemsInit()
             [ "Finished" ],
             [ "[GitHub@https://github.com/noahc606/VSCode-CMake-Project-Template]" ]
         ));
+
         ootwsSearchItems.push(new SearchItem(
             [ "NCH-CPP-Utils", "" ], "https://github.com/noahc606/nch-cpp-utils",
             [ "lib" ],
@@ -356,6 +356,16 @@ function ootwsSearchItemsInit()
             [ "C++14", "SDL2", "RmlUi", "NCH-CPP-Utils" ],
             [ "Finished", "Continued Development" ],
             [ "[GitHub@https://github.com/noahc606/SDL-RmlUi-Template]" ]
+        ));
+        ootwsSearchItems.push(new SearchItem(
+            [ "GLSDL", "" ], "https://github.com/noahc606/GLSDL",
+            [ "game", "lib", "tool" ],
+            [ "A 2D renderer built with OpenGL where SDL2-like calls can be mixed with raw OpenGL calls. This is made possible via an internal 2D shader and the GL-state-modifying functions <code>GLSDL_GL_SaveState</code> and <code>GLSDL_GL_RestoreState</code>.", "With this library, you can easily implement SDL2-like code or port existing SDL2 code to 3D OpenGL projects (for example, 2D UIs on 3D graphics, 2D game with a 3D background).", "Compatible with <a href=\"https://github.com/noahc606/nch-cpp-utils\" target=\"_blank\">NCH-CPP-Utils</a> and <a href=\"https://github.com/noahc606/nch-rmlui-utils\" target=\"_blank\">NCH-RmlUi-Utils</a>. One of the core components of Out-of-this-World Engine." ],
+            [ "2d", "3d", "opengl", "sdl", "sdl2", "cpp", "c++", "libraries", "library", "util", "opengl" ],
+            [ "C++11", "OpenGL", "GLM", "SDL2", "NCH-CPP-Utils" ],
+            [ "Finished", "Continued Development" ],
+            [ "[GitHub@https://github.com/noahc606/GLSDL]" ],
+            "[Video@/nch/ootws/assets/glsdl-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
             [ "Xcalibur", "" ], "https://github.com/noahc606/Xcalibur",

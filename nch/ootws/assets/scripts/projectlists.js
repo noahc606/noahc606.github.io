@@ -150,7 +150,7 @@ function ootwsProjectListsInit()
     }
 
     //Build table for featured projects
-    let featuredTitles = ["OmniFetch", "Out-of-this-World Engine", "Back to Earth", "NCH-CPP-Utils", "Noah's Web-Space", "SkyGazer"]; {
+    let featuredTitles = ["OmniFetch", "Out-of-this-World Engine", "GLSDL", "Back to Earth", "NCH-CPP-Utils", "Noah's Web-Space", "SkyGazer"]; {
         for(let i = 0; i<featuredTitles.length; i++) {
             //Add table row indicated by the current title
             for(let j = 0; j<projs.length; j++) {
