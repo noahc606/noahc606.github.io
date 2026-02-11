@@ -280,7 +280,9 @@ function ootwsSearchItemsInit()
             [ "Out-of-this-World Engine", "" ], "/nch/ootws/#project_out-of-this-world-engine",
             [ "lib", "desktop", "game" ],
             [
-                "An OpenGL-based 3D graphics engine built off of GLSDL, nch/opengl-utils, and other technologies."
+                "A 3D graphics engine built off SDL2+OpenGL and my other libraries.",
+                "For 2D graphical overlays and UIs: uses GLSDL, NCH-CPP-Utils, and NCH-RmlUi-Utils.",
+                "For 3D graphics: Uses opengl-utils from NCH-CPP-Utils and some additional infrastructure.",
             ],
             ["libraries", "library", "openmp", "3d", "opengl"],
             [ "C++11", "GLM", "OpenGL", "SDL2", "OpenMP", "GLSDL", "NCH-CPP-Utils", "NCH-RmlUi-Utils" ],
