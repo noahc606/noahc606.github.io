@@ -281,7 +281,7 @@ function ootwsSearchItemsInit()
             [ "lib", "desktop", "game" ],
             [
                 "A 3D graphics engine built off SDL2+OpenGL and my other libraries.",
-                "For 2D graphical overlays and UIs: uses GLSDL, NCH-CPP-Utils, and NCH-RmlUi-Utils.",
+                "For 2D graphical overlays and UIs: Uses GLSDL, NCH-CPP-Utils, and NCH-RmlUi-Utils.",
                 "For 3D graphics: Uses opengl-utils from NCH-CPP-Utils and some additional infrastructure.",
             ],
             ["libraries", "library", "openmp", "3d", "opengl"],
