@@ -263,7 +263,7 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/pixelshop-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
-            [ "OmniFetch", "" ], "/nch/ootws/#project_omnifetch",
+            [ "OmniFetch", "assets/images/projects/omnifetch-icon.png" ], "/nch/ootws/#project_omnifetch",
             [ "tool", "term", "lib" ],
             [
                 "A web scraping bot that physically controls a browser within a VM/container.",
