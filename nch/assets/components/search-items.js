@@ -266,7 +266,7 @@ function ootwsSearchItemsInit()
             [ "OmniFetch", "assets/images/projects/omnifetch-icon.png" ], "/nch/ootws/#project_omnifetch",
             [ "tool", "term", "lib" ],
             [
-                "A web scraping bot that physically controls a browser within a VM/container.",
+                "A web scraping bot that physically controls a browser within a VM/container. No AI required, allowing for great scalability (the \"OmniFetch cluster\").",
                 "Due to not using weird user agents, chromedriver, etc. it is nearly undetectable.",
                 "Many sites are able to detect the use of cURL, Selenium, Playwright, and other similar tools.",
             ],
