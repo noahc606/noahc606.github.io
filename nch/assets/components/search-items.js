@@ -165,6 +165,20 @@ function ootwsSearchItemsInit()
             "[Video@/nch/ootws/assets/bte.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
+            [ "Back to Earth: 3D", "assets/images/projects/bte-3d-icon.png" ], "/nch/ootws/#project_back_to_earth_3d",
+            [ "game", "desktop" ],
+            [
+                "A Minecraft-like game built off of Out-of-this-World Engine. Hopefully not \"just another Minecraft clone\".",
+                "Engine features: Moddability (lua terraingen, JSON data), 32³ chunks (unlimited build height, until you reach orbit), Level-of-detail terrestrial planet render distance (128km), multithreaded chunk access, multicolored lighting, modifiable physics objects (build and launch your own rockets!), and much more.",
+                "Beta coming soon to Steam (Christmas 2026?).",
+            ],
+            [ "cpp", "c++", "game", "engine", "library", "libraries", "sdl", "sdl2", "earth", "3d", "platform" ],
+            [ "C++14", "SDL2", "nlohmann json", "NCH-CPP-Utils", "RmlUi", "NCH-RmlUi-Utils", "GLM", "OpenGL", "GLSDL", "OpenMP" ],
+            [ "In Development" ],
+            [ "Closed source" ],
+            "[Video@/nch/ootws/assets/bte-3d-demo2.mp4]"
+        ));
+        ootwsSearchItems.push(new SearchItem(
             [ "EzPassword", "assets/images/projects/terminal-icon.png" ], "https://github.com/noahc606/EzPassword",
             [ "term", "tool" ],
             [
@@ -270,10 +284,25 @@ function ootwsSearchItemsInit()
                 "Due to not using weird user agents, chromedriver, etc. it is nearly undetectable.",
                 "Many sites are able to detect the use of cURL, Selenium, Playwright, and other similar tools.",
             ],
-            [ "web", "scraping", "scraper", "scrape", "auto", "browser", "container", "chromedriver" ],
+            [ "web", "scraping", "scraper", "scrape", "auto", "browser", "container", "chromedriver", "omni" ],
             [ "C++17", "SDL2_net", "nlohmann json", "libxml2", "Xcalibur", "NCH-CPP-Utils" ],
             [ "Finished", "Continued Development" ],
             [ "Closed source" ],
+            "[Video@/nch/ootws/assets/omnifetch-demo.mp4]",
+        ));
+        ootwsSearchItems.push(new SearchItem(
+            [ "OmniTranslate", "assets/images/projects/omnitranslate-icon.png" ], "/nch/ootws/#project_omnitranslate",
+            [ "mobile", "tool" ],
+            [
+                "A simple speech-to-text recognition and translation Android app. No internet required (after initial automatic downloads) as long as source language is in English.",
+                "Translation is fully offline and uses Google's ML Kit for deep-learning based translation. Each language is just a 50MB TensorFlow model that is automatically downloaded by the application when needed, no need for extra setup yourself.",
+                "Speech-to-text engine requires a cloud service for non-English source languages. Offline STT works perfectly with English, and there is a setting to force use the offline engine (Prefer offline recognition).",
+                "Languages supported (source AND target): English, Korean, Spanish, Japanese, French, German, Chinese."
+            ],
+            [ "translate", "mobile", "language", "omni", "deeplearning", "translation" ],
+            [ "Java", "Several Android APIs", "Google's ML Kit" ],
+            [ "Finished", ],
+            [ "Free-to-use and closed source", "[.apk installer@https://noahc606.github.io/omnitranslate.apk]" ],
             "[Video@/nch/ootws/assets/omnifetch-demo.mp4]",
         ));
         ootwsSearchItems.push(new SearchItem(
@@ -325,7 +354,7 @@ function ootwsSearchItemsInit()
             [],
             [ "Java", "Several Android APIs" ],
             [ "Finished" ],
-            [ "[GitHub@https://github.com/SledgeThatJackal/SkyGazer]", "[.apk installer@https://noahc606.github.io/nch/ootws/skygazer.apk]" ],
+            [ "[GitHub@https://github.com/SledgeThatJackal/SkyGazer]", "[.apk installer@https://noahc606.github.io/skygazer.apk]" ],
             "[Video@/nch/ootws/assets/skygazer-demo.mp4]"
         ));
         ootwsSearchItems.push(new SearchItem(
